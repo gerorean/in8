@@ -3891,14 +3891,23 @@ function f0050()//OCULTAR ambientes, DEJAR pantalla vacia, DETENER vibraciones y
 			}
 			if(ambi == 5)//RUTA X
 			{	lLINES.innerHTML = '';
+				intM.classList.add('cX');//Oculta la interfaz M
 				iRUTA.classList.add('cX');
 			}
 			//yBTNS.classList.add('cX');//ocultar los botones
 			yKEYS[2][8] = 0;//ocultar los botones 1 3 Y 4
-			yBot0l.classList.add('cStop');
-			yBot0r.classList.add('cStop');
-			yBB0.classList.add('cOff');
-			yBBO.classList.add('cOff');
+			//yBot0l.classList.add('cStop');
+			//yBot0r.classList.add('cStop');
+			//yBB0.classList.add('cOff');
+			//yBBO.classList.add('cOff');
+			boT0.classList.add('cStop');
+			//yBot5.classList.add('cStop');
+			yBB5.classList.add('cOff');
+			//yBB5.classList.add('cOff');
+			yBoto.classList.add('cStop');
+			//yBoto.classList.add('cStop');
+			yBBo.classList.add('cOff');
+			//yBBo.classList.add('cOff');
 			yBot4.classList.add('cStop');
 			yBB4.classList.add('cOff');
 			yBot6.classList.add('cStop');
@@ -3958,10 +3967,18 @@ function f0051()//HABILITAR botones de RUTA (1,3,4 y 7)
 					fBot7.classList.remove('cStop');
 					fBB7.classList.remove('cOff');
 				}
-				yBot0l.classList.remove('cStop');
-				yBot0r.classList.remove('cStop');
-				yBB0.classList.remove('cOff');
-				yBBO.classList.remove('cOff');
+				//yBot0l.classList.remove('cStop');
+				//yBot0r.classList.remove('cStop');
+				//yBB0.classList.remove('cOff');
+				//yBBO.classList.remove('cOff');
+				boT0.classList.remove('cStop');
+				//yBot5.classList.remove('cStop');
+				yBB5.classList.remove('cOff');
+				//yBB5.classList.remove('cOff');
+				yBoto.classList.remove('cStop');
+				//yBoto.classList.remove('cStop');
+				yBBo.classList.remove('cOff');
+				//yBBo.classList.remove('cOff');
 			}
 		}
 

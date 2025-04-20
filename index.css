@@ -109,7 +109,7 @@
 
  .cBOT
 ,.cChico
-,.cEnt
+,.c--Ent
 ,.cFlex
 ,.c--Menu
 ,.c--Info
@@ -147,7 +147,7 @@
  .cVpres
 ,.cTitul{		background:rgba(0,0,0,0.8)}
 
- .cEnt{			background:rgba(128,128,128,0.3)}
+ .c--Ent{			background:rgba(128,128,128,0.3)}
 
  .c--CR{		background:rgba(255,0,0,0.5)}
 
@@ -160,7 +160,8 @@
 ,.cNeg
 ,.yProsaL
 ,.zProsa
-,#iNegro{		background:var(--cblwh1)}
+,#i--Negro
+,#iTaco {		background:var(--cblwh1)}
 
  .cButton
 ,.cTapa{		background:var(--cblwh2)}
@@ -194,25 +195,30 @@
 
  /*#iTic{ 		border:solid 0.3px transparent}*/
 
- #iNegro
+ #i--Negro
 ,#y--Bot0l
 ,#y--Bot0r{		border:2px solid var(--cblwh1)}/*var(--sky)}/*orange}/*var(--cGrey)}/*black}*/
+
+ table{			border-collapse: collapse}
 
  .zProsa{		border-radius:0 0 var(--rmin) var(--rmin)}
 
  .cGre{			border-radius:0 0 var(--kdot) var(--kdot)}
 
- #yBot0r
-,#yBot6
-,#yBot3
-,#yBot9{		border-radius:0 11.25vh 11.25vh 0}
+ #y--Bot0r
+ ,#yBot6
+ ,#yBot3
+ ,#yBot9
+ ,#yBoto{		border-radius:0 7.5vh 7.5vh 0}/*11.25vh 0 0 11.25vh}*/
 
  #iFaro{		border-radius:0 20% 0 0}
 
- #yBot0l
-,#yBot4
-,#yBot1
-,#yBot7{		border-radius:11.25vh 0 0 11.25vh}
+ #boT0
+ ,#y--Bot0l
+ ,#yBot4
+ ,#yBot1
+ ,#yBot7
+ ,#y--Bot5{		border-radius:7.5vh 0 0 7.5vh}/*11.25vh 0 0 11.25vh}*/
 
 .c--Ame
 ,.c--Ask
@@ -272,7 +278,8 @@
 
  .z70{			box-shadow:0 max(3px,0.7vh) var(--cblwh1)}
 
- .cBOT{			box-shadow:inset 0 0 0 0.5px var(--cbw1), 0 0 0 0.3px var(--cbw2), inset 0 0 0 calc(var(--palo)/2) var(--cYel),inset 1px 1px 1px calc(var(--palo)/2) var(--cYel)}/*var(--cYel) var(--cGreyT)*/
+ .cBOT
+ ,#iNegro{		box-shadow:inset 0 0 0 0.5px var(--cbw1), 0 0 0 0.3px var(--cbw2), inset 0 0 0 calc(var(--palo)/2) var(--cYel),inset 1px 1px 1px calc(var(--palo)/2) var(--cYel)}/*var(--cYel) var(--cGreyT)*/
 
  .cEsqi{		box-shadow:inset 0 0 0 calc(var(--palo)*0.25) var(--cblwh2), inset 0 0 0 calc(var(--palo)*2) var(--cBeige)}
 
@@ -330,10 +337,11 @@
 ,.cInfo
 ,.cIng
 ,.c--Reloj
-,.yProsaL
-,.zProsa
 ,#iInfo
-,#i--Hora{		color:var(--cblwh2)}
+,#i--Hora
+,#iTaco
+,.yProsaL
+,.zProsa{		color:var(--cblwh2)}
 
  .cIyel{		color:var(--cOI)}
 
@@ -370,7 +378,7 @@
 
  .cBOT
 ,.c--Chico
-,.cEnt
+,.c--Ent
 ,.cFleB
 ,.cFleT
 ,.cFlex
@@ -388,10 +396,18 @@
 ,.cPic2
 ,.cObj{			display:inline-block}
 
+ .cInfo::-webkit-scrollbar
+,.cInSOS::-webkit-scrollbar
+,.cScroll::-webkit-scrollbar
+,.cTexM::-webkit-scrollbar
+,.cTpres::-webkit-scrollbar{display: none}/* Chrome, Safari */
+
  .sepia{		filter:sepia(30%)}
 
  .cBof
 ,.c--Info{		float:left}
+
+ #i--Taco{		font-family: Arial, sans-serif}
 
   *{			font-family:Roboto,Century Gothic,Monaco,Verdana,Tahoma,Arial,sans-serif}/*'Monaco','Verdana','Arial',sans-serif}*/
 
@@ -478,9 +494,11 @@
  .cImKe{		height:13vh}/*9vh  42px}/*8vh}*/
 
  .cBOT
-,.cEnt
+,.c--Ent
 ,.cMark
-,.c--TOB{		height:20%}/*height:25%}/*33.33333333%}/*18.75%*/
+,.c--TOB{		height:16.666666666%}/*height:20%}25%}/*33.33333333%}/*18.75%*/
+
+.cVpres{		height:70vh}/*calc(50vh - (var(--marH) * 2) - (var(--pelo)*2) - var(--kdot))}/*80vh - 1vh de los 2 margenes arriba y abajo,  84vh  80vh menos 0.5vh del borde superior y otros 0.5vh del borde inferior*/
 
  .cTones{		height:90vh}/*67.5vh}/*si --bh = 5vh calc((100vh - (2*var(--bh)))*0.75)}/*si --bh vale 5vh :: 67,5vh 56.25vh}/*(antes 18.75% x 3)  PORQUE VALE ESE VALOR de dónde sale???*/ 
 
@@ -503,11 +521,10 @@
 ,#iRUTA
 ,#iTAPA{		height:100%}
 
- .cBof{			height:calc(100% - var(--kdot))}
-
  .cTpres{		height:calc(17vh - var(--pelo))}/*17vh}/*calc(17vh - var(--pelo))}/*calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
 
- .cVpres{		height:70vh}/*calc(50vh - (var(--marH) * 2) - (var(--pelo)*2) - var(--kdot))}/*80vh - 1vh de los 2 margenes arriba y abajo,  84vh  80vh menos 0.5vh del borde superior y otros 0.5vh del borde inferior*/
+ .cInSOS
+,#i--KeyB{		height:calc(35vh - var(--kdot) - 0.5vh)}/*calc(30vh - var(--kdot) - 0.5vh)*/
 
  .cCel0{		height:calc(100vh - 0.5vh - max(var(--z),5vh) - var(--kdot))}/*var(--kdot) - (max(var(--z),5vh)) - (max(var(--z),5vh)))}/*calc(100% - var(--kdot) - (max(var(--z),5vh)))}*/
 					           /*  linea h - info loc         -  leds   */
@@ -522,6 +539,8 @@
 								/*  info loc y filbo(incluye ya los leds)  -  margen sup/inf  */
 
  .c--Vert{		height:calc(100vh - var(--z))}
+
+ .cBof{			height:calc(100% - var(--kdot))}
 
  #iGol{			height:calc(var(--bh)*2)}/*calc(var(--cWH) * 65vh)*/
 
@@ -555,7 +574,7 @@
 
  .cBOT
 ,.cChico
-,.cEnt
+,.c--Ent
 ,.cPic2
 ,.cFleB
 ,.cFleT
@@ -590,11 +609,13 @@
 
  #iBrail{		left:max(var(--pila),0.5vw)}/*0.5vw)}*/
 
- #i--Dice
-,#yBot0l
-,#yBot4
-,#yBot1
-,#yBot7{		left:var(--b)}
+ #boT0
+ ,#i--Dice
+ ,#y--Bot0l
+ ,#yBot7
+ ,#yBot4
+ ,#yBot1
+ ,#y--Bot5{		left:var(--b)}
 
  .c--Vpres{		left:var(--pelo)}
 
@@ -645,6 +666,8 @@
 
  .cTapa{		margin:max(0.5vh,0.5vw) 0.5vw}/*?max?*/
 
+  h1{			margin-bottom:20px}
+
  .cAsk{			margin-bottom:calc(var(--chico) * -0.3)}
 
  .cInfi{		margin-left:0.5vw}
@@ -680,6 +703,8 @@
 
  .c--Pic2{		min-width:calc(var(--chico)*0.25)}/*(var(--chico)*0.25)}/*25vh}/*desactivar de ser necesario*/
 
+ #iTaco{		opacity:0.3}
+
  .c1570
 ,.c1x1
 ,.cBof
@@ -695,11 +720,16 @@
  .cButton
 ,.cTapa{		overflow-x:hidden}
 
+.cInSOS{		overflow-x:scroll}
+
+.cScroll{		overflow-y:auto}
+
  .c--Infi
 ,.cInfo
 ,.cTpres{		overflow-y:hidden}
 
- .cScroll{		overflow-y:auto}
+.cInSOS
+,.cTexM{		overflow-y:scroll}
 
  .cTapa{		padding:0 0 calc(50vh - var(--bh) - (var(--a)*0.5)) 0}
 
@@ -714,6 +744,8 @@
 
  .inner>*{		padding:0}/*8.5vh 0}/*604/2 la otra mitad del ancho!!*/
 
+ #iTaco{		padding:20px 0/* Añade un margen superior para evitar recortes */}
+
  .c--Paddi{		padding:calc(50vh - var(--bh) - (var(--a)*0.5)) max(var(--pila),0.5vw) calc(100vh - 45px - var(--a)) max(var(--pila),0.5vw)}
 
  .cPaddi{		padding:calc((90vh*0.75) + var(--bh)) max(var(--pila),0.5vw)}/*0.5vw)}*/
@@ -722,18 +754,24 @@
 
  .cInfi{		padding-left:0.5vw}
 
- .cDedo
-,.cGrey
-,.c--Neg
-,#iFilbo
-,#iMarco
-,#yBTNS
-,#yBot0l
-,#yBot0r
-,#yBot3
-,#yBot7
-,#yBot9
-,#iBody{		pointer-events:auto}
+ #boT0
+ ,.cDedo
+ ,.cGrey
+ ,.cInSOS
+ ,.c--Neg
+ ,.cTexM
+ ,.cTexU
+ ,#iFilbo
+ ,#iMarco
+ ,#yBTNS
+ ,#y--Bot0l
+ ,#y--Bot0r
+ ,#yBot3
+ ,#yBot7
+ ,#yBot9
+ ,#y--Bot5
+ ,#yBoto
+ ,#iBody{		pointer-events:auto}
 
  .cBota
 ,.cBote
@@ -759,9 +797,10 @@
 ,.cBox
 ,.cChico
 ,.cCua
-,.cEnt
+,.c--Ent
 ,.cGrey
 ,.cHori
+,.cInSOS
 ,.cLen
 ,.cLogo
 ,.cLR
@@ -816,18 +855,26 @@
   #iV1i{		right:calc(var(--kdot)*4)}
 
  #i--Faro
-,#yBot0r
+,#y--Bot0r
 ,#yBot6
 ,#yBot3
-,#yBot9{		right:var(--b)}
+,#yBot9
+,#yBoto{		right:var(--b)}
 
  #i--Menu
 ,#iVol{			right:var(--kdot)}
 
+.cInfo
+,.cInSOS
+,.cScroll
+,.cTexM
+,.cTpres{		scrollbar-width: none}/* Firefox */
+
  .cAltu
 ,.cPic2
 ,.cTela
-,.cTpres{		text-align:center}
+,.cTpres
+,#iTaco{		text-align:center}
 
  .cBra1
 ,.cBrai
@@ -866,6 +913,8 @@
 ,.cAma
 ,.cLuz{			text-shadow:none}/*de última para no ponerle !important*/
 
+ h1{			text-transform: uppercase}
+
  .cGrey
 ,.cLen
 ,.cLR
@@ -876,15 +925,17 @@
 ,#iRUTA
 ,#iTAPA{		top:0}
 
- .cTitul{		top:var(--marH)}
+.c--Vpres{		top:1px}/*calc(10.5vh + var(--pelo))}/*Se calculo 100vh menos el alto de la imagen - la mitad del borde inferior: calc(10.5vh + var(--pelo) + (var(--kdot)* 0.5)) [- (var(--kdot)* 0.5)) menos la mitad del borde inferior]   84vh  10.5vh menos 0.5vh del borde superior*/
 
- .c46{			top:20%}/*top:25%}/*33.33333333%}*/
+ .c46{			top:16.666666666%}/*top:20%}25%}/*33.33333333%}*/
 
- .c13{			top:40%}/*top:50%}/*33.33333333%}*/
+ .c13{			top:33.333333333%}/*top:40%}50%}/*33.33333333%}*/
+
+ .cH0{			top:50%}
+
+ .cInSOS{		top:65vh}
 
  .c--Vpres{		top:calc(10.5vh + var(--pelo) - (var(--kdot)* 0.5))}/*84vh  80vh menos 0.5vh del borde superior el pelo es el grosor de la linea negra del borde*/
-
- .c--Vpres{		top:1px}/*calc(10.5vh + var(--pelo))}/*Se calculo 100vh menos el alto de la imagen - la mitad del borde inferior: calc(10.5vh + var(--pelo) + (var(--kdot)* 0.5)) [- (var(--kdot)* 0.5)) menos la mitad del borde inferior]   84vh  10.5vh menos 0.5vh del borde superior*/
 
 /*
  .c46999{			top:calc(((62.5% - (1.25*(var(--b))))*(1/3)) + var(--b))}
@@ -893,6 +944,8 @@
 */
 
  .cTones{		top:var(--bh)}
+
+ .cTitul{		top:var(--marH)}
 
  #iNoti{		top:var(--pelo)}/*calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
 
@@ -908,6 +961,10 @@
  .c--Menu
 ,#i--Menu{		width:8vw}
 
+ #i--I
+,#iMenu
+,#iSoni{		width:9vw}
+
  .cBota
 ,.cBote
 ,.c--Reloj
@@ -917,21 +974,17 @@
 
  .cBloK{		width:14.6666666%}/*18%}/*23%*/
 
- #i--I
-,#iMenu
-,#iSoni{		width:9vw}
-
- #iHora{		width:18vw}
-
  .cBof{			width:16.6666666%}
 
  #iGol{			width:17vh}
 
- .cChico{		width:60vw}/*calc(100% - 3.4*(var(--cAlt)))}/*min(17vh,17vw)))}*/
+ #iHora{		width:18vw}
 
  .cHori
 ,.cLR
 ,.cVert{		width:33.3333333%}
+
+ .cChico{		width:60vw}/*calc(100% - 3.4*(var(--cAlt)))}/*min(17vh,17vw)))}*/
 
  #iLeft{		width:64vw}
 
@@ -942,8 +995,9 @@
 ,.c--Band
 ,.cBox
 ,.cButton
+,.c--Ent
 ,.cGrey
-,.cEnt
+,.cInSOS
 ,.cLen
 ,.cNeg
 ,.cSom
@@ -954,7 +1008,8 @@
 ,.inner
 ,#iB--rail
 ,#iCelu
-,#i--NEG{		width:100%}
+,#i--NEG
+,table {		width:100%}
 
  .cBOT
 ,.c--TOB{		width:calc(33.3333333% - var(--b))}
@@ -972,6 +1027,8 @@
  .c--Ame{		width:calc(var(--chico) * 0.8)}
 
  .cPic2{		width:calc(var(--cWH) * 50vw)}
+
+ #iTaco{		width:max(100vw,100vh)}
 
  .cCua{			width:min(17vh,17vw)}
 
@@ -1044,6 +1101,11 @@
 					-webkit-transform:scaleX(	-1); /* Chrome, Safari, Opera */
 					transform:scaleX(			-1)/* CSS3 */
 					}
+
+ .cInfo
+,.cInSOS
+,.cScroll
+,.cTpres{		-ms-overflow-style: none}/* IE y Edge */
 
  .c--Ask
 ,.cAsK

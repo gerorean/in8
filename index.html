@@ -859,9 +859,9 @@
 		</div>
 
 
-		<!--CAPA 2-->
+		<!--CAPA 2 INTERFAZ CON BOTONES GRANDES-->
 		<div id='iFonde' class='cBox cTop'><!--FONDE para mostrar la capa con la interfaz con botones grandes y fijos del usuario-->
-			<div id='iMarco'><!--MARCO para activar barreras de bloqueo-->
+			<div id='iMarco'><!--MARCO para activar las 4 barreras invisibles de bloqueo-->
 				<div id='iPos1' class='cVert' onclick='f0074()'><!--bloqueo vertical izquierdo-->
 				</div>
 				<div id='iPos2' class='cVert' onclick='f0074()'><!--bloqueo vertical derecho-->
@@ -884,9 +884,146 @@
 			<!--div id='iDice' class='cX cTalk cBott'>
 				<i class='fas fa-comment-dots cInvert cTalk'></i>
 			</div-->
-			<div class='cTones'><!--para ajustar el espacio de los 6 botones grandes-->
+
+			
+			<div id='intM' class='cInSOS'>
+				<!--img src='files/imorse.png' class=''-->
+				<div id='iTaco' class='cX9'>
+					<h1>Morse Code, letters or functions on <i class='fa fa-minus'></i><i class='fa fa-minus c45RoT cDob'></i><i class='fas fa-circle'></i> buttons</h1>
+					<!--h1>Letters, Functions and Morse Code</h1-->
+					<table>
+						<thead>
+							<tr>
+								<th>Morse Code</th>
+								<th><i class='fa fa-minus'></i> Letter <i class='fa fa-minus c45RoT cDob'></i>Function 1 <i class='fas fa-circle'></i> Function 2</th>
+								<!--th>Phonetic</th-->
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>.-</td><td><i class='fa fa-minus'></i> A (Alpha)</td></tr>
+							<tr><td>-...</td><td><i class='fa fa-minus'></i> B (Bravo)</td></tr>
+							<tr><td>-.-.</td><td><i class='fa fa-minus'></i> C (Charlie)</td></tr>
+							<tr><td>-..</td><td><i class='fa fa-minus'></i> D (Delta)</td></tr>
+							<tr><td>.</td><td><i class='fa fa-minus'></i> E (Echo) <i class='fa fa-minus c45RoT cDob'></i>Change the input interface <i class='fas fa-circle'></i> Clic </td></tr>
+							<tr><td>..-.</td><td><i class='fa fa-minus'></i> F (Foxtrot)</td></tr>
+							<tr><td>--.</td><td><i class='fa fa-minus'></i> G (Golf)</td></tr>
+							<tr><td>....</td><td><i class='fa fa-minus'></i> H (Hotel)</td></tr>
+							<tr><td>..</td><td><i class='fa fa-minus'></i> I (India)</td></tr>
+							<tr><td>.---</td><td><i class='fa fa-minus'></i> J (Juliet)</td></tr>
+							<tr><td>-.-</td><td><i class='fa fa-minus'></i> K (Kilo)</td></tr>
+							<tr><td>.-..</td><td><i class='fa fa-minus'></i> L (Lima)</td></tr>
+							<tr><td>--</td><td><i class='fa fa-minus'></i> M (Mike) <i class='fa fa-minus c45RoT cDob'></i>Disable the input interface </td></tr>
+							<tr><td>-.</td><td><i class='fa fa-minus'></i> N (November)</td></tr>
+							<tr><td>---</td><td><i class='fa fa-minus'></i> O (Oscar)</td></tr>
+							<tr><td>.--.</td><td><i class='fa fa-minus'></i> P (Papa)</td></tr>
+							<tr><td>--.-</td><td><i class='fa fa-minus'></i> Q (Quebec)</td></tr>
+							<tr><td>.-.</td><td><i class='fa fa-minus'></i> R (Romeo)</td></tr>
+							<tr><td>...</td><td><i class='fa fa-minus'></i> S (Sierra)</td></tr>
+							<tr><td>-</td><td><i class='fa fa-minus'></i> T (Tango) <i class='fa fa-minus c45RoT cDob'></i>[Space] (in Morse Code)<i class='fas fa-circle'></i> Reverse a click </td></tr>
+							<tr><td>..-</td><td><i class='fa fa-minus'></i> U (Uniform)</td></tr>
+							<tr><td>...-</td><td><i class='fa fa-minus'></i> V (Victor)</td></tr>
+							<tr><td>.--</td><td><i class='fa fa-minus'></i> W (Whiskey)</td></tr>
+							<tr><td>-..-</td><td><i class='fa fa-minus'></i> X (X-ray)</td></tr>
+							<tr><td>-.--</td><td><i class='fa fa-minus'></i> Y (Yankee)</td></tr>
+							<tr><td>--..</td><td><i class='fa fa-minus'></i> Z (Zulu)</td></tr>
+							<tr><td>..--</td><td><i class='fa fa-minus'></i> [Space]</td></tr>
+							<tr><td>.----</td><td><i class='fa fa-minus'></i> 1</td></tr>
+							<tr><td>..---</td><td><i class='fa fa-minus'></i> 2</td></tr>
+							<tr><td>...--</td><td><i class='fa fa-minus'></i> 3</td></tr>
+							<tr><td>....-</td><td><i class='fa fa-minus'></i> 4</td></tr>
+							<tr><td>.....</td><td><i class='fa fa-minus'></i> 5</td></tr>
+							<tr><td>-....</td><td><i class='fa fa-minus'></i> 6</td></tr>
+							<tr><td>--...</td><td><i class='fa fa-minus'></i> 7</td></tr>
+							<tr><td>---..</td><td><i class='fa fa-minus'></i> 8</td></tr>
+							<tr><td>----.</td><td><i class='fa fa-minus'></i> 9</td></tr>
+							<tr><td>-----</td><td><i class='fa fa-minus'></i> 0</td></tr>
+							<tr><td>--.--</td><td><i class='fa fa-minus'></i> Ñ</td></tr>
+							<tr><td>.-.-.-</td><td><i class='fa fa-minus'></i> .</td></tr>
+							<tr><td>.--.-.</td><td><i class='fa fa-minus'></i> @</td></tr>
+							<tr><td>..--..</td><td><i class='fa fa-minus'></i> ?</td></tr>
+							<tr><td>-..-.</td><td><i class='fa fa-minus'></i> /</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div id='iKeyB' class='cX'>
+					<div class='cKRow'>
+						<div class='keY'>1</div>
+						<div class='keY'>2</div>
+						<div class='keY'>3</div>
+						<div class='keY'>4</div>
+						<div class='keY'>5</div>
+						<div class='keY'>6</div>
+						<div class='keY'>7</div>
+						<div class='keY'>8</div>
+						<div class='keY'>9</div>
+						<div class='keY'>0</div>
+					</div>
+					<div class='cKRow'>
+						<div class='keY'>q</div>
+						<div class='keY'>w</div>
+						<div class='keY'>e</div>
+						<div class='keY'>r</div>
+						<div class='keY'>t</div>
+						<div class='keY'>y</div>
+						<div class='keY'>u</div>
+						<div class='keY'>i</div>
+						<div class='keY'>o</div>
+						<div class='keY'>p</div>
+					</div>
+					<div class='cKRow'>
+						<div class='keY'>a</div>
+						<div class='keY'>s</div>
+						<div class='keY'>d</div>
+						<div class='keY'>f</div>
+						<div class='keY'>g</div>
+						<div class='keY'>h</div>
+						<div class='keY'>j</div>
+						<div class='keY'>k</div>
+						<div class='keY'>l</div>
+						<div class='keY'>ñ</div>
+					</div>
+					<div class='cKRow'>
+						<div class='keY special' id='shift'>Shift</div>
+						<div class='keY'>z</div>
+						<div class='keY'>x</div>
+						<div class='keY'>c</div>
+						<div class='keY'>v</div>
+						<div class='keY'>b</div>
+						<div class='keY'>n</div>
+						<div class='keY'>m</div>
+						<div class='keY'>,</div>
+						<div class='keY'>?</div>
+					</div>
+					<div class='cKRow'>
+						<div class='keY'>!</div>
+						<div class='keY'>/</div>
+						<div class='keY'>-</div>
+						<div class='keY' id='tilde'>´</div>
+						<div class='keY special doble' id='space'></div>
+						<div class='keY'>.</div>
+						<div class='keY'>:</div>
+						<div class='keY'>@</div>
+						<div class='keY special' id='del'>Del</div>
+					</div>
+				</div>
+
+				<!--div id='iKeyS' class='cX9 cG'-->
+				<img id='iKeyS' src="files/signchat.png" alt='teclado en señas' class='cX'>
+				<!--/div-->
+
+			</div>
+
+			<!--div id='mBoTS' class='cBotSOS cX'>
+				<div id='mBotS' class='fas fa-square cTran c45Rot'></div>
+			</div-->
+
+			<!--div id='mBoTR' class='cBotRED'>
+				<div id='mBotR' class='fa fa-minus cGran'></div>
+			</div-->
+			<div class='cTones'><!--para ajustar el espacio de los 8 botones grandes-->
 				<div id='iNegro' class='cMark cDedo cFJ cFlex' onclick='f0024(1)'>
-					<i id='iInfo' class='fas fa-info c25Rot'></i><!--iNEGRO para mostrar la muesca de info-->
+					<!--i id='iInfo' class='fas fa-info c25Rot'></i--><!--iNEGRO para mostrar la muesca de info-->
 				</div>
 				<div id='numbers' class='cX'><!--NUMBERS para mostrar los números de las teclas físicas-->
 					<div class='cMark cTec cDer cFlex'>9
@@ -900,6 +1037,10 @@
 					<div class='c13 cMark cTec cDer cFlex'>3
 					</div>
 					<div class='c13 cMark cTec cFlex'>1
+					</div>
+					<div class='cH0 cMark cTec cFleB'>5
+					</div>
+					<div class='cH0 cMark cTec cDer cFleB'>0
 					</div>
 				</div>
 				<div id='yBot9' class='cTop cBOT' onclick='f0024(1)'>
@@ -915,11 +1056,21 @@
 					<div class='cBote cFlex'>
 						<i id='yBB3' class='fas fa-circle cTran'></i>
 						<i class='fas fa-caret-right cTran cX'></i>
-						<i class='fas fa-check-circle cX'></i>
-						<i class='fas fa-paper-plane cX'></i>
-						<i class='fas fa-check cX'></i>
 						<i class='fas fa-hand-pointer c10RoT cX'></i>
-						<i class='far fa-circle cX'></i>
+					</div>
+				</div>
+
+				<!--div boton 5 morse 0 id='yBot5' class='cH0 cBOT cX9' onclick='f0145()'-->
+				<div id='boT0' class='cH0 cBOT cX9'>
+					<div class='cBota cFlex'>
+						<i id='yBB5' class='fa fa-minus cGran'></i>
+					</div>
+				</div>
+
+				<!--div boton 0 morse 8 id='yBoto' class='cH0 cBOT cX9' onclick='f0148()'-->
+				<div id='yBoto' class='cH0 cBOT cX9'>
+					<div class='cBote cFlex'>
+						<i id='yBBo' class='fa fa-minus cGran c45RoT'></i>
 					</div>
 				</div>
 
@@ -938,7 +1089,8 @@
 						</div>
 					</div>
 					
-					<div id='yBot6' class='c46 cBOT cX9' onclick='f0095(1)'>
+					<div id='yBot6' class='c46 cBOT cX9'>
+					<!--div id='yBot6' class='c46 cBOT cX9' onclick='f0095(1)'-->
 						<div class='cBote cFlex'>
 							<i class='fas fa-eraser cX'></i>
 							<i id='yBB6' class='fas fa-caret-down cGran'></i>
@@ -958,23 +1110,23 @@
 					</div>
 				</div-->
 
-				<div id='yBot00' class='cBott cEnt cX'>
+				<!--div id='yBot00' class='cBott cEnt cX'>
 					<div id='yBB00' class=''>
 						<div id='iEnt' class='c X'>Arriba</div>
 					</div>
-				</div>
-				<div id='yBot0r' class='cBott cBOT cX' onclick='f0095(1)'>
+				</div-->
+				<!--div id='yBot0r' class='cBott cBOT cX cR' onclick='f0095(1)'>
 					<div id='yBBO' class='cX cBote cFlex cGran'>·
 						<i class='cX fas fa-microphone-alt-slash cNube'></i>
-						<i id='' class='fas fa-microphone-alt cX cNube'></i>
+						<i class='fas fa-microphone-alt cX cNube'></i>
 					</div>
 				</div>
-				<div id='yBot0l' class='cBott cBOT cX' onclick='f0094(1)'>
+				<div id='yBot0l' class='cBott cBOT cX cB' onclick='f0094(1)'>
 					<div id='yBB0' class='cX cBota cFlex cGran'>·
-						<i id='' class='cX fas fa-microphone-alt-slash cNube'></i>
-						<i id='' class='fas fa-microphone-alt cX cNube'></i>
+						<i class='cX fas fa-microphone-alt-slash cNube'></i>
+						<i class='fas fa-microphone-alt cX cNube'></i>
 					</div>
-				</div>
+				</div-->
 
 
 			</div>
@@ -1076,7 +1228,7 @@
 				<i class='far fa-window-restore cFanta cX'></i>
 			</div>
 			<div id='iCLIC' class='cBota cFlex cBox cX'><!--Area "10%" icono central "Botón" Máximizar: Maxim para maximizar la pantalla desde el navegador-->
-				<i class='fas fa-sort c45RoT cFanta'></i><!-- fas fa-expand -->
+				<i class='fas fa-info c25Rot cFanta'></i><!-- fas fa-expand -->
 			</div>
 			<div class='cBack cBott cFleB'><!--Contiene los mini-indicadores inferiores de colores con fondo negro-->
 				<div class='cBloK cFleB'>
