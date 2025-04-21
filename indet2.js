@@ -77,8 +77,7 @@ function aLL(id)//Incrementar en uno el contador y si es un botón ver si Maximi
 					}
 					else
 					{	console.log('anuncio y marca de agua: maximizar la ventana (del navegador), esta acción hace que conmute el estado booleano del navegador a false y permite que se maximice desde js');
-						iMaxim.classList.remove('cX');//muestre boton max
-						iCLIC.classList.add('cX');//oculte botón MAXIMIZAR
+						iCLIC.classList.add('cX');//oculte botón i de MAXIMIZAR
 						
 						//Aqui debe actualizar la tapa info porque la ventana no se pudo maximizar
 
@@ -166,8 +165,7 @@ function hLL(id)//Incrementar en uno el contador y si es un botón ver si Maximi
 					}
 					else
 					{	console.log('anuncio y marca de agua: maximizar la ventana (del navegador), esta acción hace que conmute el estado booleano del navegador a false y permite que se maximice desde js');
-						iMaxim.classList.remove('cX');//muestre boton max
-						iCLIC.classList.add('cX');//oculte botón MAXIMIZAR
+						iCLIC.classList.add('cX');//oculte botón i de MAXIMIZAR
 						
 						//Aqui debe actualizar la tapa info porque la ventana no se pudo maximizar
 

@@ -694,8 +694,6 @@
 
  .cAsk{			margin-bottom:calc(var(--chico) * -0.3)}
 
- .cInfi{		margin-left:0.5vw}
-
  .cTexM{		margin-left:5vw}
 
  .cCR{			margin-left:calc(var(--chico) * -0.2)}
@@ -786,8 +784,6 @@
 
  .cTela{		padding:calc(var(--palo)/2) var(--palo)}
 
- .cInfi{		padding-left:0.5vw}
-
  #boT0
  ,.cDedo
  ,.cGrey
@@ -819,7 +815,6 @@
 ,#iLuz
 ,#i--Menu
 ,#iYell
-,#iMaxim
 ,#iCAPA
 ,img{			pointer-events:none}
 
@@ -1182,7 +1177,7 @@
  .c--SiV
 ,.c--Trin{		-webkit-text-stroke:1px black}/*(--cblwh1)}*/
 
- .cFanta
+ .c--Fanta
 ,.c--Nube{		-webkit-text-stroke:1px var(--cblwh2)}
 
  .cTec{			-webkit-text-stroke:1.5px var(--cblwh1)}

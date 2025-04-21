@@ -2030,7 +2030,6 @@ function f0018()//ESPERAR un segundo, el tamaño de la pantalla cambio, si no ha
 							{	hh75();//ACTUALIZAR pasado de mAX
 								if(g00VARS[20][2])//Si alerta 1 esta on de pantalla mini
 								{	g00VARS[20][2] = 0;//Desactivar la bandera de pantalla mini
-									iMaxim.classList.add('cX');
 									iCLIC.classList.add('cX');
 									bMin = 0;//Bandera off
 								}
@@ -5161,8 +5160,7 @@ function f0099()//ACTIVAR icono central de Pantalla Minimizada
 		{	lOG(99);
 			g00VARS[20][2] = 1;//notificación 1 activada de ventana minimizada!
 	 		bMin = 1;//Bandera on
-	 		iMaxim.classList.add('cX');//oculte boton max
-	 		iCLIC.classList.remove('cX');//muestre boton clic
+	 		iCLIC.classList.remove('cX');//muestre boton i de maximizar ventana
 		}
 
 function f0100(now)//TERMINAR una tarea porque se soltó una tecla del teclado//AL SUBIR UNA TECLA..
