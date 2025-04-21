@@ -206,6 +206,8 @@
 
  table{			border-collapse: collapse}
 
+ #iFaro{		border-radius:0 0 0 20%}
+
  .zProsa{		border-radius:0 0 var(--rmin) var(--rmin)}
 
  .cGre{			border-radius:0 0 var(--kdot) var(--kdot)}
@@ -215,8 +217,6 @@
  ,#yBot3
  ,#yBot9
  ,#yBoto{		border-radius:0 7.5vh 7.5vh 0}/*11.25vh 0 0 11.25vh}*/
-
- #iFaro{		border-radius:0 20% 0 0}
 
  #boT0
  ,#y--Bot0l
@@ -254,7 +254,8 @@
 ,.cChico
 ,.cPic2
 ,.cPunto
-,.c--Reloj{		bottom:0}
+,.c--Reloj
+,#iGol{			bottom:0}
 
 
  #i--Dice
@@ -264,9 +265,6 @@
 
  .c--Menu
 ,#iBrail{		bottom:calc(var(--b) + 0px)}
-
- #iCodQ
-,#iFaro{		bottom:calc(var(--kdot) + 0.5vh)}
 
   #iNot2{		bottom:var(--pelo)}/*calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
 
@@ -457,7 +455,7 @@
  .cMarqu{		font-size:min(6.5vh,6.5vw)}/*min(6.5vh,6.5vw)}/*min(8vh,8vw) o 32px*/
 
  .cNoV
-,.cSiV{			font-size:min(17vh,17vw)}
+,.cSiV{			font-size:min(13vh,13vw)}
 
  .cFanta{		font-size:min(50vh,50vw)}/*calc(var(--chico)*0.7)*/
 
@@ -576,7 +574,7 @@
  .c--BloK
 ,.cGre{			height:calc(var(--kdot) * 1.0)}/*1.33 = 4px - 1 = 3px - 0.67 = 2px aprox*/
 
- .cCua{			height:min(17vh,17vw)}
+ .cCua{			height:min(13vh,13vw)}
 
  .cChico
 ,.cHori
@@ -618,6 +616,7 @@
 ,.cLen
 ,.c--Menu
 ,.cSom
+,#iCodQ
 ,#i--Left
 ,#i--Menu{		left:0}
 
@@ -703,6 +702,8 @@
 
  .cAsk{			margin-left:calc(var(--chico) * -0.35)}
 
+ #iMenu{		margin-left:min(13vw,13vh)}
+
  .big{			margin-right:1vh}
 
  .cPush{		margin-right:calc(var(--chico) * -0.2)}
@@ -711,11 +712,11 @@
 
  .cMax{			margin-right:calc(var(--chico) *  0.05)}/*-0.35)}*/
 
- .cCua{			max-height:27vh}
+ #iHora{		margin-right:min(13vw,13vh)}
 
  .cPic2{		max-height:100%}/*calc(var(--chico)*0.85)}   85vh}*/
 
- .cCua
+ .c--Cua
 ,#iGol{			max-width:27vw}
 
  .c1x0{			max-width:200vw}
@@ -873,6 +874,7 @@
 
  .cBote
 ,.cDer
+,#iFaro
 ,#i--Hora
 ,#iNegro
 ,#iPos2{		right:0}
@@ -961,6 +963,8 @@
 ,.cVert
 ,.cTop
 ,.cZIn
+,#iCodQ
+,#iFaro
 ,#iRUTA
 ,#iTAPA{		top:0}
 
@@ -1004,14 +1008,14 @@
  .c--Menu
 ,#i--Menu{		width:8vw}
 
- #i--I
-,#iMenu
-,#iSoni{		width:9vw}
-
  .cBota
 ,.cBote
 ,.c--Reloj
 ,#i--Hora{		width:10vw}
+
+#i--I
+,#iMenu
+,#iSoni{		width:11vw}
 
  .cGre{			width:12.66%}/*calc(16.6666666% - 2px)}/*16.66 - 4 18%}/*23%*/
 
@@ -1021,7 +1025,7 @@
 
  #iGol{			width:17vh}
 
- #iHora{		width:18vw}
+ #iHora{		width:22vw}
 
  .cHori
 ,.cLR
@@ -1076,7 +1080,7 @@
 
  #iTaco{		width:max(100vw,100vh)}
 
- .cCua{			width:min(17vh,17vw)}
+ .cCua{			width:min(13vh,13vw)}
 
  .cTec
 ,#iNegro{		width:var(--b)}
