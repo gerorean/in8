@@ -1187,7 +1187,7 @@
 
  .cFran{		-webkit-text-stroke:2px lightgray}
 
- .cOff{			-webkit-text-stroke:1px grey!important}
+ .cOff{			-webkit-text-stroke:1px transparent!important}
 
  .cAme{			-webkit-text-stroke:calc(var(--chico)*0.01) black}
 

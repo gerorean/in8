@@ -1,6 +1,6 @@
-<!DOCTYPE html><!--text--><!--OBJETIVO de ineoto8: usar como rama main para recibir todas las mejoras hechas al código-->
+<!DOCTYPE html>
 <!--html lang='es-US'><!- -cuadrar esta línea global con el lang local del pais desde donde se este informando, si es para usar con lector de pantalla debe usarse, pero no con screenReader-->
-<html>
+<html><!--text--><!--OBJETIVO de ineoto8: usar como rama main para recibir todas las mejoras hechas al código-->
 
 <head>
 	<title id='iTitle'></title>
@@ -885,8 +885,23 @@
 			<div class='cTexU cX cB'>cTexU
 			</div>
 
+
+
+
+
+
+
+
+
+
+
 			<div id='iIntM0' class='cTexM cX'>
 			</div>
+		
+
+
+
+
 
 			<div id='intM' class='cInSOS cX'>
 				<!--img src='files/imorse.png' class=''-->
@@ -1023,6 +1038,7 @@
 			<!--div id='mBoTR' class='cBotRED'>
 				<div id='mBotR' class='fa fa-minus cGran'></div>
 			</div-->
+
 			<div class='cTones'><!--para ajustar el espacio de los 8 botones grandes-->
 				<div id='iNegro' class='cMark cDedo cFJ cFlex' onclick='f0024(1)'>
 					<!--i id='iInfo' class='fas fa-info c25Rot'></i--><!--iNEGRO para mostrar la muesca de info-->
@@ -1045,6 +1061,7 @@
 					<div class='cH0 cMark cTec cDer cFleB'>0
 					</div>
 				</div>
+				<!--boton 9 | ayuda-->
 				<div id='yBot9' class='cTop cBOT' onclick='f0024(1)'>
 					<div class='cBote cFlex c X'>
 						<i id='yBB9' class='fa fa-minus cGran c90Rot'></i>
@@ -1053,7 +1070,7 @@
 						<i class='fas fa-info c25Rot cTran'></i>
 					</div-->
 				</div>
-				<!--div id='yBot3' class='c46 cBOT' onclick='f0096(1,1)'-->
+				<!--boton 3 O clic o enter onclick='f0096(1,1)'-->
 				<div id='yBot3' class='c13 cBOT'>
 					<div class='cBote cFlex'>
 						<i id='yBB3' class='fas fa-circle cTran'></i>
@@ -1062,20 +1079,20 @@
 					</div>
 				</div>
 
-				<!--div boton 5 morse 0 id='yBot5' class='cH0 cBOT cX9' onclick='f0145()'-->
+				<!--boton 5 - entrada morse onclick='f0145()'-->
 				<div id='boT0' class='cH0 cBOT cX9'>
 					<div class='cBota cFlex'>
 						<i id='yBB5' class='fa fa-minus cGran'></i>
 					</div>
 				</div>
 
-				<!--div boton 0 morse 8 id='yBoto' class='cH0 cBOT cX9' onclick='f0148()'-->
+				<!--boton 0 / cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ onclick='f0148()'-->
 				<div id='yBoto' class='cH0 cBOT cX9'>
 					<div class='cBote cFlex'>
 						<i id='yBBo' class='fa fa-minus cGran c45RoT'></i>
 					</div>
 				</div>
-
+				<!--boton 7 [] menu-->
 				<div id='yBot7' class='cTop cBOT cX9 cStop' onclick='f0015(1)'>
 					<div class='cBota cFlex'>
 						<i id='yBB7' class='fas fa-square cTran cOff'></i>
@@ -1084,19 +1101,21 @@
 
 				
 				<div id='yBTNS' class='cX9'>
-
+					<!--boton 1 x salir o cancelar-->
 					<div id='yBot1' class='c13 cBOT cX9 cStop' onclick='f0047(1)'>
 						<div class='cBota cFlex'>
 							<i id='yBB1' class='fas fa-times cGran cOff'></i>
 						</div>
 					</div>
-					
+					<!--boton 6 V avanzar adelante un item (+1)-->
 					<div id='yBot6' class='c46 cBOT cX9' onclick='f0095(1)'>
+						
 						<div class='cBote cFlex'>
 							<i class='fas fa-eraser cX'></i>
 							<i id='yBB6' class='fas fa-caret-down cGran'></i>
 						</div>
 					</div>
+					<!--boton 4 /\ retroceder atrás un item (-1)-->
 					<div id='yBot4' class='c46 cBOT cX9' onclick='f0094(1)'>
 						<div class='cBota cFlex'>
 							<i class='fas fa-backspace cX'></i>
@@ -1174,7 +1193,6 @@
 				</div>
 			</div>
 
-
 			<div id='iCodQ' class='c X cDer cCua' aria-hidden='true'>
 				<img src='files/qrcode.png' class='cBox'>
 			</div-->
@@ -1202,6 +1220,7 @@
 			<div class='cNeg cFlex'><!--Recuadro superior negro que va a contener los iconos en miniatura, el titulo "i information" y la hora-->
 			</div>
 			<div class='cLen cFlex' aria-hidden='true'><!--cabezote de la aplicación-->
+				<!--Plantilla transparente que contiene los iconos en miniatura, el titulo "i info" y la hora-->
 				<!--span id='iI' class='cInfo cX'>
 					<i class="fas fa-info c25Rot"></i>
 				</span-->
@@ -1210,6 +1229,11 @@
 				</span>
 				<span id='iSoni' class='cInfo'><!--icono del audio activado-->
 					<i id='iDice' class='fas fa-comment-dots cNube'></i>
+
+
+
+
+
 				</span>
 				<span id='iLeft' class='cInfo cFlex'><!--titulo principal-->
 					<i class="fas fa-info c25Rot big"></i>info
@@ -1220,6 +1244,9 @@
 			</div>
 			<div class='cGrey' onclick='f0074()'>
 			</div>
+
+
+
 			<div id='iCLIC' class='cBota cFlex cBox cX'><!--marca de agua de i que hace de "Botón" Máximizar: Maxim para maximizar la pantalla desde el navegador-->
 				<i class='fas fa-info c25Rot cFanta'></i><!-- fas fa-expand -->
 			</div>
@@ -1324,10 +1351,22 @@
 	<audio id='myClic' src='files/clic.wav'></audio>
 	<!--audio id='audPun' src='files/punto.mp3'></audio-->
 	<audio id='audRay' src='files/raya.mp3'></audio>
+
+
+	<!-- Incluye la librería de Socket.io desde el servidor - ->
+	<script src="socket.io/socket.io.js"></script>
+	<script src="script.js"></script>
+	<!--  -->
+
+
+	<!-- Se cargan desde script.js.. -->
 	<script type='text/javascript' src='indet1.js'></script>
 	<script type='text/javascript' src='indet2.js'></script>
 	<script type='text/javascript' src='indef.js'></script>
 	<script type='text/javascript' src='inded.js'></script>
+<!--  -->
+
+
 </body>
 
 </html>

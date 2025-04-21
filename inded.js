@@ -3542,20 +3542,60 @@ function		//SIMPLIFICAR ESTO Reinicio de variables
 }//permite que SE ACTIVEN LOS CICLOS
 
 
+function		//ACTIVACION O ACTUALIZACION DEL CICLO      --l3866
+	ciclo0(){		//console.log('_____@- ciclo0()');
+				if(!pare[0])
+				{	if(cycle[0]==13)//'STOP' PARA DAR PASO AL RESULTADO
+					{	cycle[0] = 12;console.log('cycle[0]='+cycle[0]);
+					}
+					hora();
+					nn[0] = m;console.log('nn[0]='+ nn[0]);
+					if((libre[0])&&(nn[0] > max[0]))
+					{	morse(0);
+					}
+					if((!libre[0])&&(nn[0] > min[0])&&(!lin[0]))
+					{	lin[0] = true;console.log('lin[0]=' + lin[0]);//SE ACTIVO LA LINEA/RAYA
+						oscu();
+						audiRay();//ACTIVA EL SONIDO RAYA
+						regY[0][cycle[0]] = 2;
+					}
+					setTimeout(ciclo0, vT);
+				}}//ciclo0()
+
+function		//ACTIVACION O ACTUALIZACION DEL CICLO
+ciclo2(){		//console.log('_____@- ciclo2()');
+				if(!pare[2])
+				{	if(cycle[2]==11)//'STOP' PARA DAR PASO AL RESULTADO
+					{	cycle[2] = 10;console.log('cycle[2]='+cycle[2]);
+					}
+					hora();
+					nn[2] = m;console.log('nn[2]='+ nn[2]);
+					if((libre[2])&&(nn[2] > max[2]))
+					{	morse(2);
+					}
+					if((!libre[2])&&(nn[2] > min[2])&&(!lin[2]))
+					{	lin[2] = true;console.log('lin[2]=' + lin[2]);//SE ACTIVO LA LINEA/RAYA
+						oscu();
+						audiRay();//ACTIVA EL SONIDO RAYA
+						regY[2][cycle[2]] = 2;
+					}
+					setTimeout(ciclo2, vT);
+				}}//ciclo2()
+
+
 function		//ACTIVACION O ACTUALIZACION DEL CICLO
 	ciclo3() {		//console.log('_____@- ciclo4()');
 	if (!pare[3]) {
 		if (cycle[3] == 11)//'STOP' PARA DAR PASO AL RESULTADO
-		{
-			cycle[3] = 10; console.log('cycle[3]=' + cycle[3]);
+		{	cycle[3] = 10; console.log('cycle[3]=' + cycle[3]);
 		}
 		hora();
 		nn[3] = m; console.log('nn[3]=' + nn[3]);
-		if ((libre[3]) && (nn[3] > max[3])) {
-			morse(3);
+		if ((libre[3]) && (nn[3] > max[3]))
+		{	morse(3);
 		}
-		if ((!libre[3]) && (nn[3] > min[3]) && (!lin[3])) {
-			lin[3] = true; console.log('lin[3]=' + lin[3]);//SE ACTIVO LA LINEA/RAYA
+		if ((!libre[3]) && (nn[3] > min[3]) && (!lin[3]))
+		{	lin[3] = true; console.log('lin[3]=' + lin[3]);//SE ACTIVO LA LINEA/RAYA
 			oscu();
 			audiRay();//ACTIVA EL SONIDO RAYA
 			regY[3][cycle[3]] = 2;
@@ -3564,7 +3604,7 @@ function		//ACTIVACION O ACTUALIZACION DEL CICLO
 	}
 }//ciclo3()
 
-/*
+
 function		//ACTIVACION O ACTUALIZACION DEL CICLO
 ciclo4(){		//console.log('_____@- ciclo4()');
 				if(!pare[4])
@@ -3584,32 +3624,84 @@ ciclo4(){		//console.log('_____@- ciclo4()');
 					}
 					setTimeout(ciclo4, vT);
 				}}//ciclo4()
-*/
 function		//ACTIVACION O ACTUALIZACION DEL CICLO
-	ciclo6() {
-	console.log('_____@- ciclo6()');
-	if (!pare[6])//Si hay registro de actividad (PARE:Off)
-	{
-		if (cycle[6] == 11)//Si es el ciclo 11..	¿'STOP' PARA DAR PASO AL RESULTADO?
-		{
-			cycle[6] = 10; console.log('cycle[6]=' + cycle[6]);//Hace el ciclo igual a 10..
-		}
-		hora();
-		nn[6] = m; console.log('nn[6]=' + nn[6]);//HORA/DIA ACTUAL EN MILISEGUnnnnDOS
-		if ((libre[6]) && (nn[6] > max[6]))//Si la tecla se soltó, esta libre y el tiempo es mayor a tiempo/ESPACIO maxIMO EN MILISEGUNDOS PERMITIDO
-		{
-			morse(6);//Analiza los registros para ver que tipo de señal se ingreso y establece su significado
-		}
-		if ((!libre[6]) && (nn[6] > min[6]) && (!lin[6]))//Si la tecla no se ha soltado y el tiempo es mayor que la RAYA minIMA EN MILISEGUNDOS PERMITIDA
-		{
-			lin[6] = true; console.log('lin[6]=' + lin[6]);//SE ACTIVO LA LINEA/RAYA
-			oscu();
-			audiRay();//ACTIVA EL SONIDO RAYA
-			regY[6][cycle[6]] = 2;//REGISTRO2 RESULTADO DE ESTADO TECLA 2:RAYA 1:PUNTO
-		}
-		setTimeout(ciclo6, vT);//reinicia un ciclo nuevo despues de un tiempo
-	}
-}//ciclo6()
+ciclo6(){		//console.log('_____@- ciclo6()');
+				if(!pare[6])
+				{	if(cycle[6]==11)//'STOP' PARA DAR PASO AL RESULTADO
+					{	cycle[6] = 10;console.log('cycle[6]='+cycle[6]);
+					}
+					hora();
+					nn[6] = m;console.log('nn[6]='+ nn[6]);
+					if((libre[6])&&(nn[6] > max[6]))
+					{	morse(6);
+					}
+					if((!libre[6])&&(nn[6] > min[6])&&(!lin[6]))
+					{	lin[6] = true;console.log('lin[6]=' + lin[6]);//SE ACTIVO LA LINEA/RAYA
+						oscu();
+						audiRay();//ACTIVA EL SONIDO RAYA
+						regY[6][cycle[6]] = 2;
+					}
+					setTimeout(ciclo6, vT);
+				}}//ciclo6()
+function		//ACTIVACION O ACTUALIZACION DEL CICLO
+ciclo7(){		//console.log('_____@- ciclo7()');
+				if(!pare[7])
+				{	if(cycle[7]==11)//'STOP' PARA DAR PASO AL RESULTADO
+					{	cycle[7] = 10;console.log('cycle[7]='+cycle[7]);
+					}
+					hora();
+					nn[7] = m;console.log('nn[7]='+ nn[7]);
+					if((libre[7])&&(nn[7] > max[7]))
+					{	morse(7);
+					}
+					if((!libre[7])&&(nn[7] > min[7])&&(!lin[7]))
+					{	lin[7] = true;console.log('lin[7]=' + lin[7]);//SE ACTIVO LA LINEA/RAYA
+						oscu();
+						audiRay();//ACTIVA EL SONIDO RAYA
+						regY[7][cycle[7]] = 2;
+					}
+					setTimeout(ciclo7, vT);
+				}}//ciclo7()
+
+function		//ACTIVACION O ACTUALIZACION DEL CICLO
+ciclo8(){		//console.log('_____@- ciclo8()');
+				if(!pare[8])
+				{	if(cycle[8]==11)//'STOP' PARA DAR PASO AL RESULTADO
+					{	cycle[8] = 10;console.log('cycle[8]='+cycle[8]);
+					}
+					hora();
+					nn[8] = m;console.log('nn[8]='+ nn[8]);
+					if((libre[8])&&(nn[8] > max[8]))
+					{	morse(8);
+					}
+					if((!libre[8])&&(nn[8] > min[8])&&(!lin[8]))
+					{	lin[8] = true;console.log('lin[8]=' + lin[8]);//SE ACTIVO LA LINEA/RAYA
+						oscu();
+						audiRay();//ACTIVA EL SONIDO RAYA
+						regY[8][cycle[8]] = 2;
+					}
+					setTimeout(ciclo8, vT);
+				}}//ciclo8()//
+
+function		//ACTIVACION O ACTUALIZACION DEL CICLO
+ciclo9(){		//console.log('_____@- ciclo9()');
+				if(!pare[9])
+				{	if(cycle[9]==11)//'STOP' PARA DAR PASO AL RESULTADO
+					{	cycle[9] = 10;console.log('cycle[9]='+cycle[9]);
+					}
+					hora();
+					nn[9] = m;console.log('nn[9]='+ nn[9]);
+					if((libre[9])&&(nn[9] > max[9]))
+					{	morse(9);
+					}
+					if((!libre[9])&&(nn[9] > min[9])&&(!lin[9]))
+					{	lin[9] = true;console.log('lin[9]=' + lin[9]);//SE ACTIVO LA LINEA/RAYA
+						oscu();
+						audiRay();//ACTIVA EL SONIDO RAYA
+						regY[9][cycle[9]] = 2;
+					}
+					setTimeout(ciclo9, vT);
+				}}//ciclo9()
 
 
 function		//CAMBIA DE COLOR DEPENDIENDO DE QUE NUMERO DE CASILLA ES
@@ -3865,6 +3957,30 @@ function		//AL SUBIR UNA TECLA..
 }//RESETEA EVENTOS DE TECLADO DEL DOCUMENTO
 
 
+function		//AL BAJAR EL MOUSE..   --l4382
+	eMb0(){ 	
+				console.log('_____@- eMb0()');
+				if(((any[0]==0)||(any[0]==9))&&(!pv)&&(sigo[0]))
+				{	any[0] = 1;console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+					punto0();
+				}
+				if(!sigo[0])
+				{	sigo[0] = true;console.log('sigo[0]=' + sigo[0]);//'habilita' la siguiente entrada de datos con mouse luego de pausarse por ocurrir una subida del touch (ƒ(){})
+				}
+				w7()
+}
+
+function		//AL BAJAR EL MOUSE..
+	eMb2(){ 	console.log('_____@- eMb2()');
+				if(((any[2]==0)||(any[2]==9))&&(!pv)&&(sigo[2]))
+				{	any[2] = 1;console.log('any[2]=' + any[2]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+					punto2();
+				}
+				if(!sigo[2])
+				{	sigo[2] = true;console.log('sigo[2]=' + sigo[2]);//'habilita' la siguiente entrada del mouse luego de pausarse por ocurrir una subida del touch (eTb2(){})
+				}
+				w7()}
+
 function		//AL BAJAR EL MOUSE..
 	eMb3() {
 	console.log('_____@- eMb3()');
@@ -3878,10 +3994,9 @@ function		//AL BAJAR EL MOUSE..
 	w7()
 }
 
-
 /*
 function		//AL BAJAR EL MOUSE..
-eMb4(){ 		console.log('_____@- eMb4()');
+	eMb4(){ 	console.log('_____@- eMb4()');
 				if(((any[4]==0)||(any[4]==9))&&(!pv)&&(sigo[4]))
 				{	any[4] = 1;console.log('any[4]=' + any[4]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 					punto4();
@@ -3891,6 +4006,7 @@ eMb4(){ 		console.log('_____@- eMb4()');
 				}
 				w7()}
 */
+
 function		//AL BAJAR EL MOUSE..
 	eMb6() {
 	console.log('_____@- eMb6()');
@@ -3906,39 +4022,97 @@ function		//AL BAJAR EL MOUSE..
 	w7()//inicia evento 'primer' interacción
 }
 
-function		//AL SUBIR EL MOUSE..
-	eMs3() {
-	console.log('_____@- eMs3()');
-	if (any[3] == 1) {
-		any[3] = 0; console.log('any[3]=' + any[3]);//REACTIVA LA ENTRADA MOUSEDOWN
-		vacio(3);
-	}
-	www9()
+function		//AL BAJAR EL MOUSE..
+	eMb8()	{ 	
+				console.log('_____@- eMb8()');
+				if(((any[8]==0)||(any[8]==9))&&(!pv)&&(sigo[8]))
+				{	any[8] = 1;console.log('any[8]=' + any[8]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+					punto8();
+				}
+				if(!sigo[8])
+				{	sigo[8] = true;console.log('sigo[8]=' + sigo[8]);//'habilita' la siguiente entrada de datos con mouse luego de pausarse por ocurrir una subida del touch (ƒ(){})
+				}
+				w7()
 }
 
+function		//AL BAJAR EL MOUSE..
+	eMb9(){ 	console.log('_____@- eMb9()');
+				if(((any[9]==0)||(any[9]==9))&&(!pv)&&(sigo[9]))
+				{	any[9] = 1;console.log('any[9]=' + any[9]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+					punto9();
+				}
+				if(!sigo[9])
+				{	sigo[9] = true;console.log('sigo[9]=' + sigo[9]);//'habilita' la siguiente entrada de datos con mouse luego de pausarse por ocurrir una subida del touch (ƒ(){})
+				}
+				w7()}
 
+function		//AL SUBIR EL MOUSE..     --l4471
+	eMs0(){ 	console.log('_____@- eMs0()');
+				if(any[0]==1)
+				{	any[0] = 0;console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA MOUSEDOWN
+					vacio(0);
+				}
+				www9()
+}
+
+function		//AL SUBIR EL MOUSE..
+	eMs2(){ 	console.log('_____@- eMs2()');
+				if(any[2]==1)
+				{	any[2] = 0;console.log('any[2]=' + any[2]);//REACTIVA LA ENTRADA MOUSEDOWN
+					vacio(2);
+				}
+				www9()}
+
+function		//AL SUBIR EL MOUSE..
+	eMs3() {	console.log('_____@- eMs3()');
+				if (any[3] == 1) {
+				any[3] = 0; console.log('any[3]=' + any[3]);//REACTIVA LA ENTRADA MOUSEDOWN
+				vacio(3);
+				}
+				www9()
+}
 
 /*
 function		//AL SUBIR EL MOUSE..
-eMs4(){ 		console.log('_____@- eMs4()');
+	eMs4(){ 	console.log('_____@- eMs4()');
 				if(any[4]==1)
 				{	any[4] = 0;console.log('any[4]=' + any[4]);//REACTIVA LA ENTRADA MOUSEDOWN
 					vacio(4);
 				}
 				www9()}
 */
+
 function		//AL SUBIR EL MOUSE..
-	eMs6() {
-	console.log('_____@- eMs6()');
-	if (any[6] == 1)//Si esta bloqueado por ENTRADA DE DATOS TIPO MOUSEDOWN(0) o TODOS(9)
-	{
-		any[6] = 0; console.log('any[6]=' + any[6]);//REACTIVA LA ENTRADA por MOUSEDOWN
-		vacio(6);
-	}
-	www9()//termina evento 'primer' interacción
+	eMs6() {	console.log('_____@- eMs6()');
+				if (any[6] == 1)//Si esta bloqueado por ENTRADA DE DATOS TIPO MOUSEDOWN(0) o TODOS(9)
+				{
+					any[6] = 0; console.log('any[6]=' + any[6]);//REACTIVA LA ENTRADA por MOUSEDOWN
+					vacio(6);
+				}
+				www9()//termina evento 'primer' interacción
 }
 
-function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+function		//AL SUBIR EL MOUSE..
+	eMs8(){ 	console.log('_____@- eMs8()');
+				if(any[8]==1)
+				{	any[8] = 0;console.log('any[8]=' + any[8]);//REACTIVA LA ENTRADA MOUSEDOWN
+					vacio(8);
+				}
+				www9()
+}
+
+function		//AL SUBIR EL MOUSE..
+	eMs9(){ 	console.log('_____@- eMs9()');
+				if(any[9]==1)
+				{	any[9] = 0;console.log('any[9]=' + any[9]);//REACTIVA LA ENTRADA MOUSEDOWN
+					vacio(9);
+				}
+				www9()}
+
+//ooojooo con esta función al parecer es especial porque 
+//las otras funciones eTb3, eTb4, etc la llaman!
+//revizar la parte del pw
+function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..   --l4539
 	eTb0(ev) {
 	console.log('_____@- eTb0()');
 	ev.preventDefault();// Call preventDefault() to prevent any further handling
@@ -3960,6 +4134,23 @@ function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
 	}
 }
 
+function	
+eTb2(ev){	console.log('_____@- eTb2()');
+			ev.preventDefault();// Call preventDefault() to prevent any further handling
+			if (pv) {
+				eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+			}
+			else//!pv
+			{
+				if(((any[2]==4)||(any[2]==9))&&(!pv))
+				{	any[2] = 5;console.log('any[2]=' + any[2]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+					if(sigo[2])
+					{ 	sigo[2] = false;console.log('sigo[2]=' + sigo[2]);//'inhabilita' la siguiente entrada del mouse
+					}
+					punto2();
+				}
+			}
+		}
 
 function
 	eTb3(ev) {
@@ -3999,6 +4190,7 @@ eTb4(ev){		console.log('_____@- eTb4()');
 				}
 			}
 */
+
 function
 	eTb6(ev) {
 	console.log('_____@- eTb6()');
@@ -4018,7 +4210,46 @@ function
 	}
 }
 
-function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+function	
+	eTb8(ev){	console.log('_____@- eTb8()');
+				ev.preventDefault();// Call preventDefault() to prevent any further handling
+				if (pv) {
+					eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+				}
+				else//!pv
+				{
+					if(((any[8]==4)||(any[8]==9))&&(!pv))
+					{	any[8] = 5;console.log('any[8]=' + any[8]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+						if(sigo[8])
+						{	sigo[8] = false;console.log('sigo[8]=' + sigo[8]);//'inhabilita' la siguiente entrada del mouse
+						}
+						punto8();
+					}
+				}
+}
+
+function	
+eTb9(ev){	console.log('_____@- eTb9()');
+			ev.preventDefault();// Call preventDefault() to prevent any further handling
+			if (pv) {
+				eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+			}
+			else//!pv
+			{
+				if(((any[9]==4)||(any[9]==9))&&(!pv))
+				{	any[9] = 5;console.log('any[9]=' + any[9]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+					if(sigo[9])
+					{	sigo[9] = false;console.log('sigo[9]=' + sigo[9]);//'inhabilita' la siguiente entrada del mouse
+					}
+					punto9();
+				}
+			}
+		}
+
+//ooojooo con esta función al parecer es especial porque 
+//las otras funciones eTs3, eTs4, etc la llaman!
+//revizar la parte del pw
+function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..     --l4676
 	eTs0() {
 	console.log('_____@- eTs0()');
 	if ((pv) && (any[0] == 8)) {
@@ -4045,7 +4276,19 @@ function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
 	}
 }
 
-
+function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
+eTs2(){ 	console.log('_____@- eTs2()');
+			if (pv) {
+				eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+			}
+			else//!pv
+			{
+				if(any[2]==5)
+				{	any[2] = 4;console.log('any[2]=' + any[2]);//REACTIVA LA ENTRADA TOUCHSTART
+					vacio(2);
+				}
+			}
+		}
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	eTs3() {
@@ -4062,8 +4305,6 @@ function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	}
 }
 
-
-
 /*
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs4(){ 		console.log('_____@- eTs4()');
@@ -4077,6 +4318,7 @@ eTs4(){ 		console.log('_____@- eTs4()');
 					}
 				}}
 */
+
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	eTs6() {
 	console.log('_____@- eTs6()');
@@ -4092,6 +4334,33 @@ function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	}
 }
 
+function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
+eTs8(){ 		console.log('_____@- eTs8()');
+				if (pv) {
+					eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+				}
+				else//!pv
+				{	if(any[8]==5)
+					{	any[8] = 4;console.log('any[8]=' + any[8]);//REACTIVA LA ENTRADA TOUCHSTART
+						vacio(8);
+					}
+				}
+}
+
+function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
+eTs9(){ 	console.log('_____@- eTs9()');
+			if (pv) {
+				eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+			}
+			else//!pv
+			{
+				if(any[9]==5)
+				{	any[9] = 4;console.log('any[9]=' + any[9]);//REACTIVA LA ENTRADA TOUCHSTART
+					vacio(9);
+				}
+			}
+		}
+
 function		//REGISTRA LA HORA ACTUAL EN MILISEGUNDOS
 	hora() { 		//console.log('_____@- hora()');
 	hd = new Date();
@@ -4104,6 +4373,45 @@ function      //oscurece la capa de los colores
 	oscu() {       	//if(true/*t3x3*/)
 	{ doorOscu.style.backgroundColor = 'rgba(0,0,0,0.3)' }
 }
+
+function      //primer parte general del algoritmo codigo morse        --l4801
+punto0(){     console.log('_____@- punto0()');
+              //puerta.classList.add('active');
+              libre[0] = false;console.log('libre[0]=' + libre[0]);//MOUSE CLICK ESTA ABAJO
+              audiPun();//ACTIVA EL SONIDO DEL PUNTO
+              color(cycle[0]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+              if(cycle[0]==0)
+              { pare[0] = false;console.log('pare[0]=' + pare[0]);
+              }
+              hora();
+              nm[0] = m;console.log('nm[0]='+ nm[0]);
+              min[0] = m + cut;console.log('min[0]='+ min[0]);//EN EL CASO DE 0 O MORSE SON SEÑALES RAPIDAS POR LO QUE NO SE toma tM sino cut para que una parte de las rayas sean puntos y una parte de los sostenidos sean rayas
+              if(cycle[0] > 0)
+              { regX[0][cycle[0]] = nm[0] - mn[0];console.log('regX[0]=' + regX[0]);
+                cycle[0] += 1;console.log('cycle[0]=' + cycle[0]);
+              }
+              regY[0][cycle[0]] = 1;console.log('regY[0]=' + regY[0]);
+              ciclo0()}
+
+function      //primer parte general del algoritmo codigo morse
+punto2(){     console.log('_____@- punto2()');
+              //bo2.classList.add('active');
+              //boT22.classList.add('active');
+              libre[2] = false;console.log('libre[2]=' + libre[2]);//MOUSE CLICK ESTA ABAJO
+              //audiPun();//ACTIVA EL SONIDO DEL PUNTO
+              color(cycle[2]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+              if(cycle[2]==0)
+              { pare[2] = false;console.log('pare[2]=' + pare[2]);
+              }
+              hora();
+              nm[2] = m;console.log('nm[2]='+ nm[2]);
+              min[2] = m + tM;console.log('min[2]='+ min[2]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+              if(cycle[2] > 0)
+              { regX[2][cycle[2]] = nm[2] - mn[2];console.log('regX[2]=' + regX[2]);
+                cycle[2] += 1;console.log('cycle[2]=' + cycle[2]);
+              }
+              regY[2][cycle[2]] = 1;console.log('regY[2]=' + regY[2]);
+              ciclo2()}
 
 function      //primer parte general del algoritmo codigo morse
 	punto3() {
@@ -4151,6 +4459,8 @@ punto4(){     console.log('_____@- punto4()');
 			  regY[4][cycle[4]] = 1;console.log('regY[4]=' + regY[4]);
 			  ciclo4()}
 */
+
+
 function      //primer parte general del algoritmo codigo morse
 	punto6() {
 	console.log('_____@- punto6()');
@@ -4175,6 +4485,47 @@ function      //primer parte general del algoritmo codigo morse
 	regY[6][cycle[6]] = 1; console.log('regY[6]=' + regY[6]);//REGISTRO2 RESULTADO DE ESTADO TECLA, inicialmente es un punto(1) y para una raya(2)
 	ciclo6()
 }
+
+
+function      //primer parte general del algoritmo codigo morse
+punto8(){     console.log('_____@- punto8()');
+              //bo8.classList.add('active');
+              //boT88.classList.add('active');
+              libre[8] = false;console.log('libre[8]=' + libre[8]);//MOUSE CLICK ESTA ABAJO
+              //audiPun();//ACTIVA EL SONIDO DEL PUNTO
+              color(cycle[8]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+              if(cycle[8]==0)
+              { pare[8] = false;console.log('pare[8]=' + pare[8]);
+              }
+              hora();
+              nm[8] = m;console.log('nm[8]='+ nm[8]);
+              min[8] = m + tM;console.log('min[8]='+ min[8]);//EN EL CASO DE 6 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+              if(cycle[8] > 0)
+              { regX[8][cycle[8]] = nm[8] - mn[8];console.log('regX[8]=' + regX[8]);
+                cycle[8] += 1;console.log('cycle[8]=' + cycle[8]);
+              }
+              regY[8][cycle[8]] = 1;console.log('regY[8]=' + regY[8]);         
+              ciclo8()
+}
+
+function      //primer parte general del algoritmo codigo morse
+punto9(){     console.log('_____@- punto9()');
+              //boT99.classList.add('active');
+              libre[9] = false;console.log('libre[9]=' + libre[9]);//MOUSE CLICK ESTA ABAJO
+              //audiPun();//ACTIVA EL SONIDO DEL PUNTO
+              color(cycle[9]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+              if(cycle[9]==0)
+              { pare[9] = false;console.log('pare[9]=' + pare[9]);
+              }
+              hora();
+              nm[9] = m;console.log('nm[9]='+ nm[9]);
+              min[9] = m + tM;console.log('min[9]='+ min[9]);
+              if(cycle[9] > 0)
+              { regX[9][cycle[9]] = nm[9] - mn[9];console.log('regX[9]=' + regX[9]);
+                cycle[9] += 1;console.log('cycle[9]=' + cycle[9]);
+              }
+              regY[9][cycle[9]] = 1;console.log('regY[9]=' + regY[9]);
+              ciclo9()}
 
 function      //sosTENIDA.. muestra en pantalla la letra mas 'sostenida de' mas el tempo en milisegundos del sostenido
 	sos(s, u) {
@@ -5017,6 +5368,14 @@ fBot6.addEventListener('mouseup',eMs6);
 fBot6.addEventListener('touchend',eTs6);
 fBot6.addEventListener('touchstart',eTb6);
 */
+
+//boton 0 morse 8   --l5814
+yBoto.addEventListener('mousedown',eMb8);
+yBoto.addEventListener('mouseleave',eMs8);
+yBoto.addEventListener('mouseup',eMs8);
+yBoto.addEventListener('touchend',eTs8);
+yBoto.addEventListener('touchstart',eTb8);
+
 
 document.addEventListener('keydown', eKb);
 document.addEventListener('keyup', eKs);
