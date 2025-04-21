@@ -142,12 +142,13 @@
 
  .cGrey{		background:rgba(0,0,0,0.1)}
 
- .cSom{			background:rgba(0,0,0,0.2)}
+ .cSom
+,.cTexU{		background:rgba(0,0,0,0.2)}
 
  .cVpres
 ,.cTitul{		background:rgba(0,0,0,0.8)}
 
- .c--Ent{			background:rgba(128,128,128,0.3)}
+ .c--Ent{		background:rgba(128,128,128,0.3)}
 
  .c--CR{		background:rgba(255,0,0,0.5)}
 
@@ -158,10 +159,11 @@
 
  .cIng
 ,.cNeg
-,.yProsaL
-,.zProsa
+,.cTexM
 ,#i--Negro
-,#iTaco {		background:var(--cblwh1)}
+,#iTaco
+,.yProsaL
+,.zProsa{		background:var(--cblwh1)}
 
  .cButton
 ,.cTapa{		background:var(--cblwh2)}
@@ -190,6 +192,9 @@
  .cAma{			background:yellow}
 
   *{			border:0}
+
+ td
+,th{			border: 1px solid var(--cblwh2)}
 
   .c--Stop{		border:3px groove rgba(168,168,168,0.3)}
 
@@ -220,7 +225,9 @@
  ,#yBot7
  ,#y--Bot5{		border-radius:7.5vh 0 0 7.5vh}/*11.25vh 0 0 11.25vh}*/
 
-.c--Ame
+ .cTexM{		border-radius:7.5vh}
+
+ .c--Ame
 ,.c--Ask
 ,.c--CR
 ,#y--Hear{		border-radius:50%}
@@ -267,11 +274,6 @@
 
  .c--Ame{		box-shadow:0 0 0 calc(var(--chico)*0.08) red,0 0 0 calc(var(--chico)*0.1) var(--cblwh1), inset 0 0 0 calc(var(--chico)*0.15) white}/*yellow}/*var(--cBeige)}*/
 
- .cLen{			box-shadow:inset 0 0 1px var(--cBeige)}
-
- .cBu--tton:focus
-,.cBoRd{		box-shadow:inset 0 0 0 var(--palo) var(--cBeige)}/*var(--cBeige)}/*var(--cBeige)}/*cBorde)}/*var(--sky)}*/
-
  .rEsqi{		box-shadow:0 0 0 calc(var(--palo)*0.6) red, inset 0 0 0 calc(var(--palo)*0.25) var(--cblwh2), inset 0 0 0 calc(var(--palo)*2.5) red}
 
  .cSom{			box-shadow:0 0 5px 5px rgba(0,0,0,0.1)}
@@ -279,14 +281,21 @@
  .z70{			box-shadow:0 max(3px,0.7vh) var(--cblwh1)}
 
  .cBOT
- ,#iNegro{		box-shadow:inset 0 0 0 0.5px var(--cbw1), 0 0 0 0.3px var(--cbw2), inset 0 0 0 calc(var(--palo)/2) var(--cYel),inset 1px 1px 1px calc(var(--palo)/2) var(--cYel)}/*var(--cYel) var(--cGreyT)*/
+,.cTexM
+,.cTexU
+,#iNegro{		box-shadow:inset 0 0 0 0.5px var(--cbw1), 0 0 0 0.3px var(--cbw2), inset 0 0 0 calc(var(--palo)/2) var(--cYel),inset 1px 1px 1px calc(var(--palo)/2) var(--cYel)}/*var(--cYel) var(--cGreyT)*/
 
  .cEsqi{		box-shadow:inset 0 0 0 calc(var(--palo)*0.25) var(--cblwh2), inset 0 0 0 calc(var(--palo)*2) var(--cBeige)}
+
+ .cBu--tton:focus
+,.cBoRd{		box-shadow:inset 0 0 0 var(--palo) var(--cBeige)}/*var(--cBeige)}/*var(--cBeige)}/*cBorde)}/*var(--sky)}*/
 
  .cAjust9
 ,.cAma
 ,.cLuz
-,.cTitul{		box-shadow:inset 0 0 0 var(--pelo) var(--cblwh1)} 
+,.cTitul{		box-shadow:inset 0 0 0 var(--pelo) var(--cblwh1)}
+
+.cLen{			box-shadow:inset 0 0 1px var(--cBeige)}
 
  /*
  #--iCAPA{		box-shadow:inset 0 0 min(35vh,35vw) min(7vh,7vw) black}
@@ -315,6 +324,7 @@
 ,.c--Menu
 ,.c--Reloj
 ,.cTec
+,.cTexM
 ,#iNegro{		box-sizing:border-box}
 
  .cAma
@@ -337,6 +347,7 @@
 ,.cInfo
 ,.cIng
 ,.c--Reloj
+,.cTexM
 ,#iInfo
 ,#i--Hora
 ,#iTaco
@@ -354,6 +365,7 @@
 ,.c--CR
 ,.cFJ
 ,.cSiV
+,.cTexU
 ,#i--Noti
 ,#iTTP{			color:white}
 
@@ -372,7 +384,8 @@
 ,.cBof
 ,.cButton
 ,.cDedo
-,.cTapa{		cursor:pointer}/*!important usar para que funcione click en iphone????*/
+,.cTapa
+,.cTexM{		cursor:pointer}/*!important usar para que funcione click en iphone????*/
 
  .yProsaL{		display:block}
 
@@ -414,6 +427,8 @@
  .cCero
 ,.cFs0{			font-size:0}
 
+ .cTexM{		font-size:10vh}
+
  .c--Marqu{		font-size:32px}/*32px es tomado de f0028, switch aux case 4 = 32px tamaño mediano  13vh}/*13vh 9vh  42px}/*8vh}*/
 
  .big{			font-size:135%}
@@ -436,21 +451,34 @@
 
  .cMaX{			font-size:calc(var(--chico) * 3)}/*calc(var(--chico)*0.7)*/
 
+ td
+,th{			font-size:max(5vw,5vh)}
+
  .cMarqu{		font-size:min(6.5vh,6.5vw)}/*min(6.5vh,6.5vw)}/*min(8vh,8vw) o 32px*/
+
+ .cNoV
+,.cSiV{			font-size:min(17vh,17vw)}
 
  .cFanta{		font-size:min(50vh,50vw)}/*calc(var(--chico)*0.7)*/
 
+  
+ #i--I{			font-size:min(calc(0.7*(max(var(--z),5vh))),6vw)}/*,min(calc((max(var(--z),5vh))),8vw)}*/
+
+ #iMenu
+,#iSoni
+,#iHora{		font-size:min(calc((max(var(--z),5vh))*0.5),5vw)}/*calc((max(var(--z),5vh))*0.4)}/*min(calc((max(var(--z),5vh))*0.5),7vw)}*/
+
+ #iLeft{		font-size:min(calc((max(var(--z),5vh))*0.7),6.7vw)}/*calc((max(var(--z),5vh))*0.77)}/*min(calc((max(var(--z),5vh))*0.5),7vw)}*/
+
+
+ #i--Hora{		font-size:min(calc(var(--bh)*0.7),6vw)}/*min(8.5vh,8.5vw) max(13.5vh)}/*min(8.5vh,8.5vw),max(13.5vw) calc(var(--chico)*0.7)*/
 
  #i--Menu
 ,#i--Soni{		font-size:min(var(--bh),4vw)}/*calc(var(--cAlt) * 0.5),6vw)}/*min(calc(var(--bh)*0.7),6vw)}/*calc(var(--cAlt) * 0.5)}*/
 
- #i--Hora{		font-size:min(calc(var(--bh)*0.7),6vw)}/*min(8.5vh,8.5vw) max(13.5vh)}/*min(8.5vh,8.5vw),max(13.5vw) calc(var(--chico)*0.7)*/
-
  .cFran{		font-size:min(var(--bh),6vw)}
 
  #iInfo{		font-size:min(var(--cAlt),11vw)}/*var(--b))}*/
-
- .cMax{			font-size:var(--chico)}/*calc(var(--chico)*0.7)*/
 
  .cButton
 ,.cSiza{		font-size:var(--a)}
@@ -460,9 +488,6 @@
  .c--Nube
 ,.cTran{		font-size:var(--cAlt)}
 
- .cNoV
-,.cSiV{			font-size:min(17vh,17vw)}
-
  .cBra1
 ,.cBrai
 ,.cBraI
@@ -470,18 +495,14 @@
 ,.cBraIl
 ,.cTec{			font-size:var(--cBrai)}
 
+ .cMax{			font-size:var(--chico)}/*calc(var(--chico)*0.7)*/
+
  .cMors{		font-size:var(--cMors)}
-
- #iMenu
-,#iSoni
-,#iHora{		font-size:min(calc((max(var(--z),5vh))*0.5),5vw)}/*calc((max(var(--z),5vh))*0.4)}/*min(calc((max(var(--z),5vh))*0.5),7vw)}*/
-
- #iLeft{		font-size:min(calc((max(var(--z),5vh))*0.7),6.7vw)}/*calc((max(var(--z),5vh))*0.77)}/*min(calc((max(var(--z),5vh))*0.5),7vw)}*/
-
- #i--I{			font-size:min(calc(0.7*(max(var(--z),5vh))),6vw)}/*,min(calc((max(var(--z),5vh))),8vw)}*/
 
  .cIwhi
 ,.cIyel{		font-weight:600}
+
+ td:first-child{font-weight:bold}
 
  .cGlosD{		height:5%}/*calc(1px * var(--cHGlo))}*/
 
@@ -493,10 +514,14 @@
 
  .cImKe{		height:13vh}/*9vh  42px}/*8vh}*/
 
+ .cTexM{		height:15vh}
+
  .cBOT
 ,.c--Ent
 ,.cMark
 ,.c--TOB{		height:16.666666666%}/*height:20%}25%}/*33.33333333%}/*18.75%*/
+
+ .cTexU{		height:45vh}
 
 .cVpres{		height:70vh}/*calc(50vh - (var(--marH) * 2) - (var(--pelo)*2) - var(--kdot))}/*80vh - 1vh de los 2 margenes arriba y abajo,  84vh  80vh menos 0.5vh del borde superior y otros 0.5vh del borde inferior*/
 
@@ -672,6 +697,8 @@
 
  .cInfi{		margin-left:0.5vw}
 
+ .cTexM{		margin-left:5vw}
+
  .cCR{			margin-left:calc(var(--chico) * -0.2)}
 
  .cAsk{			margin-left:calc(var(--chico) * -0.35)}
@@ -704,6 +731,8 @@
  .c--Pic2{		min-width:calc(var(--chico)*0.25)}/*(var(--chico)*0.25)}/*25vh}/*desactivar de ser necesario*/
 
  #iTaco{		opacity:0.3}
+
+ .cTexM{		opacity:0.9}
 
  .c1570
 ,.c1x1
@@ -738,11 +767,15 @@
  .yProsaL
 ,.zProsa{		padding:0 1vw}
 
- .cPadd4A{		padding:0 15%}
+ .cPadd4A
+,.cTexM{		padding:0 15%}
 
  .i--nner>*{	padding:0 var(--cDelta)}/*604/2 la otra mitad del ancho!!*/
 
  .inner>*{		padding:0}/*8.5vh 0}/*604/2 la otra mitad del ancho!!*/
+
+ td
+,th{			padding: 10px}
 
  #iTaco{		padding:20px 0/* Añade un margen superior para evitar recortes */}
 
@@ -812,9 +845,11 @@
 ,.c--Reloj
 ,.cRiel
 ,.cSom
-,.cTones
+,.cTexM
+,.cTexU
 ,.cTitul
 ,.c--TOB
+,.cTones
 ,.cTpres
 ,.cVert
 ,.cVpres
@@ -873,6 +908,7 @@
  .cAltu
 ,.cPic2
 ,.cTela
+,.cTexM
 ,.cTpres
 ,#iTaco{		text-align:center}
 
@@ -880,7 +916,9 @@
 ,.cBrai
 ,.cBraI
 ,.cBraI1
-,.cBraIl{		text-align:left}
+,.cBraIl
+,td
+,th{			text-align:left}
 
 
  #i--I{			text-align:right!important}
@@ -913,7 +951,8 @@
 ,.cAma
 ,.cLuz{			text-shadow:none}/*de última para no ponerle !important*/
 
- h1{			text-transform: uppercase}
+ h1
+,th{			text-transform:uppercase}
 
  .cGrey
 ,.cLen
@@ -925,13 +964,17 @@
 ,#iRUTA
 ,#iTAPA{		top:0}
 
-.c--Vpres{		top:1px}/*calc(10.5vh + var(--pelo))}/*Se calculo 100vh menos el alto de la imagen - la mitad del borde inferior: calc(10.5vh + var(--pelo) + (var(--kdot)* 0.5)) [- (var(--kdot)* 0.5)) menos la mitad del borde inferior]   84vh  10.5vh menos 0.5vh del borde superior*/
+ .c--Vpres{		top:1px}/*calc(10.5vh + var(--pelo))}/*Se calculo 100vh menos el alto de la imagen - la mitad del borde inferior: calc(10.5vh + var(--pelo) + (var(--kdot)* 0.5)) [- (var(--kdot)* 0.5)) menos la mitad del borde inferior]   84vh  10.5vh menos 0.5vh del borde superior*/
+
+ .cTexU{		top:5vh}
 
  .c46{			top:16.666666666%}/*top:20%}25%}/*33.33333333%}*/
 
  .c13{			top:33.333333333%}/*top:40%}50%}/*33.33333333%}*/
 
  .cH0{			top:50%}
+
+ .cTexM{		top:50vh}
 
  .cInSOS{		top:65vh}
 
@@ -990,6 +1033,8 @@
 
  .c1570{		width:70%}
 
+ .cTexM{		width:90vw}
+
  .c1x1
 ,.cBack
 ,.c--Band
@@ -1004,6 +1049,7 @@
 ,.cPic1
 ,.cPicI
 ,.cRiel
+,.cTexU
 ,.cTones
 ,.inner
 ,#iB--rail
@@ -1036,7 +1082,8 @@
 ,#iNegro{		width:var(--b)}
 
  .c1570
-,.cPadd4A{		word-wrap:break-word}
+,.cPadd4A
+,.cTexM{		word-wrap:break-word}
 
  .cAsk{			-moz-transform:rotate(			0deg); /* Mozilla */
 					-ms-transform:rotate(		0deg); /* IE 9 */
