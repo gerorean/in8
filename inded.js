@@ -4600,6 +4600,7 @@ zGuiIn(ltr){	//leeme = ''.concat(kL0[ltr+1][4]);//concatena contenido de la fila
 					leeme = '';//RESET DEL GUIÓN
 				}}
 */
+
 function		//analiza la señal si es del chat comunitario q indica que tecla fue
 	morse(q) {
 	console.log('_____@- morse(q)');
@@ -4610,7 +4611,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 	console.log(' - - - rrrrr max[q]=', max[q]);
 	regX[q][cycle[q]] = nn[q] - mn[q]; console.log(' - - - rrrrr regX[q]=', regX[q]);
 	if (q == 0)//BOTON MORSE 2023 IBOGOTA!!!!! DESACTIVADO
-	{	/*
+	{				f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
 					switch (cycle[0])
 					{	case 1:
 							//if(regY[0][0]==1){outX[0] = 'E';zGuiIn(5);esTAS = true}
@@ -4672,7 +4673,9 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 							//if((regY[0][0]==2)&&(regY[0][2]==2)&&(regY[0][4]==1)&&(regY[0][6]==1)&&(regY[0][8]==2)&&(regY[0][10]==2)){outX[0] = '!';zGuiIn(30);esTAS = true}
 							if((regY[0][0]==2)&&(regY[0][2]==2)&&(regY[0][4]==2)&&(regY[0][6]==1)&&(regY[0][8]==1)&&(regY[0][10]==1)){outX[0] = ':';zGuiIn(41);esTAS = true}
 						break;
-					}*/
+					}
+					iIntM0.textContent += outX[0];
+					f0151();// Desplaza hacia el final el Display M
 	}
 	else//OTROS BOTONES 2023 IBOGOTA!!!!!
 	{		//+ + +		if(!(//(true/*t3x3*/)&&
@@ -4686,27 +4689,42 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 				{
 					outX[q] = ' *';//ES UN PUNTO..
 
-
-
-
-					if (q == 3)//MI CLIC FIJO 2023 IBOGOTA!!!! 	
-					{
-						console.log(' - - - MI CLIC FIJO 2023 IBOGOTA!!!! ');
-						f0096(1, 1);
+					if (q == 2)// 	
+					{	console.log(' - - - Espacio (2) ');
+						f0096(1, 1);//Clic sobre el boton 2
 					};
 
-
-
+					if (q == 3)//MI CLIC FIJO 2023 IBOGOTA!!!! 	
+					{	console.log(' - - - MI CLIC FIJO 2023 IBOGOTA!!!! ');
+						f0096(1, 1);//Clic sobre el boton 3
+					};
 
 					/*if(q==4)//MI CLIC FIJO 2023 IBOGOTA!!!! 	
 					{	console.log(' - - - MI CLIC FIJO 2023 IBOGOTA!!!! ');
 						f0047(1);//"UNDO CANCEL" - click en botón 4 | REGRESAR a una ruta secundaria o principal anterior
 					};*/
-					if (q == 6)//MI CLIC FIJO 2023 IBOGOTA!!!! 	
-					{
-						console.log(' - - - MI CLIC FIJO 2023 IBOGOTA!!!! ');
-						f0096(1, 1);
+
+					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
+
+					if (q == 6)//arrow down	
+					{	console.log(' - - - arrow down! ');
+						f0095(1);// arrow down
 					};
+
+
+					//Este va a cambiar a delete 1 boton 8 y este 8 se va a volver 9
+					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
+					if (q == 8)//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
+					{	console.log(' - - - rrrrr MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)!!!! ');
+						f0148();//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
+					};
+
+					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
+					if (q == 9)//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
+					{	console.log(' - - - rrrrr MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)!!!! ');
+						f0148();//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
+					};
+
 					//+ + +		if(q==1)//EL BOTON 1 GUIA DE SERVICIOS Y..
 					//+ + +		{	//if(!true/*t3x3*/)
 					//+ + +			//+ + +{	lisT1();//ACTIVA LA LISTA 1 DEPENDIENDO DEL VALOR DE eSqR[0] 
@@ -4940,28 +4958,36 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					outX[q] = ' -';//RAYA..
 					//sos(q,0);
 
-
-
-
 					if (q == 3)//MI REVERSA FIJA 2023 IBOGOTA!!!! 	
-					{
-						console.log(' - - - MI REVERSA FIJA 2023 IBOGOTA!!!! ');
-						f0096(1, 1, 1);//Aplicar reversa al clic(botón 6) salTO -1
+					{	console.log(' - - - MI REVERSA FIJA 2023 IBOGOTA!!!! ');
+						f0096(1, 1, 1);//Aplicar reversa al clic(botón 3) salTO -1
 					};
 
+					if (q == 6)//arrow down	
+					{	console.log(' - - - arrow down! ');
+						f0095(1);// arrow down
+					};
 
-
-
+					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
+					/*
 					if (q == 6)//MI REVERSA FIJA 2023 IBOGOTA!!!! 	
 					{
 						console.log(' - - - MI REVERSA FIJA 2023 IBOGOTA!!!! ');
 						f0096(1, 1, 1);//Aplicar reversa al clic(botón 6) salTO -1
-					};
+					};*/
 					/*if(q==6)//MI REVERSA FIJA 2023 IBOGOTA!!!! 	
 					{	console.log(' - - - MI REVERSA FIJA 2023 IBOGOTA!!!! ');
 						console.log('|> Flag  -> F96 ');
 						f0096(1,1,1);//aplicar reversa
 					};*/
+
+					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
+					if (q == 8)//Espacio Morse	
+					{	console.log(' - - - Espacio Morse en el display M');
+						iIntM0.textContent += ' ';
+						f0151();// Desplaza hacia el final el Display M
+						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
+					};
 					//+ + +		//esta[q] = true;
 					//+ + +		sos(q,0);
 					//+ + +		if(q==1)//si el boton de MENU, 3x3 Y RECIBE UNA RAYA..
@@ -5027,78 +5053,65 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					outX[q] = ' -*';//RAYA + PUNTO..
 
 
-
-
-
 					if (q == 3)//avanzar +(1*KTE) 
-					{
-						f0096(1, 1, 2);//Aplicar 5 avances al clic(botón 6) salTO5
+					{	f0096(1, 1, 2);//Aplicar 5 avances al clic(botón 3) salTO5
 					}
 
-
-
-
+					/*
 					if (q == 6)//avanzar +(1*KTE) 
 					{
 						f0096(1, 1, 2);//Aplicar 5 avances al clic(botón 6) salTO5
-					}
+					}*/
 				}
 				if ((regY[q][0] == 2) && (regY[q][2] == 2)) {
 					outX[q] = ' --';//DOS RAYAS..
 
-
-
-
-
+					
 					if (q == 3)//regresar -(1*KTE)
 					{
-						f0096(1, 1, 3);//Aplicar -5 avances al clic(botón 6) salTO-5
+						f0096(1, 1, 3);//Aplicar -5 avances al clic(botón 3) salTO-5
 					}
 
-
-
+					/*
 					if (q == 6)//regresar -(1*KTE)
 					{
-						f0096(1, 1, 3);//Aplicar -5 avances al clic(botón 6) salTO-5
-					}
+						f(1, 1, 3);//Aplicar -5 avances al clic(botón 6) salTO-5
+					}*/
+
+					if (q == 8)//Reset del display M 	
+					{	console.log(' - - - Reset del display M');
+						f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
+					};
 				}
 				break;
 			case 5:
 				if ((regY[q][0] == 2) && (regY[q][2] == 2) && (regY[q][4] == 1)) {
 					outX[q] = ' --*';//dos rayas punto..
 
-
+					
 					if (q == 3)//avanzar +(2*KTE)
 					{
-						f0096(1, 1, 4);//Aplicar 25 avances al clic(botón 6)
+						f0096(1, 1, 4);//Aplicar 25 avances al clic(botón 3)
 					}
-
-
-
+					/*
 					if (q == 6)//avanzar +(2*KTE)
 					{
 						f0096(1, 1, 4);//Aplicar 25 avances al clic(botón 6)
-					}
+					}*/
 				}
 				if ((regY[q][0] == 2) && (regY[q][2] == 2) && (regY[q][4] == 2)) {
 					outX[q] = ' ---';//tres rayas..
 
-
-
-
+					
 					if (q == 3)//regresar -(2*KTE)
 					{
-						f0096(1, 1, 5);//Aplicar -25 avances al clic(botón 6)
+						f0096(1, 1, 5);//Aplicar -25 avances al clic(botón 3)
 					}
-
-
-
-
-
+					/*
 					if (q == 6)//regresar -(2*KTE)
 					{
 						f0096(1, 1, 5);//Aplicar -25 avances al clic(botón 6)
-					}
+					}*/
 				}
 				break;
 			/*case 7:
@@ -5275,9 +5288,20 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 	//+ + +		{	outW[q] = outW[q].concat(outX[q]);console.log('outW[q]=' + outW[q] +'señal acumulada');
 	//+ + +			letra();
 	//+ + +		}
-	ceros(q);//console.log('ceros de morse');
+
+
+	//nuevo se quita esto porque no se le ve utilidad e interfiere la salida outX..
+	/*if((edit)&&(q==0)&&(esTAS)&&(limiT-cta>0))//puede ser codigo morse o señal asociada, cta LLEVA EL CONTEO DE LAS LETRAS DEL EDITOR
+	{	outW[q] = outW[q].concat(outX[q]);console.log('outW[q]=' + outW[q] +'señal acumulada');
+		letra();//muestra en pantalla el texto actualizado
+	}*/
+
+	//output.textContent += outX[0];
+	//iIntM0.textContent += outX[0];
+
+	ceros(q);//console.log('ceros de morse');Reinicio de variables
 }
-/*
+
 const 	kL0=[			['Tutorial de puntos y rayas',													'icon far fa-comment-dots', '', 'Utiliza las flechas de subir o bajar el cursor, al ir avanzando escucharás el símbolo del caracter donde está el cursor seguido de su señal equivalente en puntos y rayas, tomados del código Morse, '],//l0Morse..
 						['Punto, punto, raya, raya, otra forma de hacer espacios es hacer rayas sobre el botón 8, del teclado inclusivo','icon',' ','Espacio entre caracteres',			'espacio'],//zGuiIn(0)
 						['Punto, raya',																	'icon',		'a',	'Letra a, de Abeja',								'a'],
@@ -5322,14 +5346,13 @@ const 	kL0=[			['Tutorial de puntos y rayas',													'icon far fa-comment-d
 						['Raya, punto, punto, raya, punto',												'icon',		'/',	'Signo de barra inclinada',							'barra inclinada'],//zGuiIn(40)
 						['Raya, raya, raya, punto, punto, punto',										'icon',		':',	'Signo de dos puntos',								'dos puntos'],
 						['Punto, raya, raya, punto, raya, punto',										'icon',		'@',	'Signo de arroba',									'arroba']];
-*/
-/*
+
+//boton 5 morse 0
 boT0.addEventListener('mousedown',eMb0);
 boT0.addEventListener('mouseleave',eMs0);
 boT0.addEventListener('mouseup',eMs0);
 boT0.addEventListener('touchend',eTs0);
 boT0.addEventListener('touchstart',eTb0);
-*/
 
 
 //yBot3
@@ -5344,7 +5367,6 @@ fBot3.addEventListener('mouseup', eMs3);
 fBot3.addEventListener('touchend', eTs3);
 fBot3.addEventListener('touchstart', eTb3);
 
-
 /*
 yBot1.addEventListener('mousedown',eMb4);
 yBot1.addEventListener('mouseleave',eMs4);
@@ -5353,9 +5375,6 @@ yBot1.addEventListener('touchend',eTs4);
 yBot1.addEventListener('touchstart',eTb4);
 */
 
-
-
-/*
 //yBot6
 yBot6.addEventListener('mousedown',eMb6);
 yBot6.addEventListener('mouseleave',eMs6);
@@ -5367,7 +5386,6 @@ fBot6.addEventListener('mouseleave',eMs6);
 fBot6.addEventListener('mouseup',eMs6);
 fBot6.addEventListener('touchend',eTs6);
 fBot6.addEventListener('touchstart',eTb6);
-*/
 
 //boton 0 morse 8   --l5814
 yBoto.addEventListener('mousedown',eMb8);
