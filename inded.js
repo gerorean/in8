@@ -3473,15 +3473,15 @@ const
 isTouchDevice();
 
 
-//function 		//AUDIO Punto
-//audiPun(){		//if(true/*t3x3*/)
-//				{audPun.currentTime = 0; audPun.play()}
-//				}
+function 		//AUDIO Punto
+	audiPun()
+		{	audPun.currentTime = 0; audPun.play()
+		}
 
 function 		//AUDIO Raya
-	audiRay() {		//if(true/*t3x3*/)
-	{ audRay.currentTime = 0; audRay.play() }
-}
+	audiRay()
+		{	audRay.currentTime = 0; audRay.play()
+		}
 
 function		//SIMPLIFICAR ESTO Reinicio de variables
 	ceros(c) {
@@ -3543,7 +3543,7 @@ function		//SIMPLIFICAR ESTO Reinicio de variables
 
 
 function		//ACTIVACION O ACTUALIZACION DEL CICLO      --l3866
-	ciclo0(){		//console.log('_____@- ciclo0()');
+	ciclo0(){		//console.log('_____@- ciclo0()');  //boton 5 morse 0
 				if(!pare[0])
 				{	if(cycle[0]==13)//'STOP' PARA DAR PASO AL RESULTADO
 					{	cycle[0] = 12;console.log('cycle[0]='+cycle[0]);
@@ -3734,7 +3734,7 @@ function		//CAMBIA DE COLOR DEPENDIENDO DE QUE NUMERO DE CASILLA ES
 		}
 	}
 }
-/*
+
 function		//Prepara la lectura de audio
 deCi(){			speechSynthesis.pause();//pausa si esta ocupado el lector para estar listo para reiniciar
 				speechSynthesis.cancel()}//cancela el evento anterior si esta ocupado el lector y dejarlo listo para iniciar
@@ -3744,7 +3744,7 @@ decir(texto){	deCi();
 				msg.text = texto;//LINEA NUEVA DE PRUEBA
 				speechSynthesis.speak(msg);//LINEA NUEVA DE PRUEBA
 				}
-*/
+
 function		//AL BAJAR UNA TECLA..
 	eKb(now) {
 	console.log('_____@- eKb()'); console.log(now.key + '-' + now.keyCode);//CONOCER EL KEYCODE DE LA TECLA
@@ -4591,7 +4591,7 @@ function      //termina evento 'primer' interacción
 		//+ + +banD();//mira el estado si hay mensajes y lo indica
 	}
 }
-/*
+
 function		//GENERA EL GUION DE LA LETRA INGRESADA
 zGuiIn(ltr){	//leeme = ''.concat(kL0[ltr+1][4]);//concatena contenido de la fila con ', salida' y vPar
 				//if (t3x3)
@@ -4599,7 +4599,6 @@ zGuiIn(ltr){	//leeme = ''.concat(kL0[ltr+1][4]);//concatena contenido de la fila
 					decir(leeme);//lee el guión
 					leeme = '';//RESET DEL GUIÓN
 				}}
-*/
 
 function		//analiza la señal si es del chat comunitario q indica que tecla fue
 	morse(q) {
@@ -4610,7 +4609,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 	console.log(' - - - rrrrr ###### #### ###### ### ##### ### ###regY[q]=', regY[q]);
 	console.log(' - - - rrrrr max[q]=', max[q]);
 	regX[q][cycle[q]] = nn[q] - mn[q]; console.log(' - - - rrrrr regX[q]=', regX[q]);
-	if (q == 0)//BOTON MORSE 2023 IBOGOTA!!!!! DESACTIVADO
+	if (q == 0)//BOTON MORSE 2023 IBOGOTA!!!!! DESACTIVADO - //boton 5 morse 0 -
 	{				f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
 					switch (cycle[0])
 					{	case 1:

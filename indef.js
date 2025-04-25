@@ -7466,6 +7466,284 @@ function f0144()//ESPERAR un momento y dar la orden de cambiar de anuncio
 		}
 
 
+//revizar desde aqui hasta function hh1()    --l7745
+
+
+/*Funciones relacionadas con la "interface M", es decir todas aquellas que
+permiten que el usuario elija un modo para el envío de información ya sea en clave Morse,
+Audio, teclado, señas, etc.*/
+
+//inicio funciones del teclado de la interfaz M:
+const output = document.getElementById('iIntM0');
+const keYs = document.querySelectorAll('.keY');//Teclado Virtual - Seleccionar todos los elementos con la clase "keY"
+
+// Listener para registrar eventos de clics en las teclas virtuales
+/*keYs.forEach(key => {
+//document.querySelectorAll('.keY').forEach(key => {
+    key.addEventListener('click', () => {
+        console.log(`Tecla virtual presionada: ${key.textContent}`);
+    });
+});*/
+// Handle click events - Virtual Key Board
+keYs.forEach(key => {
+    key.addEventListener('click', () => 
+	{	console.log(`Tecla virtual presionada: ${key.textContent}`);
+        handleKeyPress(key.textContent);
+    });
+});
+
+
+
+var isShiftActive = false;
+var lastKeyPressed = '';
+var mViS = 0;//Visibilidad de la salida M 0-Off 1-On
+var mMod = 0;//Modo de la salida M 0 morse, 1 querty, 2 querty doble
+var mCon = 0;// Contador de segundos
+var mTim = 0;// Variable para almacenar el temporizador
+
+function
+f0145()//CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
+		{	lOL(145);
+			if(!mViS)//si el display esta apagado.. implica modo 0 por el apagado y reset
+			{	//ACTIVAR la salida de la interfaz M y quitar la opacidad:
+				iIntM0.classList.remove('cX');//Enciende el display de la interfaz M
+				mViS = 1;//Se prendio el display
+				iTaco.style.opacity='0.8';
+			}
+			else//El display M esta prendido
+			{	if(mMod)//si el modo no es 0 (si es distinto de 0)
+				{	f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
+					f0145();//Vuelve a inicar el proceso
+				}
+			}
+			//sigue con las otras tareas Morse...
+			f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
+		}
+
+function
+f0146()//ACTIVAR o RESETEAR un contador que al terminar de contar resetea la interfaz M y apaga el display M
+		{	lOL(146);
+			// Reiniciar el contador y el temporizador
+			clearInterval(mTim);
+			mCon = 0;
+			// Iniciar un nuevo temporizador
+			mTim = setInterval(() =>
+			{	mCon++;
+				console.log('mCon=',mCon);
+                if (mCon >= 30) {
+                    console.log("30 segundos");
+					f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
+                    clearInterval(mTim); // Detener el temporizador al alcanzar 100 segundos
+                }
+            }, 1000); // Incrementar cada 1 segundo
+		};
+
+function
+f0147()//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
+		{	lOL(147);
+			if(mViS)
+			{	//Resetear la intefaz M y apagar el display
+				mViS = 0;//Visibilidad de la salida M 0-Off
+				mMod = 0;
+				mCon = 0;//Reset clics Morse
+				iIntM0.classList.add('cX');//Apaga el display de la interfaz M
+				f0149();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS)
+				iTaco.classList.remove('cX');//Muestra la tabla Morse translucida.
+			}
+		};
+
+function
+f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
+		{	lOL(148);
+			f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
+    		mMod++;
+			if(mMod>=4)
+			{	mMod = 0;//Reinicia al modo Morse
+			}
+			if(!mViS)//Si el display esta apagado lo enciende
+			{	iIntM0.classList.remove('cX');
+				mViS = 1;
+			}
+			f0149();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS)
+			switch(mMod)
+			{	case 0:
+					iTaco.style.opacity='0.8';
+					iTaco.classList.remove('cX');
+				break;
+				case 1:
+					iKeyB.style.height = '35vh';
+					iKeyB.classList.remove('cX');
+				break;
+				case 2:
+					// Iterar y cambiar el tamaño de la fuente
+					keYs.forEach(button =>
+					{	button.style.fontSize = 'min(10vh,10vw)';
+					});
+					iKeyB.style.height = '70vh';
+					iKeyB.style.width = '200vw';
+					iKeyB.classList.remove('cX');
+				break;
+				case 3:
+					iKeyS.classList.remove('cX');
+				break;
+			}
+		};
+
+function
+f0149()//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS)
+		{	lOL(149);
+			// Iterar y cambiar el tamaño de la fuente
+			keYs.forEach(button =>
+			{	button.style.fontSize = 'min(5vh,5vw)';
+			});
+			iTaco.style.opacity='0.3';
+			iKeyB.style.height = 'auto';
+			iKeyB.style.width = '100vw';
+			iTaco.classList.add('cX');//Resetea (apaga) todas las ventanas M
+			iKeyB.classList.add('cX');
+			iKeyS.classList.add('cX');
+		};
+
+function
+f0150()//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
+		{	lOL(150);
+			output.textContent = '';//Borra el texto de salida
+			f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display					
+		};
+
+function
+f0151()// Desplaza hacia el final el Display M
+	{	lOL(151);
+		iIntM0.scrollTop = iIntM0.scrollHeight;
+	};
+
+//Nuevo..
+var isCapsLockActive = false;
+
+
+
+// Handle keyboard events
+document.addEventListener('keydown', (event) => {
+	//f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
+    
+	
+	//Nuevo..
+	if (event.getModifierState('CapsLock')) {
+        isCapsLockActive = true;
+    } else {
+        isCapsLockActive = false;
+    }
+
+    // Only allow keyboard input if CapsLock is off
+    if (isCapsLockActive) {
+        event.preventDefault(); // Block keyboard input
+    } else {
+
+
+	
+	const keYe = event.key;
+	const keyElement = Array.from(keYs).find(k => k.textContent.toLowerCase() === keYe.toLowerCase() || (keYe === ' ' && k.id === 'space'));
+	//const kEy = event.key;
+    //const keyElement = Array.from(keYs).find(k => k.textContent.toLowerCase() === kEy.toLowerCase() || (kEy === ' ' && k.id === 'space'));
+    if (keYe === 'Shift') {
+        toggleShift();
+    } else if (keYe === 'Backspace') {
+        handleKeyPress('Del');
+    } else if (keYe === 'Dead') {
+        handleKeyPress('´');
+    } else if (keyElement) {
+        keyElement.click();
+    }
+	}//nuevo
+});
+
+
+
+
+
+// Add visual feedback for CapsLock state
+document.addEventListener('keyup', (event) => {
+    if (!event.getModifierState('CapsLock')) {
+        isCapsLockActive = false;
+    }
+});
+
+function handleKeyPress(keyValue)
+//function handleKeyPress(keyValue, isPhysicalInput)
+{	console.log('--- --- rrr keyValue=',keyValue);
+	//if(sonCap)//Si los botones del teclado físico (CapsLock-off) están desactivados:
+	{
+	    f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
+	    if (keyValue === 'Shift') {
+	        toggleShift();
+	    } else if (keyValue === 'Del') {
+	        output.textContent = output.textContent.slice(0, -1);
+	    } else if (keyValue === '') {
+	        output.textContent += ' ';
+	    } else if (keyValue === '´') {
+	        lastKeyPressed = '´';
+	    } else if (keyValue !== '↩') { // Ignoring Enter key
+	        if (lastKeyPressed === '´' && ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'].includes(keyValue)) {
+	            const accentedVowel = accentuateVowel(keyValue);
+	            output.textContent += accentedVowel;
+	            lastKeyPressed = '';
+	        } else {
+	            output.textContent += keyValue;
+	        }
+	    }
+		f0151();// Desplaza hacia el final el Display M
+	}
+}
+
+function toggleShift() {
+    isShiftActive = !isShiftActive;
+    document.querySelectorAll('.keY').forEach(k => {
+        if (!k.classList.contains('special')) {
+            k.textContent = isShiftActive ? k.textContent.toUpperCase() : k.textContent.toLowerCase();
+        }
+    });
+}
+
+function accentuateVowel(vowel) {
+    const accents = {
+        'a': 'á',
+        'e': 'é',
+        'i': 'í',
+        'o': 'ó',
+        'u': 'ú',
+        'A': 'Á',
+        'E': 'É',
+        'I': 'Í',
+        'O': 'Ó',
+        'U': 'Ú'
+    };
+    return accents[vowel] || vowel;
+}
+//fin funciones del teclado de la matriz M
+
+
+
+
+// Listener para registrar eventos de teclado físico
+document.addEventListener('keydown', (event) => {
+    console.log(`Tecla física presionada: Key="${event.key}", Code="${event.code}", CapsLock=${event.getModifierState('CapsLock')}`);
+});
+
+// Probar el estado actual de CapsLock
+console.log(`Estado inicial de CapsLock: ${navigator.keyboard ? 'No soportado en este navegador' : 'Desconocido'}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
