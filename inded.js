@@ -3744,12 +3744,11 @@ decir(texto){	deCi();
 				msg.text = texto;//LINEA NUEVA DE PRUEBA
 				speechSynthesis.speak(msg);//LINEA NUEVA DE PRUEBA
 				}
-
+/*
 function		//AL BAJAR UNA TECLA..
 	eKb(now) {
 	console.log('_____@- eKb()'); console.log(now.key + '-' + now.keyCode);//CONOCER EL KEYCODE DE LA TECLA
 	//decir(texto);
-	//if(true/*t3x3*/)
 	if (now.getModifierState('CapsLock'))//detecta si capslock esta on
 	{	/*if((now.keyCode==key.SP0)||(now.keyCode==key.A0)||(now.keyCode==key.B0)||(now.keyCode==key.C0))
 					{	if(((any[0]==2)||(any[0]==9))&&(!pv)&&(edit))
@@ -3783,7 +3782,7 @@ function		//AL BAJAR UNA TECLA..
 
 
 
-
+/*
 		if (g00VARS[26][4] && ((now.keyCode == kEY.K22) || (now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
 		//if((now.keyCode==key.A3)||(now.keyCode==key.B3)||(now.keyCode==key.C3))
 		{
@@ -3849,14 +3848,13 @@ function		//AL BAJAR UNA TECLA..
 			}
 			w7();
 		}*/
-	}
+/*	}
 }
 
 
 function		//AL SUBIR UNA TECLA..
 	eKs(now) {
 	console.log('_____@- eKs()');
-	//if(true/*t3x3*/)
 	if (now.getModifierState('CapsLock'))//detecta si capslock esta on
 	{	/*if((now.keyCode==key.SP0)||(now.keyCode==key.A0)||(now.keyCode==key.B0)||(now.keyCode==key.C0))
 					{	if(any[0]==3)
@@ -3888,7 +3886,7 @@ function		//AL SUBIR UNA TECLA..
 					}*/
 
 
-
+/*
 
 		if (g00VARS[26][4] && ((now.keyCode == kEY.K22) || (now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
 		//if((now.keyCode==key.A3)||(now.keyCode==key.B3)||(now.keyCode==key.C3))
@@ -3953,9 +3951,9 @@ function		//AL SUBIR UNA TECLA..
 			}
 			www9();
 		}*/
-	}
+/*	}
 }//RESETEA EVENTOS DE TECLADO DEL DOCUMENTO
-
+*/
 
 function		//AL BAJAR EL MOUSE..   --l4382
 	eMb0(){ 	
@@ -5394,8 +5392,8 @@ yBoto.addEventListener('touchend',eTs8);
 yBoto.addEventListener('touchstart',eTb8);
 
 
-document.addEventListener('keydown', eKb);
-document.addEventListener('keyup', eKs);
+//document.addEventListener('keydown', eKb);
+//document.addEventListener('keyup', eKs);
 
 
 
