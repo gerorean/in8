@@ -5027,7 +5027,7 @@ function f0097()//L REINICIAR focBan, focCon y focCsE permite que "onfocus vuelv
 
 function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.. //eKb
 		{	lOG(98);
-			//console.log('_____@- eKb()');
+			console.log('--------- - - ff f0098');//console.log('_____@- eKb()');
 			if(window.event && window.event.keyCode == 27)//Bloquear la tecla ESC
 			{	console.error('Alerta 505********')
 				window.event.keyCode = 505;
@@ -5036,7 +5036,7 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 			{	return false;
 			}
 			f0093();//REGISTRAR el primer clic
-			console.log(now.key+'-::'+now.keyCode);//CONOCER EL KEYCODE DE LA TECLA
+			console.log(' -----------KEYCODE DE LA TECLA:',now.key+'-::'+now.keyCode);//CONOCER EL KEYCODE DE LA TECLA
 			if (now.getModifierState('CapsLock'))//detecta si capslock esta on
 			{	if(sonCap)
 				{	sonCap = 0;
@@ -5048,21 +5048,146 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 					f0075(1);//simula un clic sobre el hueco de la tapa, esta acción sirve para actualizar el estado de capslock
 					console.log('[Caps lock is on] - Teclado activado');
 				}
+				else
+				{	console.log('[CapsLock is off] - Teclado está desactivado');
+				}
+
+//inicio
+				if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K1)||(now.keyCode == kEY.N1)||(now.keyCode == kEY.K11)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
+				{	console.log('key1');
+					f0047();//1 undo cancel
+				}
+
+				//El Morse 2
+				if((now.keyCode==kEY.K2)||(now.keyCode==kEY.K22))
+				{		if(((any[2]==2)||(any[2]==9))&&(!pv))
+						{	any[2] = 3;console.log('any[2]=' + any[2]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+							punto2();
+						}
+						w7();
+				}
+
+				//Botón 3 es "Morse"
+				/*esta parte se quita porque se paso para el morse, ver la funciones eKs y eKb
+				if(g00VARS[26][4]&&((now.keyCode == kEY.K22)||(now.keyCode == kEY.K3)||(now.keyCode == kEY.N3)||(now.keyCode == kEY.K33))&&yKEYS[2][2])//Si esta mostrando lo botones y..
+				{	console.log('key3');
+					f0095();//3 arrow down o es para el dedo 1 [letra C del teclado físico]
+					
+				}*/
+				if (g00VARS[26][4] && ((now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
+				{	console.log('key3 K3 N3');
+					if (((any[3] == 2) || (any[3] == 9)) && (!pv)) {
+						any[3] = 3; console.log('any[3]=' + any[3]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+						punto3();
+					}
+					w7();
+					//f0096();//clic  --l26abr025
+				}
+
+				//Botón 4 es Normal
+				if(g00VARS[26][4]&&((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44))&&yKEYS[2][1])//Si esta mostrando lo botones y..
+				{	console.log('key4');
+					f0094();//4 arrow up 
+				}
+
+				//Botón 5 es Morse - pero usa el Morse del 0 (Que es el más completo de todos) y el botón 0 usaría el Morse del 5
+				if((now.keyCode==kEY.K5)||(now.keyCode==kEY.KESP)||(now.keyCode==kEY.K55))
+				{	console.log('_____@- eKb() - CapsLock K5 KESP K55 - any[0]=',any[0]);
+					if(((any[0]==2)||(any[0]==9))&&(!pv)&&(edit))
+					{	any[0] = 3;console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+						punto0();
+					}
+					w7();
+				}
+
+				/*esta parte se quita porque se paso para el morse, ver la funciones eKs y eKb
+				if(((now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][4])//||(now.keyCode == kEY.KTAB))
+				{	console.log('key6');
+					console.log('|> Flag  -> F96 ');
+				}*/
+				//Botón 6 es Normal
+				if(g00VARS[26][4]&&((now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][2])//Si esta mostrando lo botones y..
+				{	console.log('key6');
+					console.log('|> Flag  -> F96 ');
+					f0095();//6 arrow down
+				}
+
+				//Botón 7 es Normal
+				if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
+				{	console.log('key7');			
+					f0015();//7 MENU
+				}
 				
+				//Estas funciones del boton 0 se le van a pasar al Morse 9..
+				//El Morse 8 se le presta al botón 0
+				if((now.keyCode==kEY.K0)||(now.keyCode==kEY.K00))
+				//if((now.keyCode==kEY.K8)||(now.keyCode==kEY.K88))
+				//if((now.keyCode==key.A8)||(now.keyCode==key.B8)||(now.keyCode==key.C8))
+				{		if(((any[8]==2)||(any[8]==9))&&(!pv))
+						{	any[8] = 3;console.log('any[8]=' + any[8]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+							punto8();
+						}
+						w7();
+				}
+			
+				//Botón 9 es Normal
+				if(((now.keyCode == kEY.K9)||(now.keyCode == kEY.N9)||(now.keyCode == kEY.K99))&&yKEYS[2][6])
+				{	console.log('key9');
+					f0024();//9 info
+				}
+
+				//El Morse 9 se debe activar y se le presta al botón 0
+				/*if((now.keyCode==kEY.K0)||(now.keyCode==kEY.K00))
+				{		if(((any[9]==2)||(any[9]==9))&&(!pv))
+						{	any[9] = 3;console.log('any[9]=' + any[9]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+							punto9();
+						}
+						w7();
+				}*/
+
+				/*Botón 0 es Normal y si se necesita usaría el MORSE del 5
+				if((now.keyCode == kEY.K0)||(now.keyCode == kEY.N0)||(now.keyCode == kEY.K00))//Si esta mostrando lo botones y..
+				{ 	console.log('key0');
+					f0148();//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
+					//nuevo.. f0075();//CLIC de [Input] o sobre la tapa desde el "hueco" central
+				}*/
+				//pendientes: 1 habilitar las letras z,x,n,m para los dedos 2,3,5 y 6 del braille escrito (perkings?)
+				//pendientes: 2 alarma de clic: teclado activado/desactivado, aceptar
+			}
+			else//detecta si capslock esta off
+			{//if (!now.getModifierState('CapsLock'))//detecta si capslock esta off
+     			if(!sonCap)
+				{	sonCap = 1;
+					f0073();//Sonar Pito
+				}
+     			console.log('[Caps lock is off] - Teclado desactivado');
+     			if(g00VARS[10][2])
+				{	numbers.classList.add('cX');
+					g00VARS[10][2] = 0;//registro cambio de estado de CapsLock ON a Off
+				//	f0074(3);//ALERTA 3 ON en pantalla
+				}
+//Fin
+			}/*
+			if((now.keyCode == kEY.KTAB)||(now.keyCode == kEY.KESP))//Si es tabulador o el espacio
+			{	f0070(1);//REGISTRAR el primer clic
+			}*/
+		}
+
+
+
+
+/*
 				  if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K1)||(now.keyCode == kEY.N1)||(now.keyCode == kEY.K11)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
 				//PRU
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K1)||(now.keyCode == kEY.N1)||(now.keyCode == kEY.K11)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
 				
-
 				//if(g00VARS[26][4]&&((now.keyCode == kEY.K1)||(now.keyCode == kEY.N1)||(now.keyCode == kEY.K11))&&yKEYS[2][1])//Si esta mostrando lo botones y..
 				{	console.log('key7');
 					
-					
 					f0015();//1 MENU  o es para el dedo 4 [letra B del teclado físico]
-					//f0094();//1 arrow up  o es para el dedo 4 [letra B del teclado físico]
-					
+					//f0094();//1 arrow up  o es para el dedo 4 [letra B del teclado físico]	
 					
 					///7/x 				i 	/9/
 					///4/=				o 	/6/
@@ -5070,59 +5195,42 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 					///n/5n		[]		2x  /x/ EN BRAIILE EL TECLADO debe habilitar ZXC - BNM PARA FACILIDAD DE LOS DEDOS 1,2,3,4,5 Y 6
 					///m/6m		[]		3z  /z/
 				}
-				
-				
-				
-
+					
 				/*esta parte se quita porque se paso para el morse, ver la funciones eKs y eKb
 				if(g00VARS[26][4]&&((now.keyCode == kEY.K22)||(now.keyCode == kEY.K3)||(now.keyCode == kEY.N3)||(now.keyCode == kEY.K33))&&yKEYS[2][2])//Si esta mostrando lo botones y..
 				{	console.log('key3');
 					f0095();//3 arrow down o es para el dedo 1 [letra C del teclado físico]
-				}*/
-
-
-
+				}* /
 
 				if(g00VARS[26][4]&&((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44))&&yKEYS[2][1])//Si esta mostrando lo botones y..
 				//PRUEBA 24 06 15
 				//if(g00VARS[26][4]&&((now.keyCode == kEY.K1)||(now.keyCode == kEY.N1)||(now.keyCode == kEY.K11))&&yKEYS[2][1])//Si esta mostrando lo botones y..
-				
-				
-				
+					
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
 				{	console.log('key4');
-
-
 
 					f0094();//4 arrow up  o es para el dedo 4 [letra B del teclado físico]
 					//f0047();//4 undo cancel
 				}
 
-
-
 				if(g00VARS[26][4]&&((now.keyCode == kEY.K55)||(now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][2])//Si esta mostrando lo botones y..
 				//PRU
 				//if(g00VARS[26][4]&&((now.keyCode == kEY.K22)||(now.keyCode == kEY.K3)||(now.keyCode == kEY.N3)||(now.keyCode == kEY.K33))&&yKEYS[2][2])//Si esta mostrando lo botones y..
 				
-
-
-
 				//if(((now.keyCode == kEY.K55)||(now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][4])//||(now.keyCode == kEY.KTAB))
 				{	console.log('key6');
 					console.log('|> Flag  -> F96 ');
 
-
 					f0095();//6 arrow down o es para el dedo 1 [letra C del teclado físico]
 					//f0096();//6 clic
 				}
-
 
 				/*esta parte se quita porque se paso para el morse, ver la funciones eKs y eKb
 				if(((now.keyCode == kEY.K55)||(now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][4])//||(now.keyCode == kEY.KTAB))
 				{	console.log('key6');
 					console.log('|> Flag  -> F96 ');
 					f0096();//6 clic
-				}*/
+				}* /
 
 				  if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K1)||(now.keyCode == kEY.N1)||(now.keyCode == kEY.K11)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
@@ -5130,12 +5238,8 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
 				
-
-
 				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
 				{	console.log('key1');
-
-
 
 					f0047();//7 undo cancel
 					//f0015();//7 menu
@@ -5150,11 +5254,16 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 				}
 				//pendientes: 1 habilitar las letras z,x,n,m para los dedos 2,3,5 y 6 del braille escrito (perkings?)
 				//pendientes: 2 alarma de clic: teclado activado/desactivado, aceptar
-			}/*
-			if((now.keyCode == kEY.KTAB)||(now.keyCode == kEY.KESP))//Si es tabulador o el espacio
-			{	f0070(1);//REGISTRAR el primer clic
-			}*/
-		}
+*/
+
+
+
+
+
+
+
+
+
 
 function f0099()//ACTIVAR icono central de Pantalla Minimizada
 		{	lOG(99);
@@ -5165,8 +5274,12 @@ function f0099()//ACTIVAR icono central de Pantalla Minimizada
 
 function f0100(now)//TERMINAR una tarea porque se soltó una tecla del teclado//AL SUBIR UNA TECLA..
 		{	lOG(100);
-			if (!now.getModifierState('CapsLock'))//detecta si capslock esta off
-     		{	if(!sonCap)
+			console.log('--------- - - ff f0100');
+			if (now.getModifierState('CapsLock'))//detecta si capslock esta off
+     		{	
+
+//inicio				
+				/*if(!sonCap)
 				{	sonCap = 1;
 					f0073();//Sonar Pito
 				}
@@ -5177,7 +5290,141 @@ function f0100(now)//TERMINAR una tarea porque se soltó una tecla del teclado//
 				//	f0074(3);//ALERTA 3 ON en pantalla
 				}
 				f0075(1);//simula un clic sobre el hueco de la tapa, esta acción sirve para actualizar el estado de capslock
-       		}
+				*/
+//fin			
+			
+				//El Morse 2 del botón 2
+				if((now.keyCode==kEY.K2)||(now.keyCode==kEY.K22))
+					{	if(any[2]==3)
+						{	any[2] = 2;console.log('any[2]=' + any[2]);//REACTIVA LA ENTRADA
+							vacio(2);
+						}
+						www9();
+					}
+			
+
+
+
+		//Este código se trajo de inded.js:	
+		//nuevo, Morse 0 corresponde al 5 y al espacio K5, K55 y KESP, el botón con número 0 queda disponible para las funciones de la barra inclinada, Morse 8 pero se va a pasar a Morse 9..
+		if((now.keyCode==kEY.K5)||(now.keyCode==kEY.K55)||(now.keyCode==kEY.KESP))
+		//if((now.keyCode==key.SP0)||(now.keyCode==key.A0)||(now.keyCode==key.B0)||(now.keyCode==key.C0))
+		{	if(any[0]==3)
+			{	any[0] = 2;console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA
+				vacio(0);
+			}
+			www9();
+		}
+
+
+
+
+
+		
+			/*if((now.keyCode==key.SP0)||(now.keyCode==key.A0)||(now.keyCode==key.B0)||(now.keyCode==key.C0))
+					{	if(any[0]==3)
+						{	any[0] = 2;console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA
+							vacio(0);
+						}
+						www9();
+					}
+					if((now.keyCode==key.A1)||(now.keyCode==key.B1)||(now.keyCode==key.C1))
+					{	if(any[1]==3)
+						{	any[1] = 2;console.log('any[1]=' + any[1]);//REACTIVA LA ENTRADA
+							vacio(1);
+						}
+						www9();
+					}
+					if((now.keyCode==key.A2)||(now.keyCode==key.B2)||(now.keyCode==key.C2))
+					{	if(any[2]==3)
+						{	any[2] = 2;console.log('any[2]=' + any[2]);//REACTIVA LA ENTRADA
+							vacio(2);
+						}
+						www9();
+					}
+					if((now.keyCode==key.A3)||(now.keyCode==key.B3)||(now.keyCode==key.C3))
+					{	if(any[3]==3)
+						{	any[3] = 2;console.log('any[3]=' + any[3]);//REACTIVA LA ENTRADA
+							vacio(3);
+						}
+						www9();
+					}*/
+		if (g00VARS[26][4] && ((now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
+		//if((now.keyCode==key.A3)||(now.keyCode==key.B3)||(now.keyCode==key.C3))
+		{
+			if (any[3] == 3) {
+				any[3] = 2; console.log('any[3]=' + any[3]);//REACTIVA LA ENTRADA
+				vacio(3);
+			}
+			www9();
+		}
+		/*if((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))//Si esta mostrando lo botones y..
+		//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
+		//if((now.keyCode==key.A4)||(now.keyCode==key.B4)||(now.keyCode==key.C4))
+		{	if(any[4]==3)
+			{	any[4] = 2;console.log('any[4]=' + any[4]);//REACTIVA LA ENTRADA
+				vacio(4);
+			}
+			www9();
+		}
+		*/
+		/*
+		if(((now.keyCode == kEY.K55)||(now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][4])//||(now.keyCode == kEY.KTAB))
+		//if((now.keyCode==key.A6)||(now.keyCode==key.B6)||(now.keyCode==key.C6))
+		{	if(any[6]==3)
+			{	any[6] = 2;console.log('any[6]=' + any[6]);//REACTIVA LA ENTRADA
+				vacio(6);
+			}
+			www9();
+		}
+		*/
+		/*if((now.keyCode==key.A7)||(now.keyCode==key.B7)||(now.keyCode==key.C7))
+		{	if(any[7]==3)
+			{	any[7] = 2;console.log('any[7]=' + any[7]);//REACTIVA LA ENTRADA
+				vacio(7);
+			}
+			www9();
+		}*/
+
+
+		//Nota el Morse 8 se va a desactivar porque sus funciones se le van a pasar al Morse 9, y el Morse 8 va a quedar para el boton 8
+		//El Morse 8 se le presta al botón 0
+		if((now.keyCode==kEY.K0)||(now.keyCode==kEY.K00))
+		//if((now.keyCode==key.A8)||(now.keyCode==key.B8)||(now.keyCode==key.C8))
+		{	if(any[8]==3)
+			{	any[8] = 2;console.log('any[8]=' + any[8]);//REACTIVA LA ENTRADA
+				vacio(8);
+			}
+			www9();
+		}/*
+		if((now.keyCode==key.A9)||(now.keyCode==key.B9)||(now.keyCode==key.C9))
+		{	if(any[9]==3)
+			{	any[9] = 2;console.log('any[9]=' + any[9]);//REACTIVA LA ENTRADA
+				vacio(9);
+			}
+			www9();
+		}*/
+		//RESETEA EVENTOS DE TECLADO DEL DOCUMENTO
+
+
+		/*
+		//El Morse 9 se debe activar y se le presta al botón 0
+		if((now.keyCode==kEY.K0)||(now.keyCode==kEY.K00))
+			{	if(any[9]==3)
+				{	any[9] = 2;console.log('any[9]=' + any[9]);//REACTIVA LA ENTRADA
+					vacio(9);
+				}
+				www9();
+			}
+		*/
+
+
+			
+			
+			
+			
+			}
+			
 		}
 
 function f0101()//REGRESAR color texto-boton previo

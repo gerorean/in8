@@ -1106,7 +1106,9 @@ var ini2 = true;//Activa la marquesina en ingles
 var iniR = 1;//Activar la ruta inicial
 var intBan		/**/ = 0;//1:Bandera con interprete /0:Sin interprete
 //const 	kDoc		/**/= document.documentElement;//documento HTML
-const kEY = { KCAP: 20, K1: 49, N1: 188, K3: 51, N3: 88, K4: 52, N4: 77, K6: 54, N6: 67, K7: 55, N7: 78, K9: 57, N9: 86, K0: 48, N0: 66, KBAC: 8, K11: 97, K22: 98, K33: 99, K44: 100, K55: 101, K66: 102, K77: 103, K88: 104, K99: 105, K00: 96, KTAB: 9, KESP: 32 }//PRE?GUN¿,KTAB:9,KENT:13,KESP:32};
+//      --l
+const kEY = { KCAP: 20, K1: 49, N1: 188, K3: 51, N3: 88, K4: 52, N4: 77, K5:53, K6: 54, N6: 67, K7: 55, N7: 78, K9: 57, N9: 86, K0: 48, N0: 66, KBAC: 8, K11: 97, K22: 98, K33: 99, K44: 100, K55: 101, K66: 102, K77: 103, K88: 104, K99: 105, K00: 96, KTAB: 9, KESP: 32 }//PRE?GUN¿,KTAB:9,KENT:13,KESP:32};
+//const kEY = { KCAP: 20, K1: 49, N1: 188, K3: 51, N3: 88, K4: 52, N4: 77, K6: 54, N6: 67, K7: 55, N7: 78, K9: 57, N9: 86, K0: 48, N0: 66, KBAC: 8, K11: 97, K22: 98, K33: 99, K44: 100, K55: 101, K66: 102, K77: 103, K88: 104, K99: 105, K00: 96, KTAB: 9, KESP: 32 }//PRE?GUN¿,KTAB:9,KENT:13,KESP:32};
 var kmar		/**/ = 0.1;//constante de velocidad de la marquesina
 var loC = '';//Ruta actual de location valida
 var luZ = ['', ''];//String del color de la luz - tinte[0] - temperatura[1]
@@ -3425,7 +3427,7 @@ var cycle = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//cycle MAX DE 12 INDICE DEL REGIS
 var deS;//true: DESLIZAMIENTO sobre el touch/ false: TOQUE sobre el touch PARA CUANDO ESTA EN MODO DISCAPACIDAD
 var doble;//DEMORA MAXIMA PARA HACER DOS CLICKS
 const dos = 500;//TIEMPO MAXIMO EN MILISEGUNDOS PARA QUE PASEN DOS CLICS
-var edit = false;//editor de texto activado:true
+var edit = true;//editor de texto activado:true -quitar esto que no hace nada, el editor siempre estará disponible!!!
 var esTAS = false;//SI ENCUENTRA EL EQUIVALENTE MORSE SE PONE TRUE
 //+ + + const 	key={			A1:49,B1:82,C1:97,A2:50,B2:84,C2:98,A3:51,B3:89,C3:99,A4:52,B4:70,C4:100,A6:54,B6:72,C6:102,A7:55,B7:67,C7:103,A8:56,B8:86,C8:104,A9:57,B9:66,C9:105,A0:53,B0:71,C0:101,SP0:32};
 var libre = [true, true, true, true, true, true, true, true, true, true, true];//POSICION DE LA TTTECLA
@@ -3437,10 +3439,11 @@ var mn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//HORA/DIA FINAL EN MILISEGUNDOS DESD
 var msg = new SpeechSynthesisUtterance();//API que crea un objeto de audio para ser leido por el sintetizador de voz de google
 var nn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//HORA/DIA ACTUAL EN MILISEGUnnnnDOS
 var nm = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//HORA/DIA InmICIO EN MILISEGUNDOS DESDE EL 1ERO DE ENERO DE 1970
+//          --l
 //var		outW = ['','','','','','','','','',''];//SALIDA
 var outX = ['', '', '', '', '', '', '', '', '', '', ''];//VARIABLE INGRESADA DENTRO DEL CODIGO
 var pare = [true, true, true, true, true, true, true, true, true, true, true];//RELOJ ESTA DESCANSANDO
-var pv = false;//true;//PRIMER INTERACCION CON EL TOUCH
+var pv = false;//true;//PRIMER INTERACCION CON EL TOUCH - creo que pv y pw quedaron false para que no sean bloqueantes en pantallas que no son touch 26abr025
 var pw = false;//true;//COPIA VIRTUAL DE pv;
 var regW = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO3 CAMBIO A ESTADO SOSTENIDO DE LA TECLA 3:ESTADO SOSTENIDO DEL BOTON/TECLA
 var regX = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO1 5/6 CAMBIOS DE ESTADO TECLA, DIFERENCIAS EN milisgs del inicio de la tecla oprimida ej 100,150,100, etc
@@ -3584,13 +3587,13 @@ ciclo2(){		//console.log('_____@- ciclo2()');
 
 
 function		//ACTIVACION O ACTUALIZACION DEL CICLO
-	ciclo3() {		//console.log('_____@- ciclo4()');
+	ciclo3() {		//console.log('_____@- ciclo3()');
 	if (!pare[3]) {
 		if (cycle[3] == 11)//'STOP' PARA DAR PASO AL RESULTADO
 		{	cycle[3] = 10; console.log('cycle[3]=' + cycle[3]);
 		}
 		hora();
-		nn[3] = m; console.log('nn[3]=' + nn[3]);
+		nn[3] = m;console.log('nn[3]=' + nn[3]);
 		if ((libre[3]) && (nn[3] > max[3]))
 		{	morse(3);
 		}
@@ -4114,7 +4117,7 @@ function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..   --l4539
 	eTb0(ev) {
 	console.log('_____@- eTb0()');
 	ev.preventDefault();// Call preventDefault() to prevent any further handling
-	if (pw)//ES LA PRIMER VEZ!
+	if (pw)//ES LA PRIMER VEZ!  (este if nunca se ejecuta por pw false desde el inicio, se puede quitar?)
 	{
 		console.log('Playback resumed successfully');
 		pw = false; console.log('pw=' + pw);
@@ -4128,14 +4131,14 @@ function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..   --l4539
 		if (sigo[0]) {
 			sigo[0] = false; console.log('sigo[0]=' + sigo[0]);//'inhabilita' la siguiente entrada del mouse
 		}
-		//punto0();//AQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
+		//  --l punto0();//             --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
 	}
 }
 
 function	
 eTb2(ev){	console.log('_____@- eTb2()');
 			ev.preventDefault();// Call preventDefault() to prevent any further handling
-			if (pv) {
+			if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 				eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
 			}
 			else//!pv
@@ -4154,7 +4157,7 @@ function
 	eTb3(ev) {
 	console.log('_____@- eTb3()');
 	ev.preventDefault();// Call preventDefault() to prevent any further handling
-	if (pv) {
+	if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 		eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
 	}
 	else//!pv
@@ -4174,7 +4177,7 @@ function
 function	
 eTb4(ev){		console.log('_____@- eTb4()');
 				ev.preventDefault();// Call preventDefault() to prevent any further handling
-				if(pv)
+				if(pv)	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 				{	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
 				}
 				else//!pv
@@ -4193,7 +4196,7 @@ function
 	eTb6(ev) {
 	console.log('_____@- eTb6()');
 	ev.preventDefault();// Call preventDefault() to prevent any further handling
-	if (pv) {
+	if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 		eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
 	}
 	else//!pv
@@ -4211,7 +4214,7 @@ function
 function	
 	eTb8(ev){	console.log('_____@- eTb8()');
 				ev.preventDefault();// Call preventDefault() to prevent any further handling
-				if (pv) {
+				if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 					eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
 				}
 				else//!pv
@@ -4229,7 +4232,7 @@ function
 function	
 eTb9(ev){	console.log('_____@- eTb9()');
 			ev.preventDefault();// Call preventDefault() to prevent any further handling
-			if (pv) {
+			if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 				eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
 			}
 			else//!pv
@@ -4250,7 +4253,7 @@ eTb9(ev){	console.log('_____@- eTb9()');
 function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..     --l4676
 	eTs0() {
 	console.log('_____@- eTs0()');
-	if ((pv) && (any[0] == 8)) {
+	if ((pv) && (any[0] == 8)) { //(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 		hora();
 		if (m < doble) {
 			pv = false; console.log('pv=' + pv);//HA OCURRIDO LA PRIMER INTERACCION
@@ -4270,13 +4273,13 @@ function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..     --l4676
 	}
 	if (any[0] == 5) {
 		any[0] = 4; console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA TOUCHSTART
-		//vacio(0);//AQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
+		//vacio(0);//          --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
 	}
 }
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs2(){ 	console.log('_____@- eTs2()');
-			if (pv) {
+			if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 				eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
 			}
 			else//!pv
@@ -4291,7 +4294,7 @@ eTs2(){ 	console.log('_____@- eTs2()');
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	eTs3() {
 	console.log('_____@- eTs3()');
-	if (pv) {
+	if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 		eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
 	}
 	else//!pv
@@ -4306,7 +4309,7 @@ function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 /*
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs4(){ 		console.log('_____@- eTs4()');
-				if(pv)
+				if(pv)//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 				{	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
 				}
 				else//!pv
@@ -4320,7 +4323,7 @@ eTs4(){ 		console.log('_____@- eTs4()');
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	eTs6() {
 	console.log('_____@- eTs6()');
-	if (pv) {
+	if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 		eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
 	}
 	else//!pv
@@ -4334,7 +4337,7 @@ function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs8(){ 		console.log('_____@- eTs8()');
-				if (pv) {
+				if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 					eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
 				}
 				else//!pv
@@ -4347,7 +4350,7 @@ eTs8(){ 		console.log('_____@- eTs8()');
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs9(){ 	console.log('_____@- eTs9()');
-			if (pv) {
+			if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 				eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
 			}
 			else//!pv
@@ -4553,6 +4556,7 @@ function      //terminacion general de un punto o una raya: RESETEA LOS COLORES 
 	if ((v == 0) && (regX[v][cycle[v]] > tM))//Si es la tecla 0 (recibe sostenidos- con duración muy larga)
 	{
 		regW[v][cycle[v]] = 3;//REGISTRO3 CAMBIO A ESTADO SOSTENIDO DE LA TECLA, se trata de un sostenido, el 3 lo indica
+		console.log(' --- - - - - superrrrr sostenido!');
 	}
 	cycle[v] += 1; console.log('cycle[v]=' + cycle[v]);//incrementa en uno el ciclo, quedan números pares 2,4,6.. 
 	if ((v != 0) && (regY[v][(cycle[v] - 1)] == 1))//Si REGISTRO2 RESULTADO DE ESTADO anterior del boton/TECLA (previo) es (1) es se trata de un punto final ---· -· --·
@@ -4607,7 +4611,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 	console.log(' - - - rrrrr ###### #### ###### ### ##### ### ###regY[q]=', regY[q]);
 	console.log(' - - - rrrrr max[q]=', max[q]);
 	regX[q][cycle[q]] = nn[q] - mn[q]; console.log(' - - - rrrrr regX[q]=', regX[q]);
-	if (q == 0)//BOTON MORSE 2023 IBOGOTA!!!!! DESACTIVADO - //boton 5 morse 0 -
+	if (q == 0)//boton - [5] entrada morse onclick='f0145() morse 0 BOTON MORSE 2023 IBOGOTA!!!!! DESACTIVADO - //boton 5 morse 0 -
 	{				f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
 					switch (cycle[0])
 					{	case 1:
@@ -4691,7 +4695,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 						f0096(1, 1);//Clic sobre el boton 2
 					};
 
-					if (q == 3)//MI CLIC FIJO 2023 IBOGOTA!!!! 	
+					if (q == 3)//boton . [3] clic o enter onclick='f0096(1,1) morse 3 MI CLIC FIJO 2023 IBOGOTA!!!! 	
 					{	console.log(' - - - MI CLIC FIJO 2023 IBOGOTA!!!! ');
 						f0096(1, 1);//Clic sobre el boton 3
 					};
@@ -4703,7 +4707,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
 
-					if (q == 6)//arrow down	
+					if (q == 6)//boton V [6] avanzar adelante un item (+1) morse 6 arrow down	
 					{	console.log(' - - - arrow down! ');
 						f0095(1);// arrow down
 					};
@@ -4711,7 +4715,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 
 					//Este va a cambiar a delete 1 boton 8 y este 8 se va a volver 9
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
-					if (q == 8)//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
+					if (q == 8)//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8 MOSTRAR la interfaz de Salida M que corresponda porque se oprimio [0] (/)
 					{	console.log(' - - - rrrrr MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)!!!! ');
 						f0148();//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 					};
@@ -4955,12 +4959,12 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					outX[q] = ' -';//RAYA..
 					//sos(q,0);
 
-					if (q == 3)//MI REVERSA FIJA 2023 IBOGOTA!!!! 	
+					if (q == 3)//boton . [3] raya onclick='f0096(1,1,1) morse 3 MI REVERSA FIJA 2023 IBOGOTA!!!! 	
 					{	console.log(' - - - MI REVERSA FIJA 2023 IBOGOTA!!!! ');
 						f0096(1, 1, 1);//Aplicar reversa al clic(botón 3) salTO -1
 					};
 
-					if (q == 6)//arrow down	
+					if (q == 6)//boton V [6] avanzar adelante un item (+1) morse 6 arrow down	
 					{	console.log(' - - - arrow down! ');
 						f0095(1);// arrow down
 					};
@@ -4979,7 +4983,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					};*/
 
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
-					if (q == 8)//Espacio Morse	
+					if (q == 8)//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8 Espacio Morse	
 					{	console.log(' - - - Espacio Morse en el display M');
 						iIntM0.textContent += ' ';
 						f0151();// Desplaza hacia el final el Display M
@@ -5343,16 +5347,16 @@ const 	kL0=[			['Tutorial de puntos y rayas',													'icon far fa-comment-d
 						['Raya, punto, punto, raya, punto',												'icon',		'/',	'Signo de barra inclinada',							'barra inclinada'],//zGuiIn(40)
 						['Raya, raya, raya, punto, punto, punto',										'icon',		':',	'Signo de dos puntos',								'dos puntos'],
 						['Punto, raya, raya, punto, raya, punto',										'icon',		'@',	'Signo de arroba',									'arroba']];
-
-//boton 5 morse 0
+//1479 - 5036(0836)
+//boton - [5] entrada morse onclick='f0145() morse 0
 boT0.addEventListener('mousedown',eMb0);
 boT0.addEventListener('mouseleave',eMs0);
 boT0.addEventListener('mouseup',eMs0);
 boT0.addEventListener('touchend',eTs0);
 boT0.addEventListener('touchstart',eTb0);
 
-
-//yBot3
+//1479 - 5036(0836)
+//boton . [3] clic o enter onclick='f0096(1,1) morse 3
 yBot3.addEventListener('mousedown', eMb3);
 yBot3.addEventListener('mouseleave', eMs3);
 yBot3.addEventListener('mouseup', eMs3);
@@ -5371,8 +5375,8 @@ yBot1.addEventListener('mouseup',eMs4);
 yBot1.addEventListener('touchend',eTs4);
 yBot1.addEventListener('touchstart',eTb4);
 */
-
-//yBot6
+//1479 - 5036(0836)
+//boton V [6] avanzar adelante un item (+1) morse 6
 yBot6.addEventListener('mousedown',eMb6);
 yBot6.addEventListener('mouseleave',eMs6);
 yBot6.addEventListener('mouseup',eMs6);
@@ -5383,8 +5387,8 @@ fBot6.addEventListener('mouseleave',eMs6);
 fBot6.addEventListener('mouseup',eMs6);
 fBot6.addEventListener('touchend',eTs6);
 fBot6.addEventListener('touchstart',eTb6);
-
-//boton 0 morse 8   --l5814
+//1479 - 5036(0836)
+//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8  --l5814  
 yBoto.addEventListener('mousedown',eMb8);
 yBoto.addEventListener('mouseleave',eMs8);
 yBoto.addEventListener('mouseup',eMs8);
