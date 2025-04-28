@@ -762,7 +762,7 @@
 
  .c--Pic2{		min-width:calc(var(--chico)*0.25)}/*(var(--chico)*0.25)}/*25vh}/*desactivar de ser necesario*/
 
- #iTaco{		opacity:0.3}
+ #iTaco{		opacity:0.8}
 
  #iKeyB
 ,#iKeyS{		opacity:0.8}
