@@ -7756,6 +7756,7 @@ f0145()//CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st)
 			{	//ACTIVAR la salida de la interfaz M y quitar la opacidad:
 				intM.classList.remove('cX');
 				iIntM0.classList.remove('cX');//Enciende el display de la interfaz M
+				iTaco.classList.remove('cX');
 				mViS = 1;//Se prendio el display
 				mMod = 0;//Reinicia al modo Morse
 				//iTaco.style.opacity='0.8';
