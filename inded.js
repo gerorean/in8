@@ -3443,8 +3443,8 @@ var nm = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//HORA/DIA InmICIO EN MILISEGUNDOS DE
 //var		outW = ['','','','','','','','','',''];//SALIDA
 var outX = ['', '', '', '', '', '', '', '', '', '', ''];//VARIABLE INGRESADA DENTRO DEL CODIGO
 var pare = [true, true, true, true, true, true, true, true, true, true, true];//RELOJ ESTA DESCANSANDO
-var pv = false;//true;//PRIMER INTERACCION CON EL TOUCH - creo que pv y pw quedaron false para que no sean bloqueantes en pantallas que no son touch 26abr025
-var pw = false;//true;//COPIA VIRTUAL DE pv;
+var pv = false;//true;// false;//true;//PRIMER INTERACCION CON EL TOUCH - creo que pv y pw quedaron false para que no sean bloqueantes en pantallas que no son touch 26abr025
+var pw = false;//true;//false;//true;//COPIA VIRTUAL DE pv;
 var regW = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO3 CAMBIO A ESTADO SOSTENIDO DE LA TECLA 3:ESTADO SOSTENIDO DEL BOTON/TECLA
 var regX = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO1 5/6 CAMBIOS DE ESTADO TECLA, DIFERENCIAS EN milisgs del inicio de la tecla oprimida ej 100,150,100, etc
 var regY = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO2 RESULTADO DE ESTADO TECLA 0:SIN-ASIGNAR 1:PUNTO 2:RAYA 3:
@@ -3549,15 +3549,15 @@ function		//ACTIVACION O ACTUALIZACION DEL CICLO      --l3866
 	ciclo0(){		//console.log('_____@- ciclo0()');  //boton 5 morse 0
 				if(!pare[0])
 				{	if(cycle[0]==13)//'STOP' PARA DAR PASO AL RESULTADO
-					{	cycle[0] = 12;console.log('cycle[0]='+cycle[0]);
+					{	cycle[0] = 12;//console.log('cycle[0]='+cycle[0]);
 					}
 					hora();
-					nn[0] = m;console.log('nn[0]='+ nn[0]);
+					nn[0] = m;//console.log('nn[0]='+ nn[0]);
 					if((libre[0])&&(nn[0] > max[0]))
 					{	morse(0);
 					}
 					if((!libre[0])&&(nn[0] > min[0])&&(!lin[0]))
-					{	lin[0] = true;console.log('lin[0]=' + lin[0]);//SE ACTIVO LA LINEA/RAYA
+					{	lin[0] = true;//console.log('lin[0]=' + lin[0]);//SE ACTIVO LA LINEA/RAYA
 						oscu();
 						audiRay();//ACTIVA EL SONIDO RAYA
 						regY[0][cycle[0]] = 2;
@@ -4131,7 +4131,7 @@ function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..   --l4539
 		if (sigo[0]) {
 			sigo[0] = false; console.log('sigo[0]=' + sigo[0]);//'inhabilita' la siguiente entrada del mouse
 		}
-		//  --l punto0();//             --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
+		punto0();//             --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
 	}
 }
 
@@ -4273,7 +4273,7 @@ function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..     --l4676
 	}
 	if (any[0] == 5) {
 		any[0] = 4; console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA TOUCHSTART
-		//vacio(0);//          --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
+		vacio(0);//          --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
 	}
 }
 
@@ -4365,7 +4365,7 @@ eTs9(){ 	console.log('_____@- eTs9()');
 function		//REGISTRA LA HORA ACTUAL EN MILISEGUNDOS
 	hora() { 		//console.log('_____@- hora()');
 	hd = new Date();
-	m = hd.getTime(); console.log('m=' + m)
+	m = hd.getTime();//console.log('m=' + m)
 }
 
 //morse() ver al final
@@ -4376,22 +4376,23 @@ function      //oscurece la capa de los colores
 }
 
 function      //primer parte general del algoritmo codigo morse        --l4801
-punto0(){     console.log('_____@- punto0()');
+punto0(){     //console.log('_____@- punto0()');
               //puerta.classList.add('active');
-              libre[0] = false;console.log('libre[0]=' + libre[0]);//MOUSE CLICK ESTA ABAJO
+              libre[0] = false;//console.log('libre[0]=' + libre[0]);//MOUSE CLICK ESTA ABAJO
               audiPun();//ACTIVA EL SONIDO DEL PUNTO
               color(cycle[0]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
               if(cycle[0]==0)
-              { pare[0] = false;console.log('pare[0]=' + pare[0]);
+              { pare[0] = false;//console.log('pare[0]=' + pare[0]);
               }
               hora();
-              nm[0] = m;console.log('nm[0]='+ nm[0]);
-              min[0] = m + cut;console.log('min[0]='+ min[0]);//EN EL CASO DE 0 O MORSE SON SEÑALES RAPIDAS POR LO QUE NO SE toma tM sino cut para que una parte de las rayas sean puntos y una parte de los sostenidos sean rayas
+              nm[0] = m;//console.log('nm[0]='+ nm[0]);
+			  //Hay que calibrar cut en  pantallas touch!!  min[0] = m + cut*1.7:
+              min[0] = m + cut*1.7;//console.log('min[0]='+ min[0]);//EN EL CASO DE 0 O MORSE SON SEÑALES RAPIDAS POR LO QUE NO SE toma tM sino cut para que una parte de las rayas sean puntos y una parte de los sostenidos sean rayas
               if(cycle[0] > 0)
-              { regX[0][cycle[0]] = nm[0] - mn[0];console.log('regX[0]=' + regX[0]);
-                cycle[0] += 1;console.log('cycle[0]=' + cycle[0]);
+              { regX[0][cycle[0]] = nm[0] - mn[0];//console.log('regX[0]=' + regX[0]);
+                cycle[0] += 1;//console.log('cycle[0]=' + cycle[0]);
               }
-              regY[0][cycle[0]] = 1;console.log('regY[0]=' + regY[0]);
+              regY[0][cycle[0]] = 1;//console.log('regY[0]=' + regY[0]);
               ciclo0()}
 
 function      //primer parte general del algoritmo codigo morse
