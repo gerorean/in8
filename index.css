@@ -118,11 +118,14 @@
 ,.cZIn
 ,#i--I
 ,#iMenu
-,#iSoni{		align-items:center}
+,#iSoni
+,.keY{			align-items:center}
 
  .cFleB{		align-items:flex-end}
 
  .cFleT{		align-items:flex-start}
+
+ .keY:active{	background: #888}
 
  .cAltu
 ,.c--Ame
@@ -160,6 +163,7 @@
  .cIng
 ,.cNeg
 ,.cTexM
+,#iKeyB
 ,#i--Negro
 ,#iTaco
 ,.yProsaL
@@ -193,18 +197,19 @@
 
   *{			border:0}
 
- td
-,th{			border: 1px solid var(--cblwh2)}
+ #i--Negro
+,#y--Bot0l
+,#y--Bot0r{		border:2px solid var(--cblwh1)}/*var(--sky)}/*orange}/*var(--cGrey)}/*black}*/
+
+ .doble
+,td
+,th{			border:min(0.5vh,0.5vw) solid var(--cblwh2)}
 
   .c--Stop{		border:3px groove rgba(168,168,168,0.3)}
 
  /*#iTic{ 		border:solid 0.3px transparent}*/
 
- #i--Negro
-,#y--Bot0l
-,#y--Bot0r{		border:2px solid var(--cblwh1)}/*var(--sky)}/*orange}/*var(--cGrey)}/*black}*/
-
- table{			border-collapse: collapse}
+ table{			border-collapse:collapse}
 
  #iFaro{		border-radius:0 0 0 20%}
 
@@ -234,6 +239,8 @@
 
  .cBof
 ,.cLen{			border-radius:calc(var(--rmin)*2)}/* 5px var(--bh) 5px}*/
+
+ .keY{			border-radius:min(0.5vh,0.5vw)}
 
  .cAma
 ,.cLuz{			border-radius:var(--rmin) var(--rmin) 0 0}
@@ -323,6 +330,8 @@
 ,.c--Reloj
 ,.cTec
 ,.cTexM
+,#iKeyB
+,#iKeyS
 ,#iNegro{		box-sizing:border-box}
 
  .cAma
@@ -348,6 +357,7 @@
 ,.cTexM
 ,#iInfo
 ,#i--Hora
+,#iKeyB
 ,#iTaco
 ,.yProsaL
 ,.zProsa{		color:var(--cblwh2)}
@@ -383,7 +393,8 @@
 ,.cButton
 ,.cDedo
 ,.cTapa
-,.cTexM{		cursor:pointer}/*!important usar para que funcione click en iphone????*/
+,.cTexM
+,.keY{			cursor:pointer}/*!important usar para que funcione click en iphone????*/
 
  .yProsaL{		display:block}
 
@@ -401,7 +412,11 @@
 ,.i--nner
 ,#i--I
 ,#iMenu
-,#iSoni{		display:flex}
+,#iSoni
+,.keY{			display:flex}
+
+ .cKRow
+,#iKeyB{		display:grid}
 
  .cAltu
 ,.cPic2
@@ -411,14 +426,16 @@
 ,.cInSOS::-webkit-scrollbar
 ,.cScroll::-webkit-scrollbar
 ,.cTexM::-webkit-scrollbar
-,.cTpres::-webkit-scrollbar{display: none}/* Chrome, Safari */
+,.cTpres::-webkit-scrollbar{
+				display: none}/* Chrome, Safari */
 
  .sepia{		filter:sepia(30%)}
 
  .cBof
 ,.c--Info{		float:left}
 
- #i--Taco{		font-family: Arial, sans-serif}
+ #i--Taco
+,.keY{			font-family: Arial, sans-serif}
 
   *{			font-family:Roboto,Century Gothic,Monaco,Verdana,Tahoma,Arial,sans-serif}/*'Monaco','Verdana','Arial',sans-serif}*/
 
@@ -451,6 +468,8 @@
 
  td
 ,th{			font-size:max(5vw,5vh)}
+
+ .keY{			font-size:min(5vh,5vw)}
 
  .cMarqu{		font-size:min(6.5vh,6.5vw)}/*min(6.5vh,6.5vw)}/*min(8vh,8vw) o 32px*/
 
@@ -502,6 +521,16 @@
 
  td:first-child{font-weight:bold}
 
+ .cKRow{		gap:0}
+
+ .doble{		grid-column: span 2}
+
+ #iKeyB{		grid-gap:0}
+
+ .cKRow{		grid-template-columns: repeat(10, 1fr)}
+
+ #iKeyB{		grid-template-rows: repeat(5, 1fr)}
+
  .cGlosD{		height:5%}/*calc(1px * var(--cHGlo))}*/
 
  .cSom{			height:5px}
@@ -518,6 +547,9 @@
 ,.c--Ent
 ,.cMark
 ,.c--TOB{		height:16.666666666%}/*height:20%}25%}/*33.33333333%}/*18.75%*/
+
+ #iKeyB
+,#i--KeyS{		height:35vh}
 
  .cTexU{		height:45vh}
 
@@ -607,7 +639,8 @@
 ,.cTOB
 ,.c--Trin
 ,.cZIn
-,#iSoni{		justify-content:center}
+,#iSoni
+,.keY{			justify-content:center}
 
  #i--I
 ,#iMenu{		justify-content:flex-end}
@@ -731,6 +764,9 @@
 
  #iTaco{		opacity:0.3}
 
+ #iKeyB
+,#iKeyS{		opacity:0.8}
+
  .cTexM{		opacity:0.9}
 
  .c1570
@@ -758,6 +794,9 @@
 
 .cInSOS
 ,.cTexM{		overflow-y:scroll}
+
+ #iKeyB
+,#iKeyS{		padding:0}
 
  .cTapa{		padding:0 0 calc(50vh - var(--bh) - (var(--a)*0.5)) 0}
 
@@ -907,7 +946,8 @@
 ,.cTela
 ,.cTexM
 ,.cTpres
-,#iTaco{		text-align:center}
+,#iTaco
+,.keY{			text-align:center}
 
  .cBra1
 ,.cBrai
@@ -1055,6 +1095,9 @@
 ,#iCelu
 ,#i--NEG
 ,table {		width:100%}
+
+ #iKeyB
+,#iKeyS{		width:100vw}
 
  .cBOT
 ,.c--TOB{		width:calc(33.3333333% - var(--b))}
