@@ -5061,7 +5061,7 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 
 				//El Morse 2
 				if((now.keyCode==kEY.K2)||(now.keyCode==kEY.K22))
-				{		if(((any[2]==2)||(any[2]==9))&&(!pv))
+				{		if(((any[2]==2)||(any[2]==9)))//&&(!pv))
 						{	any[2] = 3;console.log('any[2]=' + any[2]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 							punto2();
 						}
@@ -5077,8 +5077,8 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 				}*/
 				if (g00VARS[26][4] && ((now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
 				{	console.log('key3 K3 N3');
-					if (((any[3] == 2) || (any[3] == 9)) && (!pv)) {
-						any[3] = 3; console.log('any[3]=' + any[3]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+					if (((any[3] == 2) || (any[3] == 9)))//// && (!pv)) 
+					{	any[3] = 3; console.log('any[3]=' + any[3]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 						punto3();
 					}
 					w7();
@@ -5094,7 +5094,7 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 				//Botón 5 es Morse - pero usa el Morse del 0 (Que es el más completo de todos) y el botón 0 usaría el Morse del 5
 				if((now.keyCode==kEY.K5)||(now.keyCode==kEY.KESP)||(now.keyCode==kEY.K55))
 				{	console.log('_____@- eKb() - CapsLock K5 KESP K55 - any[0]=',any[0]);
-					if(((any[0]==2)||(any[0]==9))&&(!pv)&&(edit))
+					if(((any[0]==2)||(any[0]==9))&&(edit))////&&(!pv)&&(edit))
 					{	any[0] = 3;console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 						punto0();
 					}
@@ -5124,7 +5124,7 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 				if((now.keyCode==kEY.K0)||(now.keyCode==kEY.K00))
 				//if((now.keyCode==kEY.K8)||(now.keyCode==kEY.K88))
 				//if((now.keyCode==key.A8)||(now.keyCode==key.B8)||(now.keyCode==key.C8))
-				{		if(((any[8]==2)||(any[8]==9))&&(!pv))
+				{		if(((any[8]==2)||(any[8]==9)))////&&(!pv))
 						{	any[8] = 3;console.log('any[8]=' + any[8]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 							punto8();
 						}
@@ -5139,7 +5139,7 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 
 				//El Morse 9 se debe activar y se le presta al botón 0
 				/*if((now.keyCode==kEY.K0)||(now.keyCode==kEY.K00))
-				{		if(((any[9]==2)||(any[9]==9))&&(!pv))
+				{		if(((any[9]==2)||(any[9]==9)))////&&(!pv))
 						{	any[9] = 3;console.log('any[9]=' + any[9]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 							punto9();
 						}

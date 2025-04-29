@@ -3443,8 +3443,8 @@ var nm = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//HORA/DIA InmICIO EN MILISEGUNDOS DE
 //var		outW = ['','','','','','','','','',''];//SALIDA
 var outX = ['', '', '', '', '', '', '', '', '', '', ''];//VARIABLE INGRESADA DENTRO DEL CODIGO
 var pare = [true, true, true, true, true, true, true, true, true, true, true];//RELOJ ESTA DESCANSANDO
-var pv = false;//true;// false;//true;//PRIMER INTERACCION CON EL TOUCH - creo que pv y pw quedaron false para que no sean bloqueantes en pantallas que no son touch 26abr025
-var pw = false;//true;//false;//true;//COPIA VIRTUAL DE pv;
+////var pv = false;//true;// false;//true;//PRIMER INTERACCION CON EL TOUCH - creo que pv y pw quedaron false para que no sean bloqueantes en pantallas que no son touch 26abr025
+////var pw = false;//true;//false;//true;//COPIA VIRTUAL DE pv;
 var regW = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO3 CAMBIO A ESTADO SOSTENIDO DE LA TECLA 3:ESTADO SOSTENIDO DEL BOTON/TECLA
 var regX = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO1 5/6 CAMBIOS DE ESTADO TECLA, DIFERENCIAS EN milisgs del inicio de la tecla oprimida ej 100,150,100, etc
 var regY = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];//REGISTRO2 RESULTADO DE ESTADO TECLA 0:SIN-ASIGNAR 1:PUNTO 2:RAYA 3:
@@ -3468,8 +3468,8 @@ const
 		catch (e) {
 			touch = 0;
 			iV6a.style.backgroundColor = 'blue';
-			pv = false;//no requiere PRIMER INTERACCION CON EL TOUCH
-			pw = false;//no requiere PRIMER INTERACCION CON EL TOUCH
+			////pv = false;//no requiere PRIMER INTERACCION CON EL TOUCH
+			////pw = false;//no requiere PRIMER INTERACCION CON EL TOUCH
 			console.log('pantalla SIN TOUCH!');
 		}
 	}
@@ -3783,8 +3783,6 @@ function		//AL BAJAR UNA TECLA..
 					}	
 					*/
 
-
-
 /*
 		if (g00VARS[26][4] && ((now.keyCode == kEY.K22) || (now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
 		//if((now.keyCode==key.A3)||(now.keyCode==key.B3)||(now.keyCode==key.C3))
@@ -3796,10 +3794,6 @@ function		//AL BAJAR UNA TECLA..
 			w7();
 		}
 
-
-
-
-
 		/*if((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))//Si esta mostrando lo botones y..
 		//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
 		//if((now.keyCode==key.A4)||(now.keyCode==key.B4)||(now.keyCode==key.C4))
@@ -3809,10 +3803,6 @@ function		//AL BAJAR UNA TECLA..
 			}
 			w7();
 		}*/
-
-
-
-
 
 		/*
 		if(((now.keyCode == kEY.K55)||(now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][4])//||(now.keyCode == kEY.KTAB))
@@ -3824,10 +3814,6 @@ function		//AL BAJAR UNA TECLA..
 			w7();
 		}
 		*/
-
-
-
-
 
 		/*
 		/*if((now.keyCode==key.A7)||(now.keyCode==key.B7)||(now.keyCode==key.C7))
@@ -3887,10 +3873,7 @@ function		//AL SUBIR UNA TECLA..
 						}
 						www9();
 					}*/
-
-
 /*
-
 		if (g00VARS[26][4] && ((now.keyCode == kEY.K22) || (now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
 		//if((now.keyCode==key.A3)||(now.keyCode==key.B3)||(now.keyCode==key.C3))
 		{
@@ -3900,9 +3883,6 @@ function		//AL SUBIR UNA TECLA..
 			}
 			www9();
 		}
-
-
-
 		/*if((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))//Si esta mostrando lo botones y..
 		//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K4)||(now.keyCode == kEY.N4)||(now.keyCode == kEY.K44)||(now.keyCode == kEY.KBAC))&&yKEYS[2][3])//Si esta mostrando lo botones y..
 		//if((now.keyCode==key.A4)||(now.keyCode==key.B4)||(now.keyCode==key.C4))
@@ -3913,11 +3893,6 @@ function		//AL SUBIR UNA TECLA..
 			www9();
 		}
 		*/
-
-
-
-
-
 		/*
 		if(((now.keyCode == kEY.K55)||(now.keyCode == kEY.K6)||(now.keyCode == kEY.N6)||(now.keyCode == kEY.K66))&&yKEYS[2][4])//||(now.keyCode == kEY.KTAB))
 		//if((now.keyCode==key.A6)||(now.keyCode==key.B6)||(now.keyCode==key.C6))
@@ -3928,11 +3903,6 @@ function		//AL SUBIR UNA TECLA..
 			www9();
 		}
 		*/
-
-
-
-
-
 		/*if((now.keyCode==key.A7)||(now.keyCode==key.B7)||(now.keyCode==key.C7))
 		{	if(any[7]==3)
 			{	any[7] = 2;console.log('any[7]=' + any[7]);//REACTIVA LA ENTRADA
@@ -3961,7 +3931,7 @@ function		//AL SUBIR UNA TECLA..
 function		//AL BAJAR EL MOUSE..   --l4382
 	eMb0(){ 	
 				console.log('_____@- eMb0()');
-				if(((any[0]==0)||(any[0]==9))&&(!pv)&&(sigo[0]))
+				if(((any[0]==0)||(any[0]==9))&&(sigo[0]))////if(((any[0]==0)||(any[0]==9))&&(!pv)&&(sigo[0]))... todas tienen &&(!pv) y se les quito!
 				{	any[0] = 1;console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 					punto0();
 				}
@@ -3973,7 +3943,7 @@ function		//AL BAJAR EL MOUSE..   --l4382
 
 function		//AL BAJAR EL MOUSE..
 	eMb2(){ 	console.log('_____@- eMb2()');
-				if(((any[2]==0)||(any[2]==9))&&(!pv)&&(sigo[2]))
+				if(((any[2]==0)||(any[2]==9))&&(sigo[2]))
 				{	any[2] = 1;console.log('any[2]=' + any[2]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 					punto2();
 				}
@@ -3985,8 +3955,8 @@ function		//AL BAJAR EL MOUSE..
 function		//AL BAJAR EL MOUSE..
 	eMb3() {
 	console.log('_____@- eMb3()');
-	if (((any[3] == 0) || (any[3] == 9)) && (!pv) && (sigo[3])) {
-		any[3] = 1; console.log('any[3]=' + any[3]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+	if (((any[3] == 0) || (any[3] == 9))&&(sigo[3]))
+	{	any[3] = 1; console.log('any[3]=' + any[3]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 		punto3();
 	}
 	if (!sigo[3]) {
@@ -3998,7 +3968,7 @@ function		//AL BAJAR EL MOUSE..
 /*
 function		//AL BAJAR EL MOUSE..
 	eMb4(){ 	console.log('_____@- eMb4()');
-				if(((any[4]==0)||(any[4]==9))&&(!pv)&&(sigo[4]))
+				if(((any[4]==0)||(any[4]==9))&&(sigo[4]))
 				{	any[4] = 1;console.log('any[4]=' + any[4]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 					punto4();
 				}
@@ -4011,14 +3981,12 @@ function		//AL BAJAR EL MOUSE..
 function		//AL BAJAR EL MOUSE..
 	eMb6() {
 	console.log('_____@- eMb6()');
-	if (((any[6] == 0) || (any[6] == 9)) && (!pv) && (sigo[6]))//[si es ENTRADA DE DATOS TIPO MOUSEDOWN(0) o TODOS(9)] y [no es la PRIMER INTERACCION CON EL TOUCH] y [sigue porque EN TOUCH 'NO HA BLOCKEADO' EL SIGUIENTE CLICK DEL MOUSE POR DAR CLIC]
-	{
-		any[6] = 1; console.log('any[6]=' + any[6]);//(1) BLOQUEA LA SIGUIENTE ENTRADA DE DATOS HASTA QUE SEA 0
+	if (((any[6] == 0) || (any[6] == 9))&&(sigo[6]))//[si es ENTRADA DE DATOS TIPO MOUSEDOWN(0) o TODOS(9)] y [no es la PRIMER INTERACCION CON EL TOUCH] y [sigue porque EN TOUCH 'NO HA BLOCKEADO' EL SIGUIENTE CLICK DEL MOUSE POR DAR CLIC]
+	{	any[6] = 1; console.log('any[6]=' + any[6]);//(1) BLOQUEA LA SIGUIENTE ENTRADA DE DATOS HASTA QUE SEA 0
 		punto6();
 	}
 	if (!sigo[6])//SI EL TOUCH 'HA BLOCKEADO' EL SIGUIENTE CLICK DEL MOUSE POR DAR CLIC..
-	{
-		sigo[6] = true; console.log('sigo[6]=' + sigo[6]);//'habilita' la siguiente entrada de datos con mouse luego de pausarse por ocurrir una subida del touch (ƒ(){})
+	{	sigo[6] = true; console.log('sigo[6]=' + sigo[6]);//'habilita' la siguiente entrada de datos con mouse luego de pausarse por ocurrir una subida del touch (ƒ(){})
 	}
 	w7()//inicia evento 'primer' interacción
 }
@@ -4026,7 +3994,7 @@ function		//AL BAJAR EL MOUSE..
 function		//AL BAJAR EL MOUSE..
 	eMb8()	{ 	
 				console.log('_____@- eMb8()');
-				if(((any[8]==0)||(any[8]==9))&&(!pv)&&(sigo[8]))
+				if(((any[8]==0)||(any[8]==9))&&(sigo[8]))
 				{	any[8] = 1;console.log('any[8]=' + any[8]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 					punto8();
 				}
@@ -4038,7 +4006,7 @@ function		//AL BAJAR EL MOUSE..
 
 function		//AL BAJAR EL MOUSE..
 	eMb9(){ 	console.log('_____@- eMb9()');
-				if(((any[9]==0)||(any[9]==9))&&(!pv)&&(sigo[9]))
+				if(((any[9]==0)||(any[9]==9))&&(sigo[9]))
 				{	any[9] = 1;console.log('any[9]=' + any[9]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
 					punto9();
 				}
@@ -4117,17 +4085,17 @@ function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..   --l4539
 	eTb0(ev) {
 	console.log('_____@- eTb0()');
 	ev.preventDefault();// Call preventDefault() to prevent any further handling
-	if (pw)//ES LA PRIMER VEZ!  (este if nunca se ejecuta por pw false desde el inicio, se puede quitar?)
-	{
-		console.log('Playback resumed successfully');
-		pw = false; console.log('pw=' + pw);
-		any[0] = 8; console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
-		hora();
-		//none();//quita el cursor tipo puntero que tiene por defecto
-		doble = m + dos; console.log('doble=' + doble);//LIMITE PARA DOBLECLICK
-	}
-	if (((any[0] == 4) || (any[0] == 9)) && (!pv)) {
-		any[0] = 5; console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+	////if (pw)//ES LA PRIMER VEZ!  (este if nunca se ejecuta por pw false desde el inicio, se puede quitar?)
+	////{
+	////	console.log('Playback resumed successfully');
+	////	pw = false; console.log('pw=' + pw);
+	////	any[0] = 8; console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+	////	hora();
+	////	//none();//quita el cursor tipo puntero que tiene por defecto
+	////	doble = m + dos; console.log('doble=' + doble);//LIMITE PARA DOBLECLICK
+	////}
+	if (((any[0] == 4) || (any[0] == 9)))// && (!pv)) 
+	{	any[0] = 5; console.log('any[0]=' + any[0]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
 		if (sigo[0]) {
 			sigo[0] = false; console.log('sigo[0]=' + sigo[0]);//'inhabilita' la siguiente entrada del mouse
 		}
@@ -4138,57 +4106,57 @@ function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..   --l4539
 function	
 eTb2(ev){	console.log('_____@- eTb2()');
 			ev.preventDefault();// Call preventDefault() to prevent any further handling
-			if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-				eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
-			}
-			else//!pv
-			{
-				if(((any[2]==4)||(any[2]==9))&&(!pv))
+			////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+			////}
+			////else//!pv
+			////{
+				if(((any[2]==4)||(any[2]==9)))// &&(!pv))
 				{	any[2] = 5;console.log('any[2]=' + any[2]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
 					if(sigo[2])
 					{ 	sigo[2] = false;console.log('sigo[2]=' + sigo[2]);//'inhabilita' la siguiente entrada del mouse
 					}
 					punto2();
 				}
-			}
+			////}
 		}
 
 function
 	eTb3(ev) {
 	console.log('_____@- eTb3()');
 	ev.preventDefault();// Call preventDefault() to prevent any further handling
-	if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-		eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
-	}
-	else//!pv
-	{
-		if (((any[3] == 4) || (any[3] == 9)) && (!pv)) {
-			any[3] = 5; console.log('any[3]=' + any[3]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+	////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+	////	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+	////}
+	////else//!pv
+	////{
+		if (((any[3] == 4) || (any[3] == 9)))//  && (!pv)) 
+		{	any[3] = 5; console.log('any[3]=' + any[3]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
 			if (sigo[3]) {
 				sigo[3] = false; console.log('sigo[3]=' + sigo[3]);//'inhabilita' la siguiente entrada del mouse
 			}
 			punto3();
 		}
-	}
+	////}
 }
-
 
 /*
 function	
 eTb4(ev){		console.log('_____@- eTb4()');
 				ev.preventDefault();// Call preventDefault() to prevent any further handling
-				if(pv)	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-				{	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
-				}
-				else//!pv
-				{	if(((any[4]==4)||(any[4]==9))&&(!pv))
+				////if(pv)	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+				////{	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+				////}
+				////else//!pv
+				////{	
+					if(((any[4]==4)||(any[4]==9)))// &&(!pv))
 					{	any[4] = 5;console.log('any[4]=' + any[4]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
 						if(sigo[4])
 						{	sigo[4] = false;console.log('sigo[4]=' + sigo[4]);//'inhabilita' la siguiente entrada del mouse
 						}
 						punto4();
 					}
-				}
+				////}
 			}
 */
 
@@ -4196,55 +4164,55 @@ function
 	eTb6(ev) {
 	console.log('_____@- eTb6()');
 	ev.preventDefault();// Call preventDefault() to prevent any further handling
-	if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-		eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
-	}
-	else//!pv
-	{
-		if (((any[6] == 4) || (any[6] == 9)) && (!pv)) {
-			any[6] = 5; console.log('any[6]=' + any[6]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+	////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+	////	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+	////}
+	////else//!pv
+	////{
+		if (((any[6] == 4) || (any[6] == 9)))//  && (!pv)) 
+		{	any[6] = 5; console.log('any[6]=' + any[6]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
 			if (sigo[6]) {
 				sigo[6] = false; console.log('sigo[6]=' + sigo[6]);//'inhabilita' la siguiente entrada del mouse
 			}
 			punto6();
 		}
-	}
+	////}
 }
 
 function	
 	eTb8(ev){	console.log('_____@- eTb8()');
 				ev.preventDefault();// Call preventDefault() to prevent any further handling
-				if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-					eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
-				}
-				else//!pv
-				{
-					if(((any[8]==4)||(any[8]==9))&&(!pv))
+				////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+				////	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+				////}
+				////else//!pv
+				////{
+					if(((any[8]==4)||(any[8]==9)))// &&(!pv))
 					{	any[8] = 5;console.log('any[8]=' + any[8]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
 						if(sigo[8])
 						{	sigo[8] = false;console.log('sigo[8]=' + sigo[8]);//'inhabilita' la siguiente entrada del mouse
 						}
 						punto8();
 					}
-				}
+				////}
 }
 
 function	
-eTb9(ev){	console.log('_____@- eTb9()');
+	eTb9(ev){	console.log('_____@- eTb9()');
 			ev.preventDefault();// Call preventDefault() to prevent any further handling
-			if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-				eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
-			}
-			else//!pv
-			{
-				if(((any[9]==4)||(any[9]==9))&&(!pv))
+			////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+			////}
+			////else//!pv
+			////{
+				if(((any[9]==4)||(any[9]==9)))// &&(!pv))
 				{	any[9] = 5;console.log('any[9]=' + any[9]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
 					if(sigo[9])
 					{	sigo[9] = false;console.log('sigo[9]=' + sigo[9]);//'inhabilita' la siguiente entrada del mouse
 					}
 					punto9();
 				}
-			}
+			////}
 		}
 
 //ooojooo con esta función al parecer es especial porque 
@@ -4253,24 +4221,18 @@ eTb9(ev){	console.log('_____@- eTb9()');
 function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..     --l4676
 	eTs0() {
 	console.log('_____@- eTs0()');
-	if ((pv) && (any[0] == 8)) { //(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-		hora();
-		if (m < doble) {
-			pv = false; console.log('pv=' + pv);//HA OCURRIDO LA PRIMER INTERACCION
-			//maxi();
-			//size();//ASIGNA VALORES A CADA CAJON
-			//abc();//ACTIVA PUERTAS
-			//audiMAmi();
-
-			f0017(1);//CARGAR los guiones de ruta y POSICIONAR el foco sobre la casilla actual
-
-			navigator.vibrate(300);//Arreglar abcdef //:/VIBRAR para una persona sordociega se entere
-			any[0] = 4; console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA TOUCHSTART
-		}
-		else {
-			pw = true;
-		}
-	}
+	////if ((pv) && (any[0] == 8)) { //(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+	////	hora();
+	////	if (m < doble) {
+	////		pv = false; console.log('pv=' + pv);//HA OCURRIDO LA PRIMER INTERACCION
+	////		f0017(1);//CARGAR los guiones de ruta y POSICIONAR el foco sobre la casilla actual
+	////		navigator.vibrate(300);//Arreglar abcdef //:/VIBRAR para una persona sordociega se entere
+	////		any[0] = 4; console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA TOUCHSTART
+	////	}
+	////	else {
+	////		pw = true;
+	////	}
+	////}
 	if (any[0] == 5) {
 		any[0] = 4; console.log('any[0]=' + any[0]);//REACTIVA LA ENTRADA TOUCHSTART
 		vacio(0);//          --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
@@ -4278,88 +4240,91 @@ function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..     --l4676
 }
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
-eTs2(){ 	console.log('_____@- eTs2()');
-			if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-				eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
-			}
-			else//!pv
-			{
+	eTs2(){ 	console.log('_____@- eTs2()');
+			////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+			////}
+			////else//!pv
+			////{
 				if(any[2]==5)
 				{	any[2] = 4;console.log('any[2]=' + any[2]);//REACTIVA LA ENTRADA TOUCHSTART
 					vacio(2);
 				}
-			}
+			////}
 		}
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	eTs3() {
 	console.log('_____@- eTs3()');
-	if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-		eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
-	}
-	else//!pv
-	{
+	////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+	////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+	////}
+	////else//!pv
+	////{
 		if (any[3] == 5) {
 			any[3] = 4; console.log('any[3]=' + any[3]);//REACTIVA LA ENTRADA TOUCHSTART
 			vacio(3);
 		}
-	}
+	////}
 }
 
 /*
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs4(){ 		console.log('_____@- eTs4()');
-				if(pv)//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-				{	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
-				}
-				else//!pv
-				{	if(any[4]==5)
+				////if(pv)//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+				////{	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+				////}
+				////else//!pv
+				////{	
+					if(any[4]==5)
 					{	any[4] = 4;console.log('any[4]=' + any[4]);//REACTIVA LA ENTRADA TOUCHSTART
 						vacio(4);
 					}
-				}}
+				////}
+					}
 */
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	eTs6() {
 	console.log('_____@- eTs6()');
-	if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-		eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
-	}
-	else//!pv
-	{
+	////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+	////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+	////}
+	////else//!pv
+	////{
 		if (any[6] == 5) {
 			any[6] = 4; console.log('any[6]=' + any[6]);//REACTIVA LA ENTRADA TOUCHSTART
 			vacio(6);
 		}
-	}
+	////}
 }
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs8(){ 		console.log('_____@- eTs8()');
-				if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-					eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
-				}
-				else//!pv
-				{	if(any[8]==5)
+				////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+				////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+				////}
+				////else//!pv
+				////{	
+					if(any[8]==5)
 					{	any[8] = 4;console.log('any[8]=' + any[8]);//REACTIVA LA ENTRADA TOUCHSTART
 						vacio(8);
 					}
-				}
+				////}
 }
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs9(){ 	console.log('_____@- eTs9()');
-			if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
-				eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
-			}
-			else//!pv
-			{
+			////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+			////}
+			////else//!pv
+			////{
 				if(any[9]==5)
 				{	any[9] = 4;console.log('any[9]=' + any[9]);//REACTIVA LA ENTRADA TOUCHSTART
 					vacio(9);
 				}
-			}
+			////}
 		}
 
 function		//REGISTRA LA HORA ACTUAL EN MILISEGUNDOS
@@ -4387,7 +4352,7 @@ punto0(){     //console.log('_____@- punto0()');
               hora();
               nm[0] = m;//console.log('nm[0]='+ nm[0]);
 			  //Hay que calibrar cut en  pantallas touch!!  min[0] = m + cut*1.7:
-              min[0] = m + cut*1.7;//console.log('min[0]='+ min[0]);//EN EL CASO DE 0 O MORSE SON SEÑALES RAPIDAS POR LO QUE NO SE toma tM sino cut para que una parte de las rayas sean puntos y una parte de los sostenidos sean rayas
+              min[0] = m + cut*2;//console.log('min[0]='+ min[0]);//EN EL CASO DE 0 O MORSE SON SEÑALES RAPIDAS POR LO QUE NO SE toma tM sino cut para que una parte de las rayas sean puntos y una parte de los sostenidos sean rayas
               if(cycle[0] > 0)
               { regX[0][cycle[0]] = nm[0] - mn[0];//console.log('regX[0]=' + regX[0]);
                 cycle[0] += 1;//console.log('cycle[0]=' + cycle[0]);
@@ -4437,8 +4402,6 @@ function      //primer parte general del algoritmo codigo morse
 	regY[3][cycle[3]] = 1; console.log('regY[3]=' + regY[3]);
 	ciclo3()
 }
-
-
 /*
 function      //primer parte general del algoritmo codigo morse
 punto4(){     console.log('_____@- punto4()');
@@ -4461,7 +4424,6 @@ punto4(){     console.log('_____@- punto4()');
 			  regY[4][cycle[4]] = 1;console.log('regY[4]=' + regY[4]);
 			  ciclo4()}
 */
-
 
 function      //primer parte general del algoritmo codigo morse
 	punto6() {
@@ -4487,7 +4449,6 @@ function      //primer parte general del algoritmo codigo morse
 	regY[6][cycle[6]] = 1; console.log('regY[6]=' + regY[6]);//REGISTRO2 RESULTADO DE ESTADO TECLA, inicialmente es un punto(1) y para una raya(2)
 	ciclo6()
 }
-
 
 function      //primer parte general del algoritmo codigo morse
 punto8(){     console.log('_____@- punto8()');
@@ -4574,18 +4535,18 @@ function      //terminacion general de un punto o una raya: RESETEA LOS COLORES 
 function      //inicia evento 'primer' interacción
 	w7() {
 	console.log('_____@- w7()');
-	if (pw)//Si copia VIRTUAL de primer vez
-	{
-		any[0] = 7;//Bloqueo por 'primer' interacción
-	}
+	////if (pw)//Si copia VIRTUAL de primer vez
+	////{
+	////	any[0] = 7;//Bloqueo por 'primer' interacción
+	////}
 }
 function      //termina evento 'primer' interacción
 	www9() {
 	console.log('_____@- www9()');
 	if (any[0] == 7)//Si tiene bloqueo 7
 	{
-		pv = false;//no es la PRIMER INTERACCION CON EL TOUCH
-		pw = false;//copia vitual de pv
+		////pv = false;//no es la PRIMER INTERACCION CON EL TOUCH
+		////pw = false;//copia vitual de pv
 		any[0] = 9;//Libera el bloqueo(7) y permite cualquier tipo de entrada (9)                
 		//+ + +maxi();
 		//+ + +size();//ASIGNA VALORES A CADA CAJON
@@ -5396,32 +5357,20 @@ yBoto.addEventListener('mouseup',eMs8);
 yBoto.addEventListener('touchend',eTs8);
 yBoto.addEventListener('touchstart',eTb8);
 
-
 //document.addEventListener('keydown', eKb);
 //document.addEventListener('keyup', eKs);
 
 
 
 
-
-
-
-
 //============================================================
 //d9000 EVENTOS TRANSVERSALES
-
-
 //window.addEventListener('hashchange',f0141);
 
-
-
-
 document.oncontextmenu = new Function("return false;");//HABILITAR/deshabilitar esta linea para Deshabilitar clic derecho:: https://www.techiedelight.com/es/disabling-text-selection-cut-copy-right-click/
-
 document.addEventListener('keydown', f0098);
 document.addEventListener('keyup', f0100);
 //f0139();//CARGAR el anuncio vacio en r003
 //f0140();//CARGAR anuncios en r003
-
 window.addEventListener('hashchange', f0141);
 document.onload = f0000();//PREPARAR ambiente en 0-blanco, 1-desarrollo o 2-producción (SI ya cargo el documento)
