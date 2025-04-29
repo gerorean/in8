@@ -1986,7 +1986,8 @@ function f0018()//ESPERAR un segundo, el tamaño de la pantalla cambio, si no ha
 						g00VARS[65][2] = window.outerHeight;//.innerHeight;//ventana actual con navegador , outerHeight;navegador completo
 						
 						if(g00VARS[65][2] < 1500)//Si alto menor de 2000px (pantalla pequeña o normal) OCULTAR la fila de botones inferior (Filbo)
-						{ 	iFilbo.classList.add('cX');
+						{ 	intM.style.height = 'calc(35vh - var(--kdot) - 0.5vh)';//- 0.5vh - max(var(--z),5vh) - var(--kdot))
+							iFilbo.classList.add('cX');
 							iCelu.classList.remove('cCel1');
 							iCelu.classList.add('cCel0');
 							iTia.classList.remove('cTi1');
@@ -1996,7 +1997,8 @@ function f0018()//ESPERAR un segundo, el tamaño de la pantalla cambio, si no ha
 							iV6b.style.backgroundColor = 'blue';
 						}
 						else//Si es igual o mayor de 2000px (pantalla muy alta) MOSTRAR la fila de botones inferior (Filbo)
-						{	iFilbo.classList.remove('cX');
+						{	intM.style.height = 'calc(35vh - max(var(--z),5vh))';
+							iFilbo.classList.remove('cX');
 							iCelu.classList.remove('cCel0');
 							iCelu.classList.add('cCel1');
 							iTia.classList.remove('cTi0');
