@@ -7747,29 +7747,29 @@ keYs.forEach(key => {
 var isShiftActive = false;
 var lastKeyPressed = '';
 var mViS = 0;//Visibilidad de la salida M 0-Off 1-On
-var mMod = 4;//Modo de la salida M 0 morse, 1 querty, 2 querty doble, 3 in signs, 4 off
+var mMod = 0;//Modo de la salida M 0 off, 1 querty, 2 querty doble, 3 morse, 4 in signs
 var mCon = 0;// Contador de segundos
 var mTim = 0;// Variable para almacenar el temporizador
 
 function
 f0145()//CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
 		{	lOL(145);
-			if(!mViS)//si el display esta apagado.. implica modo 4 por el apagado y reset
+			if(!mViS)//si el display esta apagado.. implica modo 0 por el apagado y reset
 			{	//ACTIVAR la salida de la interfaz M y quitar la opacidad:
 				intM.classList.remove('cX');
 				iIntM0.classList.remove('cX');//Enciende el display de la interfaz M
 				iTaco.classList.remove('cX');
 				mViS = 1;//Se prendio el display
-				mMod = 0;//Reinicia al modo Morse
+				//mMod = 0;//Reinicia al modo Morse
 				//iTaco.style.opacity='0.8';
 			}
 			else//El display M esta prendido
-			{	if(mMod == 4)//si el modo 4
+			{	if(mMod == 0)//si el modo 0
 				{	intM.classList.add('cX');
 					iIntM0.classList.add('cX');//apaga el display de la interfaz M	
 					mViS = 0;//Se apago el display		
 				}
-				else//si el modo no es 4 (si es distinto de 4)
+				else//si el modo no es 0 (si es distinto de 0)
 				{	f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
 					f0145();//Vuelve a inicar el proceso
 				}	
@@ -7803,7 +7803,7 @@ f0147()//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apag
 			if(mViS)
 			{	//Resetear la intefaz M y apagar el display
 				mViS = 0;//Visibilidad de la salida M 0-Off
-				mMod = 4;
+				//mMod = 0;
 				mCon = 0;//Reset clics Morse
 				intM.classList.add('cX');//Apaga la interfaz M
 				iIntM0.classList.add('cX');//Apaga el display de la interfaz M
@@ -7818,7 +7818,7 @@ f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 			f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
     		mMod++;
 			if(mMod>=5)
-			{	mMod = 0;//Reinicia al modo Morse
+			{	mMod = 0;//Reinicia al modo off
 			}
 			if(!mViS)//Si el display esta apagado lo enciende
 			{	iIntM0.classList.remove('cX');
@@ -7828,8 +7828,11 @@ f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 			f0149();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS)
 			switch(mMod)
 			{	case 0:
-					//iTaco.style.opacity='0.8';
-					iTaco.classList.remove('cX');
+					iIntM0.classList.add('cX');//Apaga el display de la interfaz M
+					intM.classList.add('cX');
+					//mViS = 0;
+					mCon = 30;//Termina el conteo
+					f0152();//Termina el conteo y oculta el display de la interfaz M
 				break;
 				case 1:
 					iKeyB.style.height = '100%';
@@ -7845,15 +7848,13 @@ f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 					iKeyB.classList.remove('cX');
 				break;
 				case 3:
-					iKeyS.classList.remove('cX');
+					//iTaco.style.opacity='0.8';
+					iTaco.classList.remove('cX');
 				break;
 				case 4:
-					iIntM0.classList.add('cX');//Apaga el display de la interfaz M
-					intM.classList.add('cX');
-					//mViS = 0;
-					mCon = 30;//Termina el conteo
-					f0152();//Termina el conteo y oculta el display de la interfaz M
+					iKeyS.classList.remove('cX');
 				break;
+				
 			}
 		};
 
