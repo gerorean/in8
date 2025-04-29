@@ -5333,14 +5333,15 @@ function
 
 						//var pprrafo = document.getElementById("texto-original");
 						//var texto = parrafo.textContent.trim(); // elimina espacios al inicio y final
-						var pplabras = sale.split(/\s+/); //texto.split(/\s+/); // divide por cualquier espacio en blanco
+						//var pplabras = sale.split(/\s+/); //texto.split(/\s+/); // divide por cualquier espacio en blanco
 						salo = '';
-				  
-						for (var i = 0; i < pplabras.length; i++) {
-						  salo += "<span>" + pplabras[i] + "</span>";
-						  if (i < pplabras.length - 1) {
-							salo += "<span class='cPace'>&nbsp;</span>";
-						  }
+						for (var i = 0; i < sale.length; i++) 
+						{	var c = sale.charAt(i);
+							if (c === " ") {
+								salo += "<span class='cPace'>&nbsp;</span>";
+							} else {
+							  	salo += "<span>" + c + "</span>";
+							}
 						}
 						iIntM0.innerHTML = salo;//
 						//output.innerHTML = salo;
@@ -5348,6 +5349,27 @@ function
 
 
 				/*
+
+
+				function colorearEspacios() {
+    			if (yaColoreado) return;
+
+    			var parrafo = document.getElementById("texto-original");
+    			var texto = parrafo.textContent;
+    			var resultado = "";
+
+    			for (var i = 0; i < texto.length; i++) {
+    			  var c = texto.charAt(i);
+    			  if (c === " ") {
+    			    resultado += "<span class='space'>&nbsp;</span>";
+    			  } else {
+    			    resultado += "<span>" + c + "</span>";
+    			  }
+    			}
+
+
+
+
 				{		//if (yaColoreado) return; // evita que se ejecute de nuevo
 
 						var pprrafo = document.getElementById("texto-original");
@@ -5367,12 +5389,17 @@ function
 				*/
 
 
-						//boton - [5] entrada morse onclick='f0145() morse 0
+//boton - [5] entrada morse onclick='f0145() morse 0
 boT0.addEventListener('mousedown',eMb0);
 boT0.addEventListener('mouseleave',eMs0);
 boT0.addEventListener('mouseup',eMs0);
 boT0.addEventListener('touchend',eTs0);
 boT0.addEventListener('touchstart',eTb0);
+fBot5.addEventListener('mousedown',eMb0);
+fBot5.addEventListener('mouseleave',eMs0);
+fBot5.addEventListener('mouseup',eMs0);
+fBot5.addEventListener('touchend',eTs0);
+fBot5.addEventListener('touchstart',eTb0);
 
 //1479 - 5036(0836)
 //boton . [3] clic o enter onclick='f0096(1,1) morse 3
@@ -5413,7 +5440,11 @@ yBoto.addEventListener('mouseleave',eMs8);
 yBoto.addEventListener('mouseup',eMs8);
 yBoto.addEventListener('touchend',eTs8);
 yBoto.addEventListener('touchstart',eTb8);
-
+fBot0.addEventListener('mousedown',eMb8);
+fBot0.addEventListener('mouseleave',eMs8);
+fBot0.addEventListener('mouseup',eMs8);
+fBot0.addEventListener('touchend',eTs8);
+fBot0.addEventListener('touchstart',eTb8);
 //document.addEventListener('keydown', eKb);
 //document.addEventListener('keyup', eKs);
 

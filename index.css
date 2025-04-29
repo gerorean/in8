@@ -658,9 +658,9 @@
 
  .cTitul{		left:0.5vw}
 
- .c1570{		left:15%}
+ .cChico{		left:10vw}/*calc(1.7*var(--cAlt))}/*min(17vh,17vw)}*/
 
- .cChico{		left:20vw}/*calc(1.7*var(--cAlt))}/*min(17vh,17vw)}*/
+ .c1570{		left:15%}
 
  .cHori{		left:33.3333333%}
 
@@ -1057,11 +1057,11 @@
 ,#iMenu
 ,#iSoni{		width:11vw}
 
+ .cBof{			width:12.5%}
+
  .cGre{			width:12.66%}/*calc(16.6666666% - 2px)}/*16.66 - 4 18%}/*23%*/
 
  .cBloK{		width:14.6666666%}/*18%}/*23%*/
-
- .cBof{			width:16.6666666%}
 
  #iGol{			width:17vh}
 
@@ -1071,11 +1071,11 @@
 ,.cLR
 ,.cVert{		width:33.3333333%}
 
- .cChico{		width:60vw}/*calc(100% - 3.4*(var(--cAlt)))}/*min(17vh,17vw)))}*/
-
  #iLeft{		width:64vw}
 
  .c1570{		width:70%}
+
+ .cChico{		width:80vw}/*calc(100% - 3.4*(var(--cAlt)))}/*min(17vh,17vw)))}*/
 
  .cTexM{		width:90vw}
 
