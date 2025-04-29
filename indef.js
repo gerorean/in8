@@ -7787,9 +7787,10 @@ f0146()//ACTIVAR o RESETEAR un contador que al terminar de contar resetea la int
 			{	mCon++;
 				console.log('mCon=',mCon);
                 if (mCon >= 30) {
-                    console.log("30 segundos");
-					f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
-                    clearInterval(mTim); // Detener el temporizador al alcanzar 100 segundos
+					f0152();//Termina el conteo y oculta el display de la interfaz M
+                    //console.log("30 segundos");
+					//f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
+                    //clearInterval(mTim); // Detener el temporizador al alcanzar 100 segundos
                 }
             }, 1000); // Incrementar cada 1 segundo
 		};
@@ -7847,7 +7848,9 @@ f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 				case 4:
 					iIntM0.classList.add('cX');//Apaga el display de la interfaz M
 					intM.classList.add('cX');
-					mViS = 0;
+					//mViS = 0;
+					mCon = 30;//Termina el conteo
+					f0152();//Termina el conteo y oculta el display de la interfaz M
 				break;
 			}
 		};
@@ -7879,6 +7882,15 @@ function
 f0151()// Desplaza hacia el final el Display M
 	{	lOL(151);
 		iIntM0.scrollTop = iIntM0.scrollHeight;
+	};
+
+
+function
+f0152()//Termina el conteo y oculta el display de la interfaz M
+	{	lOL(152);
+		console.log("30 segundos");
+		f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
+		clearInterval(mTim); // Detener el temporizador al alcanzar 100 segundos
 	};
 
 //Nuevo..

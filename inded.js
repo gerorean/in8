@@ -4951,10 +4951,13 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
 					if (q == 8)//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8 Espacio Morse	
 					{	console.log(' - - - Espacio Morse en el display M');
+						f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
 						sale += ' ';
 						colSale();
 						//iIntM0.textContent = salo;
 						f0151();// Desplaza hacia el final el Display M
+						f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
+    		
 						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 					};
 					//+ + +		//esta[q] = true;
