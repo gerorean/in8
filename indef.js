@@ -7871,7 +7871,7 @@ function
 f0150()//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 		{	lOL(150);
 			output.textContent = '';//Borra el texto de salida
-			f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display					
+			//f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display					
 		};
 
 function

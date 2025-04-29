@@ -5042,8 +5042,9 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					}*/
 
 					if (q == 8)//Reset del display M 	
-					{	console.log(' - - - Reset del display M');
-						f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
+					{	console.log(' - - - borrar la ultima letra del display M');
+						output.textContent = output.textContent.slice(0, -1);
+						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 					};
 				}
 				break;
@@ -5075,6 +5076,11 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					{
 						f0096(1, 1, 5);//Aplicar -25 avances al clic(botón 6)
 					}*/
+
+					if (q == 8)//Reset del display M 	
+					{	console.log(' - - - Reset del display M');
+						f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
+					};
 				}
 				break;
 			/*case 7:

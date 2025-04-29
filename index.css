@@ -162,15 +162,15 @@
 
  .cIng
 ,.cNeg
-,.cTexM
-,#iKeyB
-,#i--Negro
-,#iTaco
 ,.yProsaL
 ,.zProsa{		background:var(--cblwh1)}
 
  .cButton
-,.cTapa{		background:var(--cblwh2)}
+,.cTapa
+,.cTexM
+,#iKeyB
+,#i--Negro
+,#iTaco{		background:var(--cblwh2)}
 
  .cHR
  ,#iBrAi{		background:var(--cbw1)}
@@ -203,7 +203,7 @@
 
  .doble
 ,td
-,th{			border:min(0.5vh,0.5vw) solid var(--cblwh2)}
+,th{			border:min(0.5vh,0.5vw) solid var(--cblwh1)}
 
   .c--Stop{		border:3px groove rgba(168,168,168,0.3)}
 
@@ -346,19 +346,19 @@
 
  .cButton
 ,.cTapa
+,.cTexM
 ,#iBrAi
-,#iEnt{			color:var(--cblwh1)}
+,#iKeyB
+,#iEnt
+,#iTaco{		color:var(--cblwh1)}
 
  .cAsk
 ,.c--Infi
 ,.cInfo
 ,.cIng
 ,.c--Reloj
-,.cTexM
 ,#iInfo
 ,#i--Hora
-,#iKeyB
-,#iTaco
 ,.yProsaL
 ,.zProsa{		color:var(--cblwh2)}
 
