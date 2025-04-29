@@ -7747,7 +7747,7 @@ keYs.forEach(key => {
 var isShiftActive = false;
 var lastKeyPressed = '';
 var mViS = 0;//Visibilidad de la salida M 0-Off 1-On
-var mMod = 0;//Modo de la salida M 0 off, 1 querty, 2 querty doble, 3 morse, 4 in signs
+var mMod = 0;//Modo de la salida M 0 off, 1 querty, 2 querty doble, 3 in signs, 4 morse(tutorial)
 var mCon = 0;// Contador de segundos
 var mTim = 0;// Variable para almacenar el temporizador
 
@@ -7848,12 +7848,13 @@ f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 					iKeyB.classList.remove('cX');
 				break;
 				case 3:
+					iKeyS.classList.remove('cX');
+				break;
+				case 4:
 					//iTaco.style.opacity='0.8';
 					iTaco.classList.remove('cX');
 				break;
-				case 4:
-					iKeyS.classList.remove('cX');
-				break;
+				
 				
 			}
 		};

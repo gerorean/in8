@@ -4576,7 +4576,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 	console.log(' - - - rrrrr max[q]=', max[q]);
 	regX[q][cycle[q]] = nn[q] - mn[q]; console.log(' - - - rrrrr regX[q]=', regX[q]);
 	if (q == 0)//boton - [5] entrada morse onclick='f0145() morse 0 BOTON MORSE 2023 IBOGOTA!!!!! DESACTIVADO - //boton 5 morse 0 -
-	{				mMod = 3;
+	{				mMod = 4;
 					f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
 					switch (cycle[0])
 					{	case 1:
@@ -4952,7 +4952,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
 					if (q == 8)//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8 Espacio Morse	
 					{	console.log(' - - - Espacio Morse en el display M');
-						mMod = 3;
+						mMod = 4;
 						f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
 						sale += ' ';
 						colSale();
@@ -5053,7 +5053,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					}*/
 
 					if (q == 8)//Reset del display M 	
-					{	mMod = 3;
+					{	mMod = 4;
 						console.log(' - - - borrar la ultima letra del display M');
 						sale = sale.slice(0, -1);
 						colSale();
@@ -5092,7 +5092,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					}*/
 
 					if (q == 8)//Reset del display M 	
-					{	mMod = 3;
+					{	mMod = 4;
 						console.log(' - - - Reset del display M');
 						f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 					};
