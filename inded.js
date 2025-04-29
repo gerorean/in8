@@ -1143,6 +1143,8 @@ var roto 		/**/ = 0;//1:Cancelar orden reciente de focus sobre un punto - 0:Perm
 var rumba = '';//Pasado de rumbi en el navegador
 var rumbo = [];//Array con el nuevo rumbo que asigna el usuario desde el navegador
 var rumbi = '';//String de rumbo unida con i'es para hacer consultas a la BD
+var sale = '';//texto original con espacios en el display de la interfaz M
+var salo = '';//texto modificado de sale para mostrarlo con espacios de color
 var salTO = 1;//Tamaño del salto					
 var sizBan		/**/ = 0;//Bandera de resize
 var sizCon 		/**/ = 0;//Contador desborde de resize
@@ -4637,7 +4639,9 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 							if((regY[0][0]==2)&&(regY[0][2]==2)&&(regY[0][4]==2)&&(regY[0][6]==1)&&(regY[0][8]==1)&&(regY[0][10]==1)){outX[0] = ':';zGuiIn(41);esTAS = true}
 						break;
 					}
-					iIntM0.textContent += outX[0];
+					sale += outX[0];
+					colSale();
+					//iIntM0.textContent = salo;
 					f0151();// Desplaza hacia el final el Display M
 	}
 	else//OTROS BOTONES 2023 IBOGOTA!!!!!
@@ -4947,7 +4951,9 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
 					if (q == 8)//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8 Espacio Morse	
 					{	console.log(' - - - Espacio Morse en el display M');
-						iIntM0.textContent += ' ';
+						sale += ' ';
+						colSale();
+						//iIntM0.textContent = salo;
 						f0151();// Desplaza hacia el final el Display M
 						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 					};
@@ -5043,7 +5049,9 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 
 					if (q == 8)//Reset del display M 	
 					{	console.log(' - - - borrar la ultima letra del display M');
-						output.textContent = output.textContent.slice(0, -1);
+						sale = sale.slice(0, -1);
+						colSale();
+						//output.textContent = salo;//output.textContent.slice(0, -1);
 						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 					};
 				}
@@ -5265,8 +5273,10 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 		letra();//muestra en pantalla el texto actualizado
 	}*/
 
-	//output.textContent += outX[0];
-	//iIntM0.textContent += outX[0];
+	//sale += outX[0];
+	//colSale();
+	//output.textContent = salo;//+= outX[0];
+	//iIntM0.textContent = salo;//+= outX[0];
 
 	ceros(q);//console.log('ceros de morse');Reinicio de variables
 }
@@ -5315,8 +5325,49 @@ const 	kL0=[			['Tutorial de puntos y rayas',													'icon far fa-comment-d
 						['Raya, punto, punto, raya, punto',												'icon',		'/',	'Signo de barra inclinada',							'barra inclinada'],//zGuiIn(40)
 						['Raya, raya, raya, punto, punto, punto',										'icon',		':',	'Signo de dos puntos',								'dos puntos'],
 						['Punto, raya, raya, punto, raya, punto',										'icon',		'@',	'Signo de arroba',									'arroba']];
-//1479 - 5036(0836)
-//boton - [5] entrada morse onclick='f0145() morse 0
+						//1479 - 5036(0836)
+
+
+function 
+	colSale() {		//if (yaColoreado) return; // evita que se ejecute de nuevo
+
+						//var pprrafo = document.getElementById("texto-original");
+						//var texto = parrafo.textContent.trim(); // elimina espacios al inicio y final
+						var pplabras = sale.split(/\s+/); //texto.split(/\s+/); // divide por cualquier espacio en blanco
+						salo = '';
+				  
+						for (var i = 0; i < pplabras.length; i++) {
+						  salo += "<span>" + pplabras[i] + "</span>";
+						  if (i < pplabras.length - 1) {
+							salo += "<span class='cPace'>&nbsp;</span>";
+						  }
+						}
+						iIntM0.innerHTML = salo;//
+						//output.innerHTML = salo;
+				}
+
+
+				/*
+				{		//if (yaColoreado) return; // evita que se ejecute de nuevo
+
+						var pprrafo = document.getElementById("texto-original");
+						//var texto = parrafo.textContent.trim(); // elimina espacios al inicio y final
+						var pplabras = pprrafo.split(/\s+/); //texto.split(/\s+/); // divide por cualquier espacio en blanco
+						var rrsultado = "";
+				  
+						for (var i = 0; i < pplabras.length; i++) {
+						  rrsultado += "<span>" + pplabras[i] + "</span>";
+						  if (i < pplabras.length - 1) {
+							rrsultado += "<span class='cPace'>&nbsp;</span>";
+						  }
+						}
+						pprrafo.innerHTML = rrsultado;
+				}
+
+				*/
+
+
+						//boton - [5] entrada morse onclick='f0145() morse 0
 boT0.addEventListener('mousedown',eMb0);
 boT0.addEventListener('mouseleave',eMs0);
 boT0.addEventListener('mouseup',eMs0);

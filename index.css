@@ -158,7 +158,8 @@
  .do--orOscu
 ,.bo--ok{		background:transparent}
 
- .cBeiBg{		background:var(--cBeige)}
+ .cBeiBg
+,.cPace{		background:var(--cBeige)}
 
  .cIng
 ,.cNeg
@@ -201,7 +202,8 @@
 ,#y--Bot0l
 ,#y--Bot0r{		border:2px solid var(--cblwh1)}/*var(--sky)}/*orange}/*var(--cGrey)}/*black}*/
 
- .doble
+ .cTexM
+,.doble
 ,td
 ,th{			border:min(0.5vh,0.5vw) solid var(--cblwh1)}
 
@@ -419,6 +421,7 @@
 ,#iKeyB{		display:grid}
 
  .cAltu
+,.cPace
 ,.cPic2
 ,.cObj{			display:inline-block}
 
@@ -1039,6 +1042,8 @@
 ,.yProsaL
 ,.zProsa
 ,.i--nner{		white-space:nowrap}
+
+ .cPace {		width: 0.5em}
 
  .c--Menu
 ,#i--Menu{		width:8vw}

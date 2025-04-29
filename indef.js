@@ -7722,7 +7722,7 @@ permiten que el usuario elija un modo para el envío de información ya sea en c
 Audio, teclado, señas, etc.*/
 
 //inicio funciones del teclado de la interfaz M:
-const output = document.getElementById('iIntM0');
+//const output = document.getElementById('iIntM0');//const output = document.getElementById('iIntM0');
 const keYs = document.querySelectorAll('.keY');//Teclado Virtual - Seleccionar todos los elementos con la clase "keY"
 
 // Listener para registrar eventos de clics en las teclas virtuales
@@ -7870,7 +7870,8 @@ f0149()//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS)
 function
 f0150()//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 		{	lOL(150);
-			output.textContent = '';//Borra el texto de salida
+			sale = '';
+			iIntM0.innerHTML = '';//output.textContent = '';//Borra el texto de salida
 			//f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display					
 		};
 
@@ -7940,18 +7941,26 @@ function handleKeyPress(keyValue)
 	    if (keyValue === 'Shift') {
 	        toggleShift();
 	    } else if (keyValue === 'Del') {
-	        output.textContent = output.textContent.slice(0, -1);
+			sale = sale.slice(0, -1);
+			colSale();
+	        //output.textContent = salo;//output.textContent.slice(0, -1);
 	    } else if (keyValue === '') {
-	        output.textContent += ' ';
+			sale += ' ';
+			colSale();
+	        //output.textContent = salo;//+= ' ';
 	    } else if (keyValue === '´') {
 	        lastKeyPressed = '´';
 	    } else if (keyValue !== '↩') { // Ignoring Enter key
 	        if (lastKeyPressed === '´' && ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'].includes(keyValue)) {
 	            const accentedVowel = accentuateVowel(keyValue);
-	            output.textContent += accentedVowel;
+				sale += accentedVowel;
+				colSale();
+	            //output.textContent = salo;//+= accentedVowel;
 	            lastKeyPressed = '';
 	        } else {
-	            output.textContent += keyValue;
+				sale += keyValue;
+				colSale();
+	            //output.textContent = salo;//+= keyValue;
 	        }
 	    }
 		f0151();// Desplaza hacia el final el Display M
