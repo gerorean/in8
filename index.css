@@ -159,7 +159,8 @@
 ,.bo--ok{		background:transparent}
 
  .cBeiBg
-,.cPace{		background:var(--cBeige)}
+,.cPace
+,.doble{		background:var(--cBeige)}
 
  .cIng
 ,.cNeg
@@ -203,7 +204,7 @@
 ,#y--Bot0r{		border:2px solid var(--cblwh1)}/*var(--sky)}/*orange}/*var(--cGrey)}/*black}*/
 
  .cTexM
-,.doble
+,.d--oble
 ,td
 ,th{			border:min(0.5vh,0.5vw) solid var(--cblwh1)}
 
@@ -426,10 +427,10 @@
 ,.cObj{			display:inline-block}
 
  .cInfo::-webkit-scrollbar
-,.cInSOS::-webkit-scrollbar
 ,.cScroll::-webkit-scrollbar
 ,.cTexM::-webkit-scrollbar
-,.cTpres::-webkit-scrollbar{
+,.cTpres::-webkit-scrollbar
+,#intM::-webkit-scrollbar{
 				display: none}/* Chrome, Safari */
 
  .sepia{		filter:sepia(30%)}
@@ -551,8 +552,7 @@
 ,.cMark
 ,.c--TOB{		height:16.666666666%}/*height:20%}25%}/*33.33333333%}/*18.75%*/
 
- #iKeyB
-,#i--KeyS{		height:35vh}
+ #i--KeyB{		height:100%}/*35vh}*/
 
  .cTexU{		height:45vh}
 
@@ -581,8 +581,7 @@
 
  .cTpres{		height:calc(17vh - var(--pelo))}/*17vh}/*calc(17vh - var(--pelo))}/*calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
 
- .cInSOS
-,#i--KeyB{		height:calc(35vh - var(--kdot) - 0.5vh)}/*calc(30vh - var(--kdot) - 0.5vh)*/
+ #intM{			height:calc(35vh - var(--kdot) - 0.5vh)}/*calc(30vh - var(--kdot) - 0.5vh   - 50px)*/
 
  .cCel0{		height:calc(100vh - 0.5vh - max(var(--z),5vh) - var(--kdot))}/*var(--kdot) - (max(var(--z),5vh)) - (max(var(--z),5vh)))}/*calc(100% - var(--kdot) - (max(var(--z),5vh)))}*/
 					           /*  linea h - info loc         -  leds   */
@@ -787,7 +786,7 @@
  .cButton
 ,.cTapa{		overflow-x:hidden}
 
-.cInSOS{		overflow-x:scroll}
+ #intM{			overflow-x:scroll}
 
 .cScroll{		overflow-y:auto}
 
@@ -795,8 +794,8 @@
 ,.cInfo
 ,.cTpres{		overflow-y:hidden}
 
-.cInSOS
-,.cTexM{		overflow-y:scroll}
+ .cTexM
+,#intM{			overflow-y:scroll}
 
  #iKeyB
 ,#iKeyS{		padding:0}
@@ -829,12 +828,12 @@
  #boT0
  ,.cDedo
  ,.cGrey
- ,.cInSOS
  ,.c--Neg
  ,.cTexM
  ,.cTexU
  ,#iFilbo
  ,#iMarco
+ ,#intM
  ,#yBTNS
  ,#y--Bot0l
  ,#y--Bot0r
@@ -871,7 +870,6 @@
 ,.c--Ent
 ,.cGrey
 ,.cHori
-,.cInSOS
 ,.cLen
 ,.cLogo
 ,.cLR
@@ -897,6 +895,7 @@
 ,#iGol
 ,#i--Hora
 ,#i--Menu
+,#intM
 ,#iPRESE{		position:absolute}
 
  #iBody{		position:fixed}
@@ -938,11 +937,11 @@
  #i--Menu
 ,#iVol{			right:var(--kdot)}
 
-.cInfo
-,.cInSOS
+ .cInfo
 ,.cScroll
 ,.cTexM
-,.cTpres{		scrollbar-width: none}/* Firefox */
+,.cTpres
+,#intM{			scrollbar-width: none}/* Firefox */
 
  .cAltu
 ,.cPic2
@@ -1018,7 +1017,7 @@
 
  .cTexM{		top:50vh}
 
- .cInSOS{		top:65vh}
+ #intM{			top:65vh}
 
  .c--Vpres{		top:calc(10.5vh + var(--pelo) - (var(--kdot)* 0.5))}/*84vh  80vh menos 0.5vh del borde superior el pelo es el grosor de la linea negra del borde*/
 
@@ -1086,7 +1085,6 @@
 ,.cButton
 ,.c--Ent
 ,.cGrey
-,.cInSOS
 ,.cLen
 ,.cNeg
 ,.cSom
@@ -1099,6 +1097,7 @@
 ,#iB--rail
 ,#iCelu
 ,#i--NEG
+,#intM
 ,table {		width:100%}
 
  #iKeyB
@@ -1197,9 +1196,9 @@
 					}
 
  .cInfo
-,.cInSOS
 ,.cScroll
-,.cTpres{		-ms-overflow-style: none}/* IE y Edge */
+,.cTpres
+,#intM{			-ms-overflow-style: none}/* IE y Edge */
 
  .c--Ask
 ,.cAsK

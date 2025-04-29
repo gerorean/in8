@@ -7830,7 +7830,7 @@ f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 					iTaco.classList.remove('cX');
 				break;
 				case 1:
-					iKeyB.style.height = '35vh';
+					iKeyB.style.height = '100%';
 					iKeyB.classList.remove('cX');
 				break;
 				case 2:
@@ -7838,7 +7838,7 @@ f0148()//MOSTRAR la interfaz de Salida M que corresponda porque se oprimio 0 (/)
 					keYs.forEach(button =>
 					{	button.style.fontSize = 'min(10vh,10vw)';
 					});
-					iKeyB.style.height = '70vh';
+					iKeyB.style.height = '200%';//'70vh';
 					iKeyB.style.width = '200vw';
 					iKeyB.classList.remove('cX');
 				break;
