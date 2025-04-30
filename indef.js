@@ -3091,7 +3091,7 @@ function f0031(scr)//Pintar el marco (scr)POSICIONAR al usuario sobre el foco(cu
 		 	cBut[gFoco].classList.add('cBoRd');//Adicionar marco sobre el foco
 			if((gFoco == 0)&&(yKEYS[2][1]))
 			{	yKEYS[2][1] = 0;
-				yBot4.classList.add('cStop');
+				yBot4.classList.add('cStop');//oculta la sombra del botón???
 				yBB4.classList.add('cOff');
 				fBot4.classList.add('cStop');
 				fBB4.classList.add('cOff');
@@ -3827,7 +3827,7 @@ function f0048()//RETORNAR a la ruta principal
 			gRuta =	gMemR;
 		}
 
-function f0049()//OCULTAR botón 4 de deshacer (x UNDO) y 7 de menu cuando no se necesiten
+function f0049()//OCULTAR botón 1 de deshacer (x UNDO) y 7 de menu cuando no se necesiten
 		{	lOL(49);
 			if((g02RUTA[gRuta][5])&&(!g02RUTA[gRuta][8]))//ruta es principal y no tiene padre
 			{	//ocultar el icono de botón undo
@@ -3920,6 +3920,8 @@ function f0050()//OCULTAR ambientes, DEJAR pantalla vacia, DETENER vibraciones y
 			yBB3.classList.add('cOff');
 			yBot7.classList.add('cStop');
 			yBB7.classList.add('cOff');
+			yBot9.classList.add('cStop');
+			yBB9.classList.add('cOff');
 			fBot4.classList.add('cStop');
 			fBB4.classList.add('cOff');
 			fBot6.classList.add('cStop');
@@ -3930,6 +3932,8 @@ function f0050()//OCULTAR ambientes, DEJAR pantalla vacia, DETENER vibraciones y
 			fBB3.classList.add('cOff');
 			fBot7.classList.add('cStop');
 			fBB7.classList.add('cOff');
+			fBot9.classList.add('cStop');
+			fBB9.classList.add('cOff');
 			g00VARS[26][4] = 0;//Botones ocultos 
 		}
 
@@ -3981,6 +3985,10 @@ function f0051()//HABILITAR botones de RUTA (1,3,4 y 7)
 				//yBoto.classList.remove('cStop');
 				yBBo.classList.remove('cOff');
 				//yBBo.classList.remove('cOff');
+				fBot9.classList.remove('cStop');
+				fBB9.classList.remove('cOff');
+				yBot9.classList.remove('cStop');
+				yBB9.classList.remove('cOff');
 			}
 		}
 

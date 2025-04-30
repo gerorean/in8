@@ -1033,7 +1033,7 @@
 
  .cTitul{		top:var(--marH)}
 
- #iNoti{		top:var(--pelo)}/*calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
+ #iNoti{		top:var(--pelo)}/*top:var(--pelo)    calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
 
  #iCelu{		top:max(var(--z),5vh)}
 
