@@ -7902,6 +7902,7 @@ f0152()//Termina el conteo y oculta el display de la interfaz M
 		console.log("30 segundos");
 		f0147();//RESETEAR la interfaz de Salida M (por defecto, sin mMod ni mViS) y apagar el display
 		clearInterval(mTim); // Detener el temporizador al alcanzar 100 segundos
+		mMod = 0;//reinicia el modo a off
 	};
 
 //Nuevo..

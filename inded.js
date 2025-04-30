@@ -3568,6 +3568,26 @@ function		//ACTIVACION O ACTUALIZACION DEL CICLO      --l3866
 				}}//ciclo0()
 
 function		//ACTIVACION O ACTUALIZACION DEL CICLO
+ciclo1(){		//console.log('_____@- ciclo2()');
+				if(!pare[1])
+				{	if(cycle[1]==11)//'STOP' PARA DAR PASO AL RESULTADO
+					{	cycle[1] = 10;console.log('cycle[1]='+cycle[1]);
+					}
+					hora();
+					nn[1] = m;console.log('nn[1]='+ nn[1]);
+					if((libre[1])&&(nn[1] > max[1]))
+					{	morse(1);
+					}
+					if((!libre[1])&&(nn[1] > min[1])&&(!lin[1]))
+					{	lin[1] = true;console.log('lin[1]=' + lin[1]);//SE ACTIVO LA LINEA/RAYA
+						oscu();
+						audiRay();//ACTIVA EL SONIDO RAYA
+						regY[1][cycle[1]] = 2;
+					}
+					setTimeout(ciclo1, vT);
+				}}//ciclo2()
+
+function		//ACTIVACION O ACTUALIZACION DEL CICLO
 ciclo2(){		//console.log('_____@- ciclo2()');
 				if(!pare[2])
 				{	if(cycle[2]==11)//'STOP' PARA DAR PASO AL RESULTADO
@@ -3944,6 +3964,17 @@ function		//AL BAJAR EL MOUSE..   --l4382
 }
 
 function		//AL BAJAR EL MOUSE..
+	eMb1(){ 	console.log('_____@- eMb1()');
+				if(((any[1]==0)||(any[1]==9))&&(sigo[1]))
+				{	any[1] = 1;console.log('any[1]=' + any[1]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+					punto1();
+				}
+				if(!sigo[1])
+				{	sigo[1] = true;console.log('sigo[1]=' + sigo[1]);//'habilita' la siguiente entrada del mouse luego de pausarse por ocurrir una subida del touch (eTb2(){})
+				}
+				w7()}
+
+function		//AL BAJAR EL MOUSE..
 	eMb2(){ 	console.log('_____@- eMb2()');
 				if(((any[2]==0)||(any[2]==9))&&(sigo[2]))
 				{	any[2] = 1;console.log('any[2]=' + any[2]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
@@ -3994,6 +4025,17 @@ function		//AL BAJAR EL MOUSE..
 }
 
 function		//AL BAJAR EL MOUSE..
+	eMb7(){ 	console.log('_____@- eMb7()');
+				if(((any[7]==0)||(any[7]==9))&&(sigo[7]))
+				{	any[7] = 1;console.log('any[7]=' + any[7]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+					punto7();
+				}
+				if(!sigo[7])
+				{	sigo[7] = true;console.log('sigo[7]=' + sigo[7]);//'habilita' la siguiente entrada del mouse luego de pausarse por ocurrir una subida del touch (eTb2(){})
+				}
+				w7()}
+
+function		//AL BAJAR EL MOUSE..
 	eMb8()	{ 	
 				console.log('_____@- eMb8()');
 				if(((any[8]==0)||(any[8]==9))&&(sigo[8]))
@@ -4025,6 +4067,14 @@ function		//AL SUBIR EL MOUSE..     --l4471
 				}
 				www9()
 }
+
+function		//AL SUBIR EL MOUSE..
+	eMs1(){ 	console.log('_____@- eMs1()');
+				if(any[1]==1)
+				{	any[1] = 0;console.log('any[1]=' + any[1]);//REACTIVA LA ENTRADA MOUSEDOWN
+					vacio(1);
+				}
+				www9()}
 
 function		//AL SUBIR EL MOUSE..
 	eMs2(){ 	console.log('_____@- eMs2()');
@@ -4062,6 +4112,14 @@ function		//AL SUBIR EL MOUSE..
 				}
 				www9()//termina evento 'primer' interacción
 }
+
+function		//AL SUBIR EL MOUSE..
+	eMs7(){ 	console.log('_____@- eMs7()');
+				if(any[7]==1)
+				{	any[7] = 0;console.log('any[7]=' + any[7]);//REACTIVA LA ENTRADA MOUSEDOWN
+					vacio(7);
+				}
+				www9()}
 
 function		//AL SUBIR EL MOUSE..
 	eMs8(){ 	console.log('_____@- eMs8()');
@@ -4104,6 +4162,24 @@ function		//AL TOCAR EL TOUCH EN CUALQUIE PARTE..   --l4539
 		punto0();//             --lAQUI NO SE NECESITA SOLO ES PARA DESBLOQUEAR EL TOUCH DE PRIMER VEZ
 	}
 }
+
+function	
+eTb1(ev){	console.log('_____@- eTb1()');
+			ev.preventDefault();// Call preventDefault() to prevent any further handling
+			////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+			////}
+			////else//!pv
+			////{
+				if(((any[1]==4)||(any[1]==9)))// &&(!pv))
+				{	any[1] = 5;console.log('any[1]=' + any[1]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+					if(sigo[1])
+					{ 	sigo[1] = false;console.log('sigo[1]=' + sigo[1]);//'inhabilita' la siguiente entrada del mouse
+					}
+					punto1();
+				}
+			////}
+		}
 
 function	
 eTb2(ev){	console.log('_____@- eTb2()');
@@ -4182,6 +4258,24 @@ function
 }
 
 function	
+eTb7(ev){	console.log('_____@- eTb7()');
+			ev.preventDefault();// Call preventDefault() to prevent any further handling
+			////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTb0(ev);//AL TOCAR EL TOUCH EN CUALQUIE PARTE..
+			////}
+			////else//!pv
+			////{
+				if(((any[7]==4)||(any[7]==9)))// &&(!pv))
+				{	any[7] = 5;console.log('any[7]=' + any[7]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 4
+					if(sigo[7])
+					{ 	sigo[7] = false;console.log('sigo[7]=' + sigo[7]);//'inhabilita' la siguiente entrada del mouse
+					}
+					punto7();
+				}
+			////}
+		}
+
+function	
 	eTb8(ev){	console.log('_____@- eTb8()');
 				ev.preventDefault();// Call preventDefault() to prevent any further handling
 				////if (pv) {	//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
@@ -4242,6 +4336,20 @@ function		//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..     --l4676
 }
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
+	eTs1(){ 	console.log('_____@- eTs1()');
+			////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+			////}
+			////else//!pv
+			////{
+				if(any[1]==5)
+				{	any[1] = 4;console.log('any[1]=' + any[1]);//REACTIVA LA ENTRADA TOUCHSTART
+					vacio(1);
+				}
+			////}
+		}
+
+function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 	eTs2(){ 	console.log('_____@- eTs2()');
 			////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
 			////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
@@ -4300,6 +4408,20 @@ function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 		}
 	////}
 }
+
+function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
+	eTs7(){ 	console.log('_____@- eTs7()');
+			////if (pv) {//(este if nunca se ejecuta por pv y pw false desde el inicio, se puede quitar?)
+			////	eTs0();//AL SOLTAR EL TOUCH EN CUALQUIER PARTE..
+			////}
+			////else//!pv
+			////{
+				if(any[7]==5)
+				{	any[7] = 4;console.log('any[7]=' + any[7]);//REACTIVA LA ENTRADA TOUCHSTART
+					vacio(7);
+				}
+			////}
+		}
 
 function		//AL sOLTAR EL TOUCH EN UN AREA ESPECIFICA..
 eTs8(){ 		console.log('_____@- eTs8()');
@@ -4363,6 +4485,26 @@ punto0(){     //console.log('_____@- punto0()');
               ciclo0()}
 
 function      //primer parte general del algoritmo codigo morse
+punto1(){     console.log('_____@- punto1()');
+				//bo1.classList.add('active');
+				//boT11.classList.add('active');
+				libre[1] = false;console.log('libre[1]=' + libre[1]);//MOUSE CLICK ESTA ABAJO
+				//audiPun();//ACTIVA EL SONIDO DEL PUNTO
+				color(cycle[1]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+				if(cycle[1]==0)
+				{ pare[1] = false;console.log('pare[1]=' + pare[1]);
+				}
+				hora();
+				nm[1] = m;console.log('nm[1]='+ nm[1]);
+				min[1] = m + tM;console.log('min[1]='+ min[1]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+				if(cycle[1] > 0)
+				{ regX[1][cycle[1]] = nm[1] - mn[1];console.log('regX[1]=' + regX[1]);
+				  cycle[1] += 1;console.log('cycle[1]=' + cycle[1]);
+				}
+				regY[1][cycle[1]] = 1;console.log('regY[1]=' + regY[1]);
+				ciclo1()}
+
+function      //primer parte general del algoritmo codigo morse
 punto2(){     console.log('_____@- punto2()');
               //bo2.classList.add('active');
               //boT22.classList.add('active');
@@ -4383,27 +4525,27 @@ punto2(){     console.log('_____@- punto2()');
               ciclo2()}
 
 function      //primer parte general del algoritmo codigo morse
-	punto3() {
-	console.log('_____@- punto3()');
-	//bo3.classList.add('active');
-	//+ + +boT33.classList.add('active');
-	libre[3] = false; console.log('libre[3]=' + libre[3]);//MOUSE CLICK ESTA ABAJO
-	//audiPun();//ACTIVA EL SONIDO DEL PUNTO
-	color(cycle[3]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
-	if (cycle[3] == 0) {
-		pare[3] = false; console.log('pare[3]=' + pare[3]);
-	}
-	hora();
-	nm[3] = m; console.log('nm[3]=' + nm[3]);
-	//NOTA IMPORTANTE! Si fuera punto0(Editor Morse) min vale m + cut; esto porque si no esta escribiendo morse, todas son teclas especiales que inician minimo con una raya o un sostenido, solo tienen rayas y pueden terminar con o sin un punto, ej --- --· -· ---· , esto permite que se puedan hacer múltiples clics superrápidos ....... y NO se confundan con una función especial!!!
-	min[3] = m + tM; console.log('min[3]=' + min[3]);
-	if (cycle[3] > 0) {
-		regX[3][cycle[3]] = nm[3] - mn[3]; console.log('regX[3]=' + regX[3]);
-		cycle[3] += 1; console.log('cycle[3]=' + cycle[3]);
-	}
-	regY[3][cycle[3]] = 1; console.log('regY[3]=' + regY[3]);
-	ciclo3()
-}
+punto3() {
+			console.log('_____@- punto3()');
+			//bo3.classList.add('active');
+			//+ + +boT33.classList.add('active');
+			libre[3] = false; console.log('libre[3]=' + libre[3]);//MOUSE CLICK ESTA ABAJO
+			//audiPun();//ACTIVA EL SONIDO DEL PUNTO
+			color(cycle[3]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+			if (cycle[3] == 0) {
+				pare[3] = false; console.log('pare[3]=' + pare[3]);
+			}
+			hora();
+			nm[3] = m; console.log('nm[3]=' + nm[3]);
+			//NOTA IMPORTANTE! Si fuera punto0(Editor Morse) min vale m + cut; esto porque si no esta escribiendo morse, todas son teclas especiales que inician minimo con una raya o un sostenido, solo tienen rayas y pueden terminar con o sin un punto, ej --- --· -· ---· , esto permite que se puedan hacer múltiples clics superrápidos ....... y NO se confundan con una función especial!!!
+			min[3] = m + tM; console.log('min[3]=' + min[3]);
+			if (cycle[3] > 0) {
+				regX[3][cycle[3]] = nm[3] - mn[3]; console.log('regX[3]=' + regX[3]);
+				cycle[3] += 1; console.log('cycle[3]=' + cycle[3]);
+			}
+			regY[3][cycle[3]] = 1; console.log('regY[3]=' + regY[3]);
+			ciclo3()
+			}
 /*
 function      //primer parte general del algoritmo codigo morse
 punto4(){     console.log('_____@- punto4()');
@@ -4428,29 +4570,54 @@ punto4(){     console.log('_____@- punto4()');
 */
 
 function      //primer parte general del algoritmo codigo morse
-	punto6() {
-	console.log('_____@- punto6()');
-	//bo6.classList.add('active');
-	//+ + +boT66.classList.add('active');
-	libre[6] = false; console.log('libre[6]=' + libre[6]);//la tecla no esta libre porque MOUSE CLICK ESTA ABAJO
-	//audiPun();//ACTIVA EL SONIDO DEL PUNTO
-	color(cycle[6]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
-	if (cycle[6] == 0)//Si es el ciclo 0..
-	{
-		pare[6] = false; console.log('pare[6]=' + pare[6]);//hay registro de actividad (PARE:Off)
-	}
-	hora();//Registra la hora actual
-	nm[6] = m; console.log('nm[6]=' + nm[6]);//HORA/DIA InmICIO EN MILISEGUNDOS DESDE EL 1ERO DE ENERO DE 1970
-	//NOTA IMPORTANTE! Si fuera punto0(Editor Morse) min vale m + cut; esto porque si no esta escribiendo morse, todas son teclas especiales que inician minimo con una raya o un sostenido, solo tienen rayas y pueden terminar con o sin un punto, ej --- --· -· ---· , esto permite que se puedan hacer múltiples clics superrápidos ....... y NO se confundan con una función especial!!!
-	min[6] = m + tM; console.log('min[6]=' + min[6]);//RAYA minIMA EN MILISEGUNDOS PERMITIDA
-	if (cycle[6] > 0)//Si va 1 ciclo o más..
-	{
-		regX[6][cycle[6]] = nm[6] - mn[6]; console.log('regX[6]=' + regX[6]);//REGISTRO1 5/6 CAMBIOS DE ESTADO TECLA  - diferencia HORA/DIA INICIAL-FINAL EN MILISEGUNDOS DESDE EL 1ERO DE ENERO DE 1970
-		cycle[6] += 1; console.log('cycle[6]=' + cycle[6]);//INCREMENTA 1 CICLO, quedan números impares 1,3,5..
-	}
-	regY[6][cycle[6]] = 1; console.log('regY[6]=' + regY[6]);//REGISTRO2 RESULTADO DE ESTADO TECLA, inicialmente es un punto(1) y para una raya(2)
-	ciclo6()
-}
+punto6() {
+			console.log('_____@- punto6()');
+			//bo6.classList.add('active');
+			//+ + +boT66.classList.add('active');
+			libre[6] = false; console.log('libre[6]=' + libre[6]);//la tecla no esta libre porque MOUSE CLICK ESTA ABAJO
+			//audiPun();//ACTIVA EL SONIDO DEL PUNTO
+			color(cycle[6]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+			if (cycle[6] == 0)//Si es el ciclo 0..
+			{
+				pare[6] = false; console.log('pare[6]=' + pare[6]);//hay registro de actividad (PARE:Off)
+			}
+			hora();//Registra la hora actual
+			nm[6] = m; console.log('nm[6]=' + nm[6]);//HORA/DIA InmICIO EN MILISEGUNDOS DESDE EL 1ERO DE ENERO DE 1970
+			//NOTA IMPORTANTE! Si fuera punto0(Editor Morse) min vale m + cut; esto porque si no esta escribiendo morse, todas son teclas especiales que inician minimo con una raya o un sostenido, solo tienen rayas y pueden terminar con o sin un punto, ej --- --· -· ---· , esto permite que se puedan hacer múltiples clics superrápidos ....... y NO se confundan con una función especial!!!
+			min[6] = m + tM; console.log('min[6]=' + min[6]);//RAYA minIMA EN MILISEGUNDOS PERMITIDA
+			if (cycle[6] > 0)//Si va 1 ciclo o más..
+			{
+				regX[6][cycle[6]] = nm[6] - mn[6]; console.log('regX[6]=' + regX[6]);//REGISTRO1 5/6 CAMBIOS DE ESTADO TECLA  - diferencia HORA/DIA INICIAL-FINAL EN MILISEGUNDOS DESDE EL 1ERO DE ENERO DE 1970
+				cycle[6] += 1; console.log('cycle[6]=' + cycle[6]);//INCREMENTA 1 CICLO, quedan números impares 1,3,5..
+			}
+			regY[6][cycle[6]] = 1; console.log('regY[6]=' + regY[6]);//REGISTRO2 RESULTADO DE ESTADO TECLA, inicialmente es un punto(1) y para una raya(2)
+			ciclo6()
+			}
+
+
+function      //primer parte general del algoritmo codigo morse
+punto7(){     console.log('_____@- punto7()');
+			  //bo7.classList.add('active');
+			  //boT77.classList.add('active');
+			  libre[7] = false;console.log('libre[7]=' + libre[7]);//MOUSE CLICK ESTA ABAJO
+			  //audiPun();//ACTIVA EL SONIDO DEL PUNTO
+			  color(cycle[7]);//ASIGNA UN COLOR A LA SEÑAL PUNTO/RAYA
+			  if(cycle[7]==0)
+			  { pare[7] = false;console.log('pare[7]=' + pare[7]);
+			  }
+			  hora();
+			  nm[7] = m;console.log('nm[7]='+ nm[7]);
+			  min[7] = m + tM;console.log('min[7]='+ min[7]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+			  if(cycle[7] > 0)
+			  { regX[7][cycle[7]] = nm[7] - mn[7];console.log('regX[7]=' + regX[7]);
+				cycle[7] += 1;console.log('cycle[7]=' + cycle[7]);
+			  }
+			  regY[7][cycle[7]] = 1;console.log('regY[7]=' + regY[7]);
+			  ciclo7()}
+			
+
+
+
 
 function      //primer parte general del algoritmo codigo morse
 punto8(){     console.log('_____@- punto8()');
@@ -4657,6 +4824,11 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 				{
 					outX[q] = ' *';//ES UN PUNTO..
 
+					if (q == 1)// 	
+					{	console.log(' - - - Salir X (1) ');
+						f0047(1);//Clic sobre el boton 1
+					};
+
 					if (q == 2)// 	
 					{	console.log(' - - - Espacio (2) ');
 						f0096(1, 1);//Clic sobre el boton 2
@@ -4677,6 +4849,11 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					if (q == 6)//boton V [6] avanzar adelante un item (+1) morse 6 arrow down	
 					{	console.log(' - - - arrow down! ');
 						f0095(1);// arrow down
+					};
+
+					if (q == 7)// 	
+					{	console.log(' - - - Menu (7) ');
+						f0015(1);//Clic sobre el boton 7 [] menu
 					};
 
 
@@ -4926,6 +5103,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					outX[q] = ' -';//RAYA..
 					//sos(q,0);
 
+					
 					if (q == 3)//boton . [3] raya onclick='f0096(1,1,1) morse 3 MI REVERSA FIJA 2023 IBOGOTA!!!! 	
 					{	console.log(' - - - MI REVERSA FIJA 2023 IBOGOTA!!!! ');
 						f0096(1, 1, 1);//Aplicar reversa al clic(botón 3) salTO -1
@@ -4935,6 +5113,20 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					{	console.log(' - - - arrow down! ');
 						f0095(1);// arrow down
 					};
+
+					if (q == 7)//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8 Espacio Morse	
+					{	console.log(' - - - Espacio Morse en el display M');
+						mMod = 4;
+						f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
+						sale += ' ';
+						colSale();
+						//iIntM0.textContent = salo;
+						f0151();// Desplaza hacia el final el Display M
+						f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
+    		
+						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
+					};
+
 
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
 					/*
@@ -4950,18 +5142,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					};*/
 
 					//Nota: no le tengo funciones al 5, es decir el boton 0 de la barra inclinada, el 8 esta libre por eso lo tome prestado!
-					if (q == 8)//boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8 Espacio Morse	
-					{	console.log(' - - - Espacio Morse en el display M');
-						mMod = 4;
-						f0145();////CONTROLAR la salida de la interfaz M y la opacidad segun el estado (st) 1:ACTIVAR la salida de la interfaz M y quitar la opacidad y 0:Hace todo lo contrario
-						sale += ' ';
-						colSale();
-						//iIntM0.textContent = salo;
-						f0151();// Desplaza hacia el final el Display M
-						f0146();//DETECTAR los eventos, si es el último evento sobre el botón 5 o la interfaz M resetea la interfaz M
-    		
-						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
-					};
+					
 					//+ + +		//esta[q] = true;
 					//+ + +		sos(q,0);
 					//+ + +		if(q==1)//si el boton de MENU, 3x3 Y RECIBE UNA RAYA..
@@ -5040,6 +5221,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 				if ((regY[q][0] == 2) && (regY[q][2] == 2)) {
 					outX[q] = ' --';//DOS RAYAS..
 
+
 					
 					if (q == 3)//regresar -(1*KTE)
 					{
@@ -5052,7 +5234,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 						f(1, 1, 3);//Aplicar -5 avances al clic(botón 6) salTO-5
 					}*/
 
-					if (q == 8)//Reset del display M 	
+					if (q == 7)//Reset del display M 	
 					{	mMod = 4;
 						console.log(' - - - borrar la ultima letra del display M');
 						sale = sale.slice(0, -1);
@@ -5060,6 +5242,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 						//output.textContent = salo;//output.textContent.slice(0, -1);
 						//f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 					};
+					
 				}
 				break;
 			case 5:
@@ -5080,6 +5263,7 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 				if ((regY[q][0] == 2) && (regY[q][2] == 2) && (regY[q][4] == 2)) {
 					outX[q] = ' ---';//tres rayas..
 
+
 					
 					if (q == 3)//regresar -(2*KTE)
 					{
@@ -5090,12 +5274,13 @@ function		//analiza la señal si es del chat comunitario q indica que tecla fue
 					{
 						f0096(1, 1, 5);//Aplicar -25 avances al clic(botón 6)
 					}*/
-
-					if (q == 8)//Reset del display M 	
+					if (q == 7)//Reset del display M 	
 					{	mMod = 4;
 						console.log(' - - - Reset del display M');
 						f0150();//APAGAR la interfaz de Salida M, el Dsiplay M y Borra todo el texto de salida actual
 					};
+
+					
 				}
 				break;
 			/*case 7:
@@ -5409,6 +5594,19 @@ fBot5.addEventListener('touchend',eTs0);
 fBot5.addEventListener('touchstart',eTb0);
 
 //1479 - 5036(0836)
+//boton x [1] salir o cancelar onclick='f0047(1)' morse 1
+yBot1.addEventListener('mousedown', eMb1);
+yBot1.addEventListener('mouseleave', eMs1);
+yBot1.addEventListener('mouseup', eMs1);
+yBot1.addEventListener('touchend', eTs1);
+yBot1.addEventListener('touchstart', eTb1);
+fBot1.addEventListener('mousedown', eMb1);
+fBot1.addEventListener('mouseleave', eMs1);
+fBot1.addEventListener('mouseup', eMs1);
+fBot1.addEventListener('touchend', eTs1);
+fBot1.addEventListener('touchstart', eTb1);
+
+//1479 - 5036(0836)
 //boton . [3] clic o enter onclick='f0096(1,1) morse 3
 yBot3.addEventListener('mousedown', eMb3);
 yBot3.addEventListener('mouseleave', eMs3);
@@ -5440,6 +5638,22 @@ fBot6.addEventListener('mouseleave',eMs6);
 fBot6.addEventListener('mouseup',eMs6);
 fBot6.addEventListener('touchend',eTs6);
 fBot6.addEventListener('touchstart',eTb6);
+
+
+//boton [] [7] menu onclick='f0015(1)' morse 7
+yBot7.addEventListener('mousedown', eMb7);
+yBot7.addEventListener('mouseleave', eMs7);
+yBot7.addEventListener('mouseup', eMs7);
+yBot7.addEventListener('touchend', eTs7);
+yBot7.addEventListener('touchstart', eTb7);
+fBot7.addEventListener('mousedown', eMb7);
+fBot7.addEventListener('mouseleave', eMs7);
+fBot7.addEventListener('mouseup', eMs7);
+fBot7.addEventListener('touchend', eTs7);
+fBot7.addEventListener('touchstart', eTb7);
+
+
+
 //1479 - 5036(0836)
 //boton / [0] cambio de entrada -> /morse/teclado normal/teclado gigante/señas/off/ morse 8  --l5814  
 yBoto.addEventListener('mousedown',eMb8);
