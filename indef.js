@@ -7743,7 +7743,6 @@ keYs.forEach(key => {
 });
 
 
-
 var isShiftActive = false;
 var lastKeyPressed = '';
 var mViS = 0;//Visibilidad de la salida M 0-Off 1-On

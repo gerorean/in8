@@ -148,7 +148,9 @@
  .cSom
 ,.cTexU{		background:rgba(0,0,0,0.2)}
 
- .cVpres
+ .cIwhi
+,.cIyel
+,.cVpres
 ,.cTitul{		background:rgba(0,0,0,0.8)}
 
  .c--Ent{		background:rgba(128,128,128,0.3)}
@@ -441,7 +443,7 @@
  #i--Taco
 ,.keY{			font-family: Arial, sans-serif}
 
-  *{			font-family:Roboto,Century Gothic,Monaco,Verdana,Tahoma,Arial,sans-serif}/*'Monaco','Verdana','Arial',sans-serif}*/
+  *{			font-family:Roboto,Century Gothic,Monaco,Verdana,Tahoma,Arial,sans-serif}/*        'Monaco','Verdana','Arial',sans-serif}*/
 
  .cCero
 ,.cFs0{			font-size:0}
@@ -475,7 +477,7 @@
 
  .keY{			font-size:min(5vh,5vw)}
 
- .cMarqu{		font-size:min(6.5vh,6.5vw)}/*min(6.5vh,6.5vw)}/*min(8vh,8vw) o 32px*/
+ .cMarqu{		font-size:min(4vh,4vw)}/*min(6.5vh,6.5vw)}/*min(8vh,8vw) o 32px*/
 
  .cNoV
 ,.cSiV{			font-size:min(13vh,13vw)}
@@ -520,8 +522,8 @@
 
  .cMors{		font-size:var(--cMors)}
 
- .cIwhi
-,.cIyel{		font-weight:600}
+ .c--Iwhi
+,.c--Iyel{		font-weight:200}
 
  td:first-child{font-weight:bold}
 
@@ -579,7 +581,7 @@
 ,#iRUTA
 ,#iTAPA{		height:100%}
 
- .cTpres{		height:calc(17vh - var(--pelo))}/*17vh}/*calc(17vh - var(--pelo))}/*calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
+ .cTpres{		height:calc(11vh - var(--pelo))}/*17vh}/*calc(17vh - var(--pelo))}/*calc(19.5vh - var(--pelo))}/*19.5vh - 9.75vh  16vh  8vh   se toma 10vh menos .25vh(x2) del borde inferior*/
 
  #intM{			height:calc(35vh - var(--kdot) - 0.5vh)}/*calc(30vh - var(--kdot) - 0.5vh   - 50px)*/
 
@@ -688,7 +690,7 @@
 
  .c--Min{		line-height:calc(var(--chico) * 0.3)!important}/*calc(var(--chico)*0.4)*/
 
- .cMarqu{		line-height:min(9vh,9vw)}
+ .cMarqu{		line-height:min(6vh,6vw)}/*:min(9vh,9vw)}*/
 
  .cTapa{		line-height:var(--a)}
 
