@@ -1050,8 +1050,8 @@ const rutas = ['/7/7', '/6/10', '/1/8', '/4/6', '/5/4', '/3/5', '/5/2', '/4/3/7'
 
 
 var aafil = 8000;//Tiempo en milisegundo que demora el cambio del texto en la presentacion AV 		
-const aaini 		/**/ = 500;//Sugerido 500 (4mins apróx) :: 115(1min apróx) - 230(2mins apróx) - 345(3mins apróx) - 500(4mins apróx) Cantidad de pulsos que deben superarse para inicar el modo presentación AV
-var aasen		/**/ = 600;//sugerido 600  milisegundos para el cambio de seña
+const aaini 		/**/ = 500;//Sugerido 500 (4mins apróx) :: 115(1min apróx) - 230(2mins apróx) - 345(3mins apróx) - 500(4mins apróx) Cantidad de pulsos que deben superarse para inicar el modo presentación AV sug 500 (4min)
+var aasen		/**/ = 600;//sugerido 600  milisegundos para el cambio de señaS
 var accion 		/**/ = 0;//Ocurrio un evento 0NO /1SI
 var ambi 		/**/ = 5;//variable memoria de ambiente, inicia en 5 de ENTRADA ACCESIBLE, ambi debe ir cambiando/actualizarse dependiendo del modo/frondend actual
 //var 	ambi1 		/**/= 0;//Primer frontend en Pantalla (0:NO - 1:SI)

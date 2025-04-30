@@ -3934,6 +3934,10 @@ function f0050()//OCULTAR ambientes, DEJAR pantalla vacia, DETENER vibraciones y
 			fBB7.classList.add('cOff');
 			fBot9.classList.add('cStop');
 			fBB9.classList.add('cOff');
+			fBot0.classList.add('cStop');
+			fBB0.classList.add('cOff');
+			fBot5.classList.add('cStop');
+			fBB5.classList.add('cOff');
 			g00VARS[26][4] = 0;//Botones ocultos 
 		}
 
@@ -3989,6 +3993,10 @@ function f0051()//HABILITAR botones de RUTA (1,3,4 y 7)
 				fBB9.classList.remove('cOff');
 				yBot9.classList.remove('cStop');
 				yBB9.classList.remove('cOff');
+				fBot0.classList.remove('cStop');
+				fBB0.classList.remove('cOff');
+				fBot5.classList.remove('cStop');
+				fBB5.classList.remove('cOff');
 			}
 		}
 
