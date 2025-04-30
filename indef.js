@@ -5123,12 +5123,24 @@ function f0098(now)//INICIAR una tarea porque se oprimío una tecla del teclado.
 					f0095();//6 arrow down
 				}
 
-				//Botón 7 es Normal
-				if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
-				{	console.log('key7');			
-					f0015();//7 MENU
+				//Botón 7 es Morse
+				//if (g00VARS[26][4] && ((now.keyCode == kEY.K3) || (now.keyCode == kEY.N3) || (now.keyCode == kEY.K33)) && yKEYS[2][2])//Si esta mostrando lo botones y..
+				if((now.keyCode == kEY.K7)||(now.keyCode == kEY.K77))//Si esta mostrando lo botones y..
+				{	console.log('key7');
+					if (((any[7] == 2) || (any[7] == 9)))//// && (!pv)) 
+					{	any[7] = 3; console.log('any[7]=' + any[7]);//BLOQUEA ENTRADA DE DATOS HASTA QUE SEA 0
+						punto7();
+					}
+					w7();
+					//f0096();//clic  --l26abr025
 				}
-				
+
+				////Botón 7 es Normal
+				//if(g00VARS[26][4]&&g00VARS[76][2]&&((now.keyCode == kEY.K7)||(now.keyCode == kEY.N7)||(now.keyCode == kEY.K77)||(now.key == 'ArrowRight')||(now.key == 'ArrowLeft'))&&yKEYS[2][5])//Si esta mostrando lo botones y..
+				//{	console.log('key7');			
+				//	f0015();//7 MENU
+				//}
+				//
 				//Estas funciones del boton 0 se le van a pasar al Morse 9..
 				//El Morse 8 se le presta al botón 0
 				if((now.keyCode==kEY.K0)||(now.keyCode==kEY.K00))
@@ -5389,13 +5401,16 @@ function f0100(now)//TERMINAR una tarea porque se soltó una tecla del teclado//
 			www9();
 		}
 		*/
-		/*if((now.keyCode==key.A7)||(now.keyCode==key.B7)||(now.keyCode==key.C7))
+
+		//Morse 7
+		//if((now.keyCode==key.A7)||(now.keyCode==key.B7)||(now.keyCode==key.C7))
+		if((now.keyCode == kEY.K7)||(now.keyCode == kEY.K77))//Si esta mostrando lo botones y..
 		{	if(any[7]==3)
 			{	any[7] = 2;console.log('any[7]=' + any[7]);//REACTIVA LA ENTRADA
 				vacio(7);
 			}
 			www9();
-		}*/
+		}
 
 
 		//Nota el Morse 8 se va a desactivar porque sus funciones se le van a pasar al Morse 9, y el Morse 8 va a quedar para el boton 8
