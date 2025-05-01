@@ -4496,7 +4496,7 @@ punto1(){     console.log('_____@- punto1()');
 				}
 				hora();
 				nm[1] = m;console.log('nm[1]='+ nm[1]);
-				min[1] = m + tM;console.log('min[1]='+ min[1]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+				min[1] = m + cut*2;//m + tM;console.log('min[1]='+ min[1]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
 				if(cycle[1] > 0)
 				{ regX[1][cycle[1]] = nm[1] - mn[1];console.log('regX[1]=' + regX[1]);
 				  cycle[1] += 1;console.log('cycle[1]=' + cycle[1]);
@@ -4516,7 +4516,7 @@ punto2(){     console.log('_____@- punto2()');
               }
               hora();
               nm[2] = m;console.log('nm[2]='+ nm[2]);
-              min[2] = m + tM;console.log('min[2]='+ min[2]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+              min[2] = m + cut*2;//m + tM;console.log('min[2]='+ min[2]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
               if(cycle[2] > 0)
               { regX[2][cycle[2]] = nm[2] - mn[2];console.log('regX[2]=' + regX[2]);
                 cycle[2] += 1;console.log('cycle[2]=' + cycle[2]);
@@ -4538,7 +4538,7 @@ punto3() {
 			hora();
 			nm[3] = m; console.log('nm[3]=' + nm[3]);
 			//NOTA IMPORTANTE! Si fuera punto0(Editor Morse) min vale m + cut; esto porque si no esta escribiendo morse, todas son teclas especiales que inician minimo con una raya o un sostenido, solo tienen rayas y pueden terminar con o sin un punto, ej --- --· -· ---· , esto permite que se puedan hacer múltiples clics superrápidos ....... y NO se confundan con una función especial!!!
-			min[3] = m + tM; console.log('min[3]=' + min[3]);
+			min[3] = m + cut*2;// m + tM; console.log('min[3]=' + min[3]);
 			if (cycle[3] > 0) {
 				regX[3][cycle[3]] = nm[3] - mn[3]; console.log('regX[3]=' + regX[3]);
 				cycle[3] += 1; console.log('cycle[3]=' + cycle[3]);
@@ -4584,7 +4584,7 @@ punto6() {
 			hora();//Registra la hora actual
 			nm[6] = m; console.log('nm[6]=' + nm[6]);//HORA/DIA InmICIO EN MILISEGUNDOS DESDE EL 1ERO DE ENERO DE 1970
 			//NOTA IMPORTANTE! Si fuera punto0(Editor Morse) min vale m + cut; esto porque si no esta escribiendo morse, todas son teclas especiales que inician minimo con una raya o un sostenido, solo tienen rayas y pueden terminar con o sin un punto, ej --- --· -· ---· , esto permite que se puedan hacer múltiples clics superrápidos ....... y NO se confundan con una función especial!!!
-			min[6] = m + tM; console.log('min[6]=' + min[6]);//RAYA minIMA EN MILISEGUNDOS PERMITIDA
+			min[6] = m + cut*2;//m + tM; console.log('min[6]=' + min[6]);//RAYA minIMA EN MILISEGUNDOS PERMITIDA
 			if (cycle[6] > 0)//Si va 1 ciclo o más..
 			{
 				regX[6][cycle[6]] = nm[6] - mn[6]; console.log('regX[6]=' + regX[6]);//REGISTRO1 5/6 CAMBIOS DE ESTADO TECLA  - diferencia HORA/DIA INICIAL-FINAL EN MILISEGUNDOS DESDE EL 1ERO DE ENERO DE 1970
@@ -4607,7 +4607,7 @@ punto7(){     console.log('_____@- punto7()');
 			  }
 			  hora();
 			  nm[7] = m;console.log('nm[7]='+ nm[7]);
-			  min[7] = m + tM;console.log('min[7]='+ min[7]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+			  min[7] = m + cut*2;// m + tM;console.log('min[7]='+ min[7]);//EN EL CASO DE 2 y 8 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
 			  if(cycle[7] > 0)
 			  { regX[7][cycle[7]] = nm[7] - mn[7];console.log('regX[7]=' + regX[7]);
 				cycle[7] += 1;console.log('cycle[7]=' + cycle[7]);
@@ -4631,7 +4631,7 @@ punto8(){     console.log('_____@- punto8()');
               }
               hora();
               nm[8] = m;console.log('nm[8]='+ nm[8]);
-              min[8] = m + tM;console.log('min[8]='+ min[8]);//EN EL CASO DE 6 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
+              min[8] = m + cut*2;// m + tM;console.log('min[8]='+ min[8]);//EN EL CASO DE 6 NO SE toma cut sino tM para que los puntos sigan como puntos, las rayas sean como puntos y los sostenidos como las rayas    
               if(cycle[8] > 0)
               { regX[8][cycle[8]] = nm[8] - mn[8];console.log('regX[8]=' + regX[8]);
                 cycle[8] += 1;console.log('cycle[8]=' + cycle[8]);
@@ -4651,7 +4651,7 @@ punto9(){     console.log('_____@- punto9()');
               }
               hora();
               nm[9] = m;console.log('nm[9]='+ nm[9]);
-              min[9] = m + tM;console.log('min[9]='+ min[9]);
+              min[9] = m + cut*2;//m + tM;console.log('min[9]='+ min[9]);
               if(cycle[9] > 0)
               { regX[9][cycle[9]] = nm[9] - mn[9];console.log('regX[9]=' + regX[9]);
                 cycle[9] += 1;console.log('cycle[9]=' + cycle[9]);
